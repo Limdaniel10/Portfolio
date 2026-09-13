@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Chaehyun Lim — aerospace engineering portfolio focused on hardware integration, test, electrified aviation, and autonomous aircraft systems." />
+  <title>Chaehyun Lim | Engineering Portfolio</title>
+  <style>
+    :root {
+      --bg:#0b0f14;
+      --panel:#121922;
+      --panel2:#17212c;
+      --text:#f5f7fa;
+      --muted:#aeb9c6;
+      --line:#2a3643;
+      --accent:#72d6c9;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:auto;padding:0 24px}
+    nav{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:.2px;text-decoration:none}
+    .navlinks{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}
+    .navlinks a:hover{color:var(--text)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:10px;border:1px solid var(--line);text-decoration:none;font-weight:700}
+    .btn.primary{background:var(--accent);color:#07110f;border-color:var(--accent)}
+    header{padding:88px 0 60px}
+    .eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;margin:10px 0 18px;letter-spacing:-.045em;max-width:900px}
+    .lede{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted);max-width:820px;margin:0 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .quick{margin-top:32px;display:flex;gap:12px 24px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
+    section{padding:64px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}
+    h2{font-size:2rem;margin:0;letter-spacing:-.02em}
+    .section-note{color:var(--muted);max-width:600px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .card{background:linear-gradient(180deg,var(--panel),#0f151d);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .card img{width:100%;height:260px;object-fit:cover;display:block;background:white}
+    .card-body{padding:22px}
+    .tag{display:inline-block;color:var(--accent);font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+    h3{font-size:1.32rem;margin:0 0 8px}
+    .card p{color:var(--muted);margin:0 0 12px}
+    .metrics{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:.82rem;color:#dfe6ee;background:var(--panel2)}
+    .skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .skillbox{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:20px}
+    .skillbox h3{font-size:1rem;margin-bottom:8px}
+    .skillbox p{margin:0;color:var(--muted);font-size:.95rem}
+    .about{display:grid;grid-template-columns:1.25fr .75fr;gap:24px}
+    .about-box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+    .about-box p{color:var(--muted);margin-top:0}
+    .interests{font-weight:700;color:var(--text)!important}
+    footer{border-top:1px solid var(--line);padding:36px 0 50px;color:var(--muted)}
+    .small{font-size:.86rem;color:var(--muted)}
+    @media (max-width:760px){
+      .grid,.skills,.about{grid-template-columns:1fr}
+      .navlinks a:not(.btn){display:none}
+      .card img{height:220px}
+      header{padding-top:64px}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Chaehyun Lim</a>
+    <div class="navlinks">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a class="btn" href="Chaehyun_Lim_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="eyebrow">Hardware Integration · Test · Electrified Aviation</div>
+    <h1>Building and validating hardware for autonomous and electric aircraft systems.</h1>
+    <p class="lede">I’m Chaehyun Lim, a Georgia Tech Aerospace Engineering B.S./M.S. engineer working across hardware integration, instrumentation, controls, battery testing, and hybrid-electric aircraft systems.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#projects">View engineering work</a>
+      <a class="btn" href="mailto:clim70@gatech.edu">clim70@gatech.edu</a>
+      <a class="btn" href="https://www.linkedin.com/in/lim-chaehyun" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="quick">
+      <span>Atlanta, GA</span>
+      <span>M.S. Aerospace Engineering — Expected May 2027</span>
+      <span>Korean · English · Chinese (HSK 5)</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">Selected Work</div><h2>Engineering projects</h2></div>
+      <p class="section-note">The descriptions below are scoped to my own work within team projects rather than claiming the full team’s output.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <img src="assets/cube-hardware-schematic.png" alt="CubeSat reaction-wheel hardware setup and wiring schematic" />
+        <div class="card-body">
+          <div class="tag">Hardware + Controls</div>
+          <h3>CubeSat Reaction-Wheel Heading Control</h3>
+          <p><strong>Senior Capstone — #1 in class; Top 5 capstone project.</strong> Created the system circuit schematic in KiCad, integrated Arduino/IMU/ESC/BLDC hardware, built a 1-DOF MATLAB/Simulink reaction-wheel model, and validated the physical system against quantitative response targets.</p>
+          <div class="metrics"><span class="pill">2.7 s rise</span><span class="pill">5.9 s settling</span><span class="pill">&lt;8.24% overshoot</span><span class="pill">±2.8° error</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/cube-simulink.png" alt="MATLAB Simulink block diagram for CubeSat heading control" />
+        <div class="card-body">
+          <div class="tag">Model → Hardware</div>
+          <h3>Control-System Modeling & Validation</h3>
+          <p>Used MATLAB/Simulink to represent 1-DOF reaction-wheel dynamics and connect model behavior to bench testing. Hardware testing used an Arduino Nano 33 IoT, MPU-6050 IMU, ESC, BLDC motor, and LiPo power source.</p>
+          <div class="metrics"><span class="pill">MATLAB/Simulink</span><span class="pill">KiCad</span><span class="pill">Arduino</span><span class="pill">IMU / ESC / BLDC</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/vfs-power-architecture.png" alt="Hybrid-electric tiltrotor turbo-electric battery system architecture" />
+        <div class="card-body">
+          <div class="tag">Electric Aviation</div>
+          <h3>Hybrid-Electric Tiltrotor — Propulsion Lead</h3>
+          <p>Developed hybrid-electric power architecture and MATLAB mission-energy models for hover, conversion, and cruise; coordinated propulsion interfaces with aerodynamics and structures. The Georgia Tech team placed <strong>2nd globally</strong> in the undergraduate division.</p>
+          <div class="metrics"><span class="pill">Power architecture</span><span class="pill">Mission energy</span><span class="pill">Trade studies</span><span class="pill">Cross-functional integration</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/battery-test-setup.png" alt="Li-polymer battery discharge and internal-resistance measurement setup" />
+        <div class="card-body">
+          <div class="tag">Battery Test</div>
+          <h3>Li-Polymer Cycle-Life & Degradation Testing</h3>
+          <p>Ran charge/discharge cycle-life tests and analyzed capacity fade and internal-resistance growth for AAM/eVTOL research. The broader eight-pack longitudinal study accumulated roughly 4,700 charge/discharge cycles.</p>
+          <div class="metrics"><span class="pill">Cycle-life testing</span><span class="pill">Degradation analysis</span><span class="pill">DAQ</span><span class="pill">AAM/eVTOL</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <div class="tag">Test Automation</div>
+          <h3>Automated Modal-Impact Test System</h3>
+          <p>Integrated a UR30 robot arm, Arduino-controlled stepper motor, and NI cDAQ into an automated impact-test workflow, replacing manual strikes. Built the MATLAB acquisition interface and supported repeatable loading from 250 N to 3,000 N.</p>
+          <div class="metrics"><span class="pill">UR30</span><span class="pill">NI cDAQ</span><span class="pill">MATLAB GUI</span><span class="pill">250–3,000 N</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <div class="tag">UAV Systems</div>
+          <h3>Forest-Fire Detection UAV</h3>
+          <p>Integrated UAV structure, a 3D-printed battery enclosure, and thermal/optical sensor payloads; executed waypoint flight tests to verify airframe stability and payload function.</p>
+          <div class="metrics"><span class="pill">Sensor integration</span><span class="pill">Flight test</span><span class="pill">3D printing</span><span class="pill">UAS operations</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Capabilities</div><h2>Tools & technical foundation</h2></div></div>
+    <div class="skills">
+      <div class="skillbox"><h3>Electronics & bench work</h3><p>Oscilloscope · digital multimeter · bench power supply · function generator · circuit debugging · bench testing</p></div>
+      <div class="skillbox"><h3>Integration & instrumentation</h3><p>Sensor/DAQ integration · NI cDAQ · Arduino · verification & validation · test automation</p></div>
+      <div class="skillbox"><h3>Design & analysis</h3><p>KiCad (schematic capture) · MATLAB/Simulink · SolidWorks · 3D printing · Python (coursework)</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">About</div><h2>Beyond the project list</h2></div></div>
+    <div class="about">
+      <div class="about-box">
+        <p>I’m interested in roles where electrical hardware, test, systems integration, and aircraft operations meet. My background spans electric and hybrid-electric aviation, autonomous UAV systems, controls hardware, battery testing, and technical leadership.</p>
+        <p>I also served in the Republic of Korea Defense Intelligence Command, where I led an 11-person squad and worked as a command interpreter during the 2021 U.S.–ROK CCPT exercise.</p>
+      </div>
+      <div class="about-box">
+        <p class="small">Outside engineering</p>
+        <p class="interests">Travel (90 countries) · Scuba diving · Baseball · Travel writing</p>
+        <p>These interests keep me curious about systems, people, and places well outside a single technical domain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Chaehyun Lim</strong><br />
+    <span>Atlanta, GA · <a href="mailto:clim70@gatech.edu">clim70@gatech.edu</a> · <a href="https://www.linkedin.com/in/lim-chaehyun" target="_blank" rel="noopener">LinkedIn</a></span>
+    <p class="small">Project images are excerpts from Georgia Tech team/research reports and are shown to provide technical context for the work described above.</p>
+  </div>
+</footer>
+</body>
+</html>
