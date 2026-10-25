@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Chaehyun Lim — aerospace engineering portfolio focused on hardware integration, test, electrified aviation, and autonomous aircraft systems." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chaehyun Lim — Georgia Tech aerospace engineering graduate student focused on hardware integration, test automation, instrumentation, batteries, and electrified aircraft systems.">
   <title>Chaehyun Lim | Engineering Portfolio</title>
   <style>
     :root {
@@ -64,7 +64,25 @@
       .card img{height:220px}
       header{padding-top:64px}
     }
-  </style>
+  
+    .card > a {display:block}
+    .card img {object-fit:contain;height:250px;padding:12px}
+    .project-meta {font-size:.86rem;color:#c5cfdc!important;margin:0 0 14px!important}
+    .result {font-size:.95rem}
+    .metric-label {font-size:.82rem;margin:18px 0 0!important;color:#dfe6ee!important}
+    .wide {grid-column:1 / -1}
+    details {margin-top:20px;border-top:1px solid var(--line);padding-top:14px}
+    summary {cursor:pointer;color:var(--accent);font-weight:700;font-size:.93rem}
+    details p {font-size:.92rem;margin:12px 0 0!important}
+    details img {height:auto!important;padding:6px!important;margin-top:14px;border-radius:8px}
+    .test-results {width:100%;border-collapse:collapse;font-size:.82rem;margin:14px 0}
+    .test-results th,.test-results td {text-align:left;border-bottom:1px solid var(--line);padding:8px 5px}
+    .test-results th {color:var(--text)}
+    .test-results td {color:var(--muted)}
+    a:focus-visible,summary:focus-visible {outline:2px solid var(--accent);outline-offset:4px}
+    @media (max-width:760px) {.wide{grid-column:auto}.card img{height:220px}.project-meta{font-size:.83rem}}
+    @media (prefers-reduced-motion:reduce) {html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 <nav>
@@ -81,9 +99,9 @@
 
 <header id="top">
   <div class="wrap">
-    <div class="eyebrow">Hardware Integration · Test · Electrified Aviation</div>
-    <h1>Building and validating hardware for autonomous and electric aircraft systems.</h1>
-    <p class="lede">I’m Chaehyun Lim, a Georgia Tech aerospace engineering graduate student working across hardware integration, instrumentation, controls, battery testing, and hybrid-electric aircraft systems.</p>
+    <div class="eyebrow">Hardware Integration · Test Automation · Electrification</div>
+    <h1>Integrating and testing hardware for aircraft and energy systems.</h1>
+    <p class="lede">I’m Chaehyun Lim, a Georgia Tech aerospace engineering graduate student. My work spans laboratory test automation, instrumentation, controls prototypes, battery testing, and hybrid-electric aircraft design.</p>
     <div class="hero-actions">
       <a class="btn primary" href="#projects">View engineering work</a>
       <a class="btn" href="mailto:clim70@gatech.edu">clim70@gatech.edu</a>
@@ -101,108 +119,188 @@
 <section id="projects">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="eyebrow">Selected Work</div><h2>Engineering projects</h2></div>
-      <p class="section-note">The descriptions below are scoped to my own work within team projects rather than claiming the full team’s output.</p>
+      <div>
+<div class="eyebrow">Selected Work</div>
+<h2>Engineering projects</h2>
+</div>
+      <p class="section-note">Selected research and academic projects in hardware integration, controls, batteries, and aircraft electrification.</p>
     </div>
     <div class="grid">
-      <article class="card">
-        <img src="assets/cube-hardware-schematic.png" alt="CubeSat reaction-wheel hardware setup and wiring schematic" />
-        <div class="card-body">
-          <div class="tag">Hardware + Controls</div>
-          <h3>CubeSat Reaction-Wheel Heading Control</h3>
-          <p><strong>Senior Capstone — #1 in class; Top 5 capstone project.</strong> Created the system circuit schematic in KiCad, integrated Arduino/IMU/ESC/BLDC hardware, built a 1-DOF MATLAB/Simulink reaction-wheel model, and validated the physical system against quantitative response targets.</p>
-          <div class="metrics"><span class="pill">2.7 s rise</span><span class="pill">5.9 s settling</span><span class="pill">&lt;8.24% overshoot</span><span class="pill">±2.8° error</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="assets/cube-simulink.png" alt="MATLAB Simulink block diagram for CubeSat heading control" />
-        <div class="card-body">
-          <div class="tag">Model → Hardware</div>
-          <h3>Control-System Modeling & Validation</h3>
-          <p>Used MATLAB/Simulink to represent 1-DOF reaction-wheel dynamics and connect model behavior to bench testing. Hardware testing used an Arduino Nano 33 IoT, MPU-6050 IMU, ESC, BLDC motor, and LiPo power source.</p>
-          <div class="metrics"><span class="pill">MATLAB/Simulink</span><span class="pill">KiCad</span><span class="pill">Arduino</span><span class="pill">IMU / ESC / BLDC</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="assets/vfs-power-architecture.png" alt="Hybrid-electric tiltrotor turbo-electric battery system architecture" />
-        <div class="card-body">
-          <div class="tag">Electric Aviation</div>
-          <h3>Hybrid-Electric Tiltrotor — Propulsion Lead</h3>
-          <p>Developed hybrid-electric power architecture and MATLAB mission-energy models for hover, conversion, and cruise; coordinated propulsion interfaces with aerodynamics and structures. The Georgia Tech team placed <strong>2nd globally</strong> in the undergraduate division.</p>
-          <div class="metrics"><span class="pill">Power architecture</span><span class="pill">Mission energy</span><span class="pill">Trade studies</span><span class="pill">Cross-functional integration</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="assets/battery-test-setup.png" alt="Li-polymer battery discharge and internal-resistance measurement setup" />
-        <div class="card-body">
-          <div class="tag">Battery Test</div>
-          <h3>Li-Polymer Cycle-Life & Degradation Testing</h3>
-          <p>Ran charge/discharge cycle-life tests and analyzed capacity fade and internal-resistance growth for AAM/eVTOL research. The broader eight-pack longitudinal study accumulated roughly 4,700 charge/discharge cycles.</p>
-          <div class="metrics"><span class="pill">Cycle-life testing</span><span class="pill">Degradation analysis</span><span class="pill">DAQ</span><span class="pill">AAM/eVTOL</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <div class="tag">Test Automation</div>
-          <h3>Automated Modal-Impact Test System</h3>
-          <p>Developed a MATLAB GUI integrating Arduino-controlled impact
-  actuation, NI cDAQ force and acceleration acquisition, calibration,
-  visualization, and data logging. Implemented camera-based pattern
-  recognition and target-coordinate calculation; final UR30 positioning
-  used the teach pendant. Tests covered approximately 250–1,500 N
-  in the coupled configuration and 3,000 N in the released configuration.</p>
-          <div class="metrics"><span class="pill">UR30</span><span class="pill">NI cDAQ</span><span class="pill">MATLAB GUI</span><span class="pill">250–3,000 N</span></div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <div class="tag">UAV Systems</div>
-          <h3>Forest-Fire Detection UAV</h3>
-          <p>Integrated UAV structure, a 3D-printed battery enclosure, and thermal/optical sensor payloads; executed waypoint flight tests to verify airframe stability and payload function.</p>
-          <div class="metrics"><span class="pill">Sensor integration</span><span class="pill">Flight test</span><span class="pill">3D printing</span><span class="pill">UAS operations</span></div>
-        </div>
-      </article>
-    </div>
+<article class="card">
+  <a href="assets/vfs-power-architecture.png" target="_blank" rel="noopener" aria-label="Open the tiltrotor power architecture image">
+    <img src="assets/vfs-power-architecture.png" alt="Erodius conceptual hybrid-electric tiltrotor power architecture">
+  </a>
+  <div class="card-body">
+    <div class="tag">Aircraft Electrification</div>
+    <h3>Hybrid-Electric Tiltrotor</h3>
+    <p class="project-meta">Georgia Tech · Deputy Team Lead → Propulsion Lead · Aug 2025–Jun 2026</p>
+    <p>Led and performed most of the propulsion work: developed the hybrid-electric power architecture, built MATLAB mission-energy models for hover, conversion, and cruise, and assessed turbogenerator/battery power allocation. Coordinated propulsion interfaces with aerodynamics and structures.</p>
+    <p class="result"><strong>Team result:</strong> 2nd place, undergraduate division, international 43rd VFS Student Design Competition.</p>
+    <div class="metrics">
+<span class="pill">Power architecture</span><span class="pill">Mission-energy modeling</span><span class="pill">Component trades</span>
+</div>
+    <details><summary>Design scope</summary><p>Conceptual aircraft design, component trade studies, and requirements/feasibility review. MATLAB models and XV-15 performance data supported the design comparisons; the work described here was a design study.</p></details>
   </div>
+</article>
+
+<article class="card">
+  <div class="card-body">
+    <div class="tag">Test Automation and Instrumentation</div>
+    <h3>Automated Modal-Impact Testing</h3>
+    <p class="project-meta">Moore Dynamics and Analytics Lab · Undergraduate Researcher · Oct 2024–May 2026</p>
+    <p>Developed a MATLAB GUI integrating Arduino-controlled impact actuation, NI cDAQ force/acceleration acquisition, calibration, visualization, and data logging. Diagnosed driver-mismatch and MATLAB global-variable faults, and designed SolidWorks test fixtures and camera mounts.</p>
+    <p>Implemented camera-pattern recognition and target-coordinate calculation. Final UR30 positioning used the controller or teach pendant.</p>
+    <div class="metrics">
+<span class="pill">MATLAB GUI</span><span class="pill">Arduino / AccelStepper</span><span class="pill">NI cDAQ</span><span class="pill">UR30 positioning</span>
+</div>
+    <details><summary>Robot scope and test configurations</summary><p>The hammer/DAQ/GUI test workflow was implemented. The final connection from calculated target coordinates to GUI-controlled UR30 motion remained incomplete. Tests covered approximately 250–1,500 N in the coupled configuration and 3,000 N in the released configuration.</p>
+<p>Prototype fabrication included Formlabs SLA printing with changes to print orientation, supports, and resin settings.</p></details>
+  </div>
+</article>
+
+<article class="card">
+  <a href="assets/cube-hardware-schematic.png" target="_blank" rel="noopener" aria-label="Open the CubeSat prototype schematic">
+    <img src="assets/cube-hardware-schematic.png" alt="Circuit schematic and hardware for the single-axis reaction-wheel bench prototype">
+  </a>
+  <div class="card-body">
+    <div class="tag">Controls and Bench Validation</div>
+    <h3>CubeSat Reaction-Wheel Heading Control</h3>
+    <p class="project-meta">Georgia Tech · AE 4610 course project · Spring 2026</p>
+    <p>Designed and experimentally validated a single-axis BLDC reaction-wheel heading-control system using velocity-feedback PI-II control. Created the KiCad circuit schematic, selected components, and integrated and troubleshot Arduino/IMU/ESC/BLDC hardware. Contributed across modeling, testing, analysis, and documentation.</p>
+    <p class="result"><strong>Project recognition:</strong> #1 in class; Top 5 capstone recognition.</p>
+    <p class="metric-label">Team prototype results · Short-duration bench tests</p>
+    <div class="metrics">
+<span class="pill">2.7 s rise</span><span class="pill">5.9 s settling</span><span class="pill">&lt;8.24% overshoot</span><span class="pill">±2.8° heading error</span>
+</div>
+    <details><summary>Model and validation targets</summary>
+      <a href="assets/cube-simulink.png" target="_blank" rel="noopener"><img src="assets/cube-simulink.png" alt="Team Simulink model of the single-axis reaction-wheel control system"></a>
+      <table class="test-results">
+<thead><tr>
+<th>Measure</th>
+<th>Target</th>
+<th>Team result</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Rise time</td>
+<td>≤5 s</td>
+<td>2.7 s</td>
+</tr>
+<tr>
+<td>Settling time</td>
+<td>≤10 s</td>
+<td>5.9 s</td>
+</tr>
+<tr>
+<td>Overshoot</td>
+<td>&lt;25%</td>
+<td>&lt;8.24%</td>
+</tr>
+<tr>
+<td>Heading error</td>
+<td>Within ±5°</td>
+<td>±2.8°</td>
+</tr>
+</tbody>
+</table>
+      <p>The suspended 1-DOF prototype met these targets over the short experimental interval. IMU angular-rate integration introduced drift that limited long-duration measurements.</p>
+    </details>
+  </div>
+</article>
+
+<article class="card">
+  <a href="assets/battery-test-setup.png" target="_blank" rel="noopener" aria-label="Open the battery test setup image">
+    <img src="assets/battery-test-setup.png" alt="Published Li-polymer battery cycling and internal-resistance measurement setup">
+  </a>
+  <div class="card-body">
+    <div class="tag">Battery Testing and Data Analysis</div>
+    <h3>Li-Polymer Battery Cycle-Life Testing</h3>
+    <p class="project-meta">VLRCOE, Georgia Tech · Undergraduate Researcher / Test Operator · Jan–May 2025</p>
+    <p>Performed battery-pack cycling using a published charge/discharge protocol, collected pre/post-discharge internal-resistance measurements, and maintained test records. Reviewed capacity data and subsequently analyzed internal-resistance results in Excel.</p>
+    <p class="result"><strong>Program context:</strong> The eight-pack longitudinal study had accumulated roughly 4,700 combined cycles at the interim-report stage.</p>
+    <div class="metrics">
+<span class="pill">Published protocol</span><span class="pill">Resistance measurement</span><span class="pill">Excel analysis</span>
+</div>
+    <details><summary>Protocol and apparatus</summary><p>The study used 6S Li-polymer packs, charging at no more than 1C, cooling to ambient temperature, resistance measurements before and after discharge, and 750 W constant-power discharge. The apparatus used West Mountain Radio battery-analysis equipment and LabJack T7-Pro logging.</p></details>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-body">
+    <div class="tag">UAV Integration and Flight Operations</div>
+    <h3>Forest-Fire Detection UAV</h3>
+    <p class="project-meta">Pilot and System Designer · Aug 2024–Dec 2025</p>
+    <p>Integrated UAV structure, a 3D-printed battery enclosure, and thermal/optical sensor payloads. Performed pre-programmed waypoint flight tests to verify airframe stability and payload function.</p>
+    <div class="metrics">
+<span class="pill">Sensor integration</span><span class="pill">Waypoint flight testing</span><span class="pill">3D printing</span><span class="pill">UAS operations</span>
+</div>
+  </div>
+</article>
+
+<article class="card">
+  <div class="card-body">
+    <div class="tag">Graduate Systems Analysis</div>
+    <h3>Atlanta UAM Integration and Simulation Design</h3>
+    <p class="project-meta">Georgia Tech · AE 8803 Smart City Workshop · Fall 2026</p>
+    <p>Analyzed aircraft and vertiport compatibility and designed a four-site, 48-case hybrid simulation design of experiments, combining matched anchors, D-optimal augmentation, and independent nominal/stress holdouts.</p>
+    <p>Presented the team’s UAM integration concept at Aerotropolis headquarters in September 2026.</p>
+    <div class="metrics">
+<span class="pill">Simulation DoE</span><span class="pill">48 designed cases</span><span class="pill">Infrastructure feasibility</span>
+</div>
+    <details><summary>Completed design deliverables</summary><p>Prepared the run matrix, methodological explanation, and handoff/analysis plan. The 48 cases describe the simulation experiment design; production runs and validated transport outcomes are separate milestones.</p></details>
+  </div>
+</article>
+</div>
+</div>
 </section>
 
 <section id="skills">
   <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">Capabilities</div><h2>Tools & technical foundation</h2></div></div>
+    <div class="section-head"><div>
+<div class="eyebrow">Capabilities</div>
+<h2>Tools &amp; technical foundation</h2>
+</div></div>
     <div class="skills">
-      <div class="skillbox"><h3>Electronics & bench work</h3><p>Oscilloscope · digital multimeter · bench power supply · function generator · circuit debugging · bench testing</p></div>
-      <div class="skillbox"><h3>Integration & instrumentation</h3><p>Sensor/DAQ integration · NI cDAQ · Arduino · verification & validation · test automation</p></div>
-      <div class="skillbox"><h3>Design & analysis</h3><p>KiCad (schematic capture) · MATLAB/Simulink · SolidWorks · 3D printing · Python (coursework)</p></div>
-    </div>
-  </div>
+<div class="skillbox">
+<h3>Electronics and bench testing</h3>
+<p>Oscilloscope · Digital multimeter · Bench power supply · Function generator · Circuit debugging · Prototype validation</p>
+</div>
+<div class="skillbox">
+<h3>Integration and instrumentation</h3>
+<p>NI cDAQ · Force/acceleration sensing · Arduino/AccelStepper · MATLAB test automation · Sensor integration · UR30 teach-pendant positioning</p>
+</div>
+<div class="skillbox">
+<h3>Design and engineering analysis</h3>
+<p>MATLAB/Simulink · Excel · KiCad schematic capture · SolidWorks · Fixture design · Formlabs SLA printing · Python coursework</p>
+</div>
+</div>
+</div>
 </section>
 
 <section id="about">
   <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">About</div><h2>Beyond the project list</h2></div></div>
+    <div class="section-head"><div>
+<div class="eyebrow">About</div>
+<h2>Beyond the project list</h2>
+</div></div>
     <div class="about">
-      <div class="about-box">
-        <p>I’m interested in roles where electrical hardware, test, systems integration, and aircraft operations meet. My background spans electric and hybrid-electric aviation, autonomous UAV systems, controls hardware, battery testing, and technical leadership.</p>
-        <p>I also served in the Republic of Korea Defense Intelligence Command, where I led an 11-person squad and worked as a command interpreter during the 2021 U.S.–ROK CCPT exercise.</p>
-      </div>
-      <div class="about-box">
-        <p class="small">Outside engineering</p>
-        <p class="interests">Travel (90 countries) · Scuba diving · Baseball · Travel writing</p>
-        <p>These interests keep me curious about systems, people, and places well outside a single technical domain.</p>
-      </div>
-    </div>
-  </div>
+<div class="about-box">
+  <p>I’m interested in engineering roles that combine hardware integration, instrumentation, test, and energy systems. My experience spans laboratory automation, controls prototypes, battery-pack testing, and conceptual aircraft propulsion design.</p>
+  <p>During my service in the Republic of Korea Defense Intelligence Command, I led an 11-person squad and served as one of four command interpreters during the 2021 U.S.–ROK combined exercise.</p>
+  <p><strong>UAV credentials:</strong> FAA Part 107 · EASA Open Category A1/A3 · ROK UAV pilot qualification, with 20+ logged UAV flight hours.</p>
+</div>
+<div class="about-box">
+  <p class="small">Outside engineering</p>
+  <p class="interests">Travel (90 countries) · Scuba diving · Baseball · Travel writing</p>
+</div>
+</div>
+</div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <strong>Chaehyun Lim</strong><br />
+    <strong>Chaehyun Lim</strong><br>
     <span>Atlanta, GA · <a href="mailto:clim70@gatech.edu">clim70@gatech.edu</a> · <a href="https://www.linkedin.com/in/lim-chaehyun" target="_blank" rel="noopener">LinkedIn</a></span>
     <p class="small">Project images are excerpts from Georgia Tech team/research reports and are shown to provide technical context for the work described above.</p>
   </div>
