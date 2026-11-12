@@ -18,6 +18,11 @@ class TravelSyncTests(unittest.TestCase):
   self.assertGreaterEqual(len(data['geometry']['features']),len(self.baseline['geometry']['features']))
   self.assertEqual(data['country_basis'],194)
   self.assertIn('Bus',data['transport_modes'])
+  verified={('place-0043',2024,'2024-02'),('place-0071',2025,'2025-10'),('place-0066',2025,'2025-12'),('place-0178',2026,'2026-05'),('place-0032',2026,'2026-06')}
+  actual={(v['place_id'],v['year'],m) for v in data['visits'] for m in v['months']}
+  self.assertTrue(verified.issubset(actual))
+  self.assertFalse(any(p['country_iso2']=='HN' for p in data['places']))
+  self.assertEqual(sum(f['count_status']=='recorded_flown' for f in data['flights']),277)
   rs=[f for f in data['geometry']['features'] if f['properties']['kind']=='surface_route']
   self.assertEqual(len(rs),len([f for f in self.baseline['geometry']['features'] if f['properties']['kind']=='surface_route'])+1)
   self.assertTrue(any(f['properties']['from_name']=='Moscow' and f['properties']['to_name']=='Irkutsk' for f in rs))

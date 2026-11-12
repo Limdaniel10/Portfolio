@@ -25,3 +25,12 @@
 - Country code GB and MD duplicate category variants are present in the original archived country data and intentionally preserved.
 - The surface route CSV now has 143 schematic legs, one more than the previous baseline because Moscow was confirmed as an intermediate train stop.
 - The only non-rendered flown flight geometry is ATH → ATH, as its endpoints coincide.
+
+## Additional author verification — 2026-11-12 (follow-up)
+- Checked all 278 Flights.csv rows for NAP: only flight-0064 BCN → NAP (recorded_flown) and flight-0065 NAP → GVA (cancelled). Author reports rebooking and flying NAP → GVA, but the other actual flown segment is not independently recorded. Changing status alone would raise flown count from confirmed 277 to 278. Keep flight-0065 unchanged pending reconciliation; do not invent or delete a flight.
+- Added existing-city visits: 2024-02 Brussels (Belgium stay window), 2025-10 Copenhagen (month only; did not assume both October visits were in the city), 2025-12 Antigua (Guatemala stay window), 2026-05 Tallinn (Estonia stay window), 2026-06 Beijing (China stay window). All use existing place coordinates; a country-stay window is not a claim of exact city entry/exit dates.
+- Author confirmed transit only, no city additions: Honduras 2026-04-30 (border transit), Panama 2022-12-30, Chile 2025-01-02 (SCL airport transit), Finland 2026-05-26 (HEL airport transit).
+- Author confirmed a visited city existed, but supplied no city name: Japan 2011 and Peru 2025; no new city or date added. Peru has pre-existing visit records spanning 2024-12 through 2025-01 under year 2024; do not multiply those visits without identifying the 2025 city.
+- France 2026-05-23 to 2026-05-25: answer 'ㅍ' insufficient to establish a city, retained as unresolved.
+- September/October 2025 Denmark dates span two stay records, but Copenhagen was only confirmed in October, not assigned to a specific stay.
+- Source-of-truth: GitHub CSV, unless Google Sheet sync is configured later, in which case these author-confirmed rows must be entered in the live sheet too.
