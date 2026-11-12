@@ -65,6 +65,8 @@ jobs:
           fi
       - name: Build all pages and live visited-country homepage map
         run: python scripts/build_site.py --base /Portfolio/
+      - name: Render monochrome one-page resume PDF
+        run: python scripts/build_resume.py --out _site/assets/resume.pdf
       - name: Test Markdown auto-generation and source data checks
         run: |
           python writing_source/tests/test_build.py

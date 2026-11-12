@@ -6,3 +6,16 @@
 .timeline-item{display:grid;grid-template-columns:175px minmax(0,1fr);gap:20px;padding:24px 10px;border-bottom:1px solid var(--line)}.date{font-size:11px;color:var(--accent);letter-spacing:.04em;padding-top:5px}.timeline-item h3{font:400 22px/1.3 var(--serif);letter-spacing:-.03em;margin:0 0 7px}.timeline-item p{color:var(--muted);font-size:12px;line-height:1.75;margin:0}.status{font:400 12px var(--sans);color:var(--accent)}.skills{border-bottom:1px solid var(--line);padding:22px 10px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:25px;font-size:13px;line-height:1.65}.skills div:first-child{font-weight:700;color:var(--accent);font-size:11px}.contact{padding-bottom:0}.contact p{font-size:13px;color:var(--muted);line-height:1.8}.contact .links{margin-top:18px}
 @media(max-width:900px){.career-page .hero{gap:30px}.career-art{height:330px;padding:22px}.logos{gap:11px}}
 @media(max-width:680px){.career-page .hero{grid-template-columns:1fr;padding:51px 0 60px;gap:32px}.career-page .hero h1{font-size:clamp(63px,14vw,90px)}.career-art{height:225px}.career-art p{font-size:22px}.affiliations{padding-bottom:55px}.logos{grid-template-columns:1fr}.logo-card{min-height:109px}.section{padding-bottom:55px}.section-head{align-items:flex-start}.section-head span{max-width:140px;font-size:9px}.project summary{grid-template-columns:30px 1fr 18px;gap:10px;padding:23px 4px}.project h3{font-size:21px}.detail{margin-left:44px;font-size:12px}.timeline-item{grid-template-columns:1fr;gap:7px;padding:19px 4px}.skills{grid-template-columns:1fr;gap:5px}.section h2{font-size:clamp(27px,8vw,36px)}}
+
+/* Genuine institutional logos with clean horizontal alignment. */
+.logo-card{min-height:215px;gap:11px;padding:20px 16px 19px;justify-content:center}
+.logo-card .logo-art{height:92px;width:100%;display:flex;align-items:center;justify-content:center}
+.logo-card .logo-art img{display:block;max-width:86%;max-height:88px;width:auto;height:auto;object-fit:contain}
+.logo-card .logo-art img[data-logo="tsmc"]{max-width:160px;max-height:63px}
+.logo-card .logo-art img[data-logo="gt"]{max-width:180px;max-height:76px}
+.logo-card .logo-art img[data-logo="hafs"]{max-width:89px;max-height:89px}
+.logo-card .logo-art img[hidden]{display:none}
+.logo-card .logo-art .fallback-logo{font:600 18px/1.2 var(--sans);letter-spacing:.03em;color:var(--ink);text-align:center}
+.logo-card .logo-name{font-size:12px;font-weight:650;text-align:center;line-height:1.4}
+.logo-card small{font-size:10px;line-height:1.6}
+@media(max-width:680px){.logo-card{min-height:190px}.logo-card .logo-art{height:78px}}
