@@ -65,7 +65,7 @@ def build(root=ROOT,base='/Portfolio/',out=None):
  for item in all_entries:
   if item['status']=='missing':continue
   p=site/item['path'];p.mkdir(parents=True,exist_ok=True)
-  book=books.get(item['collection_id']);siblings=book['chapters'] if book else sorted([e for e in all_entries if e['category']==item['category'] and not e['collection_id']],key=lambda e:(e['date'],e['title']))
+  book=books.get(item['collection_id']);siblings=[c for c in book['chapters'] if c['status']!='missing'] if book else sorted([e for e in all_entries if e['category']==item['category'] and not e['collection_id']],key=lambda e:(e['date'],e['title']))
   ix=siblings.index(item);prev=siblings[ix-1] if ix else None;nxt=siblings[ix+1] if ix+1<len(siblings) else None
   crumbs=f'<a href="{base}writing/">Writing</a><span>/</span><a href="{base}writing/{"fiction" if book and book["category"]=="fiction" else "collections" if book else item["category"]}/">{esc(book["title"] if book else item["category"].title())}</a>'
   content=MD.render(item['body']) if item['has_body'] else '<p class="empty-note">This chapter is available on Brunch in Korean.</p>' if item['brunch_url'] else '<p class="empty-note">This chapter is not yet available here.</p>'
