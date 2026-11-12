@@ -15,7 +15,7 @@ const NOTION_BY_YEAR = Object.freeze({
 });
 let years = [];
 let bookLookup = new Map();
-let activeYear, activeMonth, showAllBooks = false;
+let activeYear, activeMonth, showAllBooks = false, chartMetric = "books";
 
 function groupArchive(books, monthlyPages) {
   if (!Array.isArray(books) || !Array.isArray(monthlyPages)) {
@@ -58,7 +58,7 @@ function groupArchive(books, monthlyPages) {
 }
 
 function drawBars() {
-  const max = Math.max(1, ...years.map(y => y.books));
+  const max = Math.max(1, ...years.map(y => y[chartMetric]));
   $("#bars").replaceChildren(...years.map(y => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -68,9 +68,9 @@ function drawBars() {
     const label = document.createElement("span"); label.className = "yearlabel"; label.textContent = y.year;
     const track = document.createElement("span"); track.className = "track";
     const fill = document.createElement("span"); fill.className = "fill";
-    fill.style.width = (100 * y.books / max) + "%";
+    fill.style.width = (100 * y[chartMetric] / max) + "%";
     track.append(fill);
-    const qty = document.createElement("span"); qty.className = "qty"; qty.textContent = fmt(y.books);
+    const qty = document.createElement("span"); qty.className = "qty"; qty.textContent = fmt(y[chartMetric]);
     btn.append(label, track, qty);
     btn.onclick = () => {
       activeYear = y.year;
@@ -95,7 +95,7 @@ function draw() {
     btn.setAttribute("aria-pressed", String(m.month === activeMonth));
     const heading = document.createElement("small"); heading.textContent = MONTHS[m.month - 1].slice(0, 3);
     const count = document.createElement("b"); count.textContent = fmt(m.books) + " " + bookUnit(m.books);
-    btn.append(heading, count);
+    const pages = document.createElement("em"); pages.className="month-pages"; pages.textContent=fmt(m.pages)+" pages"; btn.append(heading, count, pages);
     btn.onclick = () => { activeMonth = m.month; showAllBooks = false; drawMonth(); };
     return btn;
   }));
@@ -155,6 +155,7 @@ function drawMonth() {
 }
 
 $("#showmore").onclick = () => { showAllBooks = !showAllBooks; drawBookList(); };
+for (const metric of ["books","pages"]) { const button = $(metric === "books" ? "#metricBooks" : "#metricPages"); button.onclick=()=> {chartMetric=metric; $("#metricBooks").classList.toggle("active",metric==="books");$("#metricPages").classList.toggle("active",metric==="pages");$("#metricBooks").setAttribute("aria-pressed",String(metric==="books"));$("#metricPages").setAttribute("aria-pressed",String(metric==="pages"));drawBars();}; }
 
 async function initialize() {
   try {

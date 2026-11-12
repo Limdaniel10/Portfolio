@@ -246,3 +246,9 @@
 
 /* Portfolio refinement: keep all four archive cards aligned with hero/nav. */
 .shell.portal-grid {margin-left:auto;margin-right:auto;}
+
+/* Keep the four cards inside the same real centered wrapper as the hero. */
+.portal-section{width:min(1152px,calc(100% - 96px));margin-inline:auto}
+.portal-section>.portal-grid{width:100%;margin:0 0 88px;box-sizing:border-box}
+@media(max-width:960px){.portal-section{width:calc(100% - 62px)}}
+@media(max-width:680px){.portal-section{width:calc(100% - 38px)}.portal-section>.portal-grid{margin-bottom:55px}}

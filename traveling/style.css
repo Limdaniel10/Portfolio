@@ -18,3 +18,9 @@ header.shell nav a[aria-current="page"]{color:#126093;font-weight:750}
 .list-scope button.active{background:#28649c;color:#fff}
 .list-scope button:disabled{opacity:.43;cursor:not-allowed}
 @media(max-width:600px){.foldbody .listtools{align-items:stretch}.list-scope{width:fit-content;max-width:100%}.list-scope button{padding:8px 10px}}
+
+/* Consistent editorial navigation across all six pages. */
+@media(min-width:681px){.shell{width:min(1152px,calc(100% - 96px))}}
+header{height:76px}
+header nav a{padding-bottom:5px}
+header nav a[aria-current="page"]{color:var(--ink);font-weight:700;border-bottom:1px solid var(--blue)}

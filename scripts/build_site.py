@@ -44,9 +44,9 @@ def make_map(data,world):
    cur.append((x,y));last=(x,y)
   if len(cur)>2:segments.append(cur)
   return ' '.join('M'+' L'.join(f'{x:.1f},{y:.1f}' for x,y in segment)+' Z' for segment in segments)
- svg=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-label="Countries visited highlighted in aqua">',
-      '<style>path{stroke:#50717e;stroke-width:.58;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}</style>',
-      '<g fill="none" stroke="#354d5c" stroke-width=".55" opacity=".3">',
+ svg=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-label="Countries visited highlighted in soft blue">',
+      '<style>path{stroke:#93a7a9;stroke-width:.58;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}</style>',
+      '<g fill="none" stroke="#b4c7c9" stroke-width=".55" opacity=".3">',
       ''.join(f'<path d="M0 {i}H1000"/>' for i in (125,250,375)),
       '</g>']
  from html import escape
@@ -58,7 +58,7 @@ def make_map(data,world):
   polys=[coords] if geom.get('type')=='Polygon' else coords if geom.get('type')=='MultiPolygon' else []
   d=' '.join(ringpath(r) for poly in polys for r in poly if len(r)>=3)
   if not d:continue
-  color= '#91d3d9' if fid in highlighted else '#547c89' if fid in secondary else '#293f4c'
+  color= '#82b9bc' if fid in highlighted else '#acc8c7' if fid in secondary else '#dce5e3'
   name=escape(str(feature.get('properties',{}).get('name',fid)))
   svg.append(f'<path fill="{color}" d="{d}"><title>{name}</title></path>')
  # Microstates/small islands absent from the low-resolution map receive markers
@@ -71,7 +71,7 @@ def make_map(data,world):
   if not candidates:continue
   x,y=project([candidates[0]['longitude'],candidates[0]['latitude']])
   name=escape(str(c.get('name','small country')))
-  svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.1" fill="#91d3d9" stroke="#f3fafb" stroke-width=".85"><title>{name}</title></circle>')
+  svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.1" fill="#82b9bc" stroke="#f3fafb" stroke-width=".85"><title>{name}</title></circle>')
  svg.append('</svg>')
  return '\n'.join(svg)+'\n' 
 
