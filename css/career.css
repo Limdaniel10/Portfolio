@@ -8,3 +8,31 @@
 @media(max-width:650px){.section-head{gap:8px}.section-head h2{font-size:clamp(20px,5vw,29px)}.section-head span{font-size:9px;letter-spacing:.025em}}
 @media(max-width:390px){.section-head h2{font-size:19px}.section-head span{font-size:8px}}
 
+
+
+/* Portfolio refinement: forest-green Career palette (2026-11-12). */
+:root {
+  --bg:#0b211a;
+  --fg:#eff9f1;
+  --muted:#aac5b5;
+  --line:#315448;
+  --soft:#c4dfd0;
+  --accent:#87d2aa;
+}
+body{background:radial-gradient(ellipse 66% 35% at 82% 9%,rgba(33,110,74,.22),transparent 75%),#0b211a;color:var(--fg)}
+header,footer{border-color:var(--line)}
+.brand{color:#d4f0dc}
+nav .active,nav a:hover{color:#8fe2b5}
+.hero .eyebrow,.kicker,.num,.date{color:#8acaa6}
+.hero h1{color:#f2fff4}
+.hero .intro,.detail{color:#d5e8db}
+.hero .links a{border-bottom-color:#78b99b}
+.hero .links a:hover{border-bottom-color:#d1f8df;color:#d1f8df}
+.logo-card{background:#112e22;border-color:#315448}
+.logo-card small,.timeline-item p{color:#adc8b6}
+.section-head{border-color:#557667}
+.project,.timeline-item,.skills,.affiliations{border-color:var(--line)}
+.project summary:hover h3{color:#b4f0cc}
+.project .meta,.plus,.skills div:first-child{color:#aac5b5}
+.detail .tools,.status{color:#97d6b2}
+footer{color:#abc5b2}

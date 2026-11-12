@@ -88,3 +88,35 @@ body.about-page .identity p{display:none}
 @media (max-width:520px){body.about-page .identities{display:flex;flex-direction:column;gap:0}
 body.about-page .identity{padding:22px 0}
 body.about-page .identity h3{font-size:30px}}
+
+
+/* Portfolio refinement: burnt-orange About palette (2026-11-12). */
+body.about-page {
+  --bg:#21160f;
+  --fg:#fff4e7;
+  --muted:#d5b9a1;
+  --line:#604633;
+  --about-accent:#f0a566;
+  background:radial-gradient(ellipse 70% 38% at 90% 8%,rgba(176,94,39,.19),transparent 75%),#21160f;
+  color:var(--fg);
+}
+body.about-page header{background:rgba(32,20,12,.76);border-color:var(--line)}
+body.about-page .brand,body.about-page .hero h1{color:#fff4e7}
+body.about-page .eyebrow,body.about-page .kicker,body.about-page .portrait-note,body.about-page .now .label{color:var(--about-accent)}
+body.about-page .links{color:#dec3ad}
+body.about-page .links a[aria-current]{color:var(--about-accent)}
+body.about-page .hero .lead,body.about-page .now p,body.about-page .section .copy{color:#dec9b8}
+body.about-page .portrait{background:linear-gradient(145deg,#5b3622,#29190f 70%);border-color:#82543a}
+body.about-page .portrait .placeholder{color:#dfad83}
+body.about-page .stat{border-color:#76533b}
+body.about-page .stat strong{color:#f0b17b}
+body.about-page .stat span{color:#dabba2}
+body.about-page .section,body.about-page .accordion,body.about-page .accordion:last-child,
+body.about-page .identity,body.about-page .identity:last-child,
+body.about-page .timeline,body.about-page .now article{border-color:var(--line)}
+body.about-page .identity:hover,body.about-page .identity:focus-visible{background:#3d271a;color:#fff4e7}
+body.about-page .identity:focus-visible{box-shadow:0 0 0 2px var(--about-accent)}
+body.about-page summary::after{color:var(--about-accent)}
+body.about-page details .panel{color:#ddc3ae}
+body.about-page .timeline b{color:#fff0e1}
+body.about-page footer{color:#c6a68c}

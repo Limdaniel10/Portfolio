@@ -9,3 +9,12 @@
 header.shell nav{display:flex;align-items:center;gap:clamp(9px,1.4vw,22px);flex-wrap:wrap}
 header.shell nav a[aria-current="page"]{color:#126093;font-weight:750}
 @media(max-width:750px){header.shell{flex-wrap:wrap;gap:14px;padding-top:18px;padding-bottom:18px}header.shell nav{width:100%;gap:12px 17px}}
+
+
+/* Portfolio refinement: explicit country directory scope controls. */
+.foldbody .listtools{justify-content:space-between;flex-wrap:wrap;gap:14px;padding-bottom:7px}
+.list-scope{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid #c1d3e2;background:#e8f0f7}
+.list-scope button{padding:8px 12px;border:0;background:transparent;color:#587992;font-size:10px;white-space:nowrap}
+.list-scope button.active{background:#28649c;color:#fff}
+.list-scope button:disabled{opacity:.43;cursor:not-allowed}
+@media(max-width:600px){.foldbody .listtools{align-items:stretch}.list-scope{width:fit-content;max-width:100%}.list-scope button{padding:8px 10px}}
