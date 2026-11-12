@@ -21,6 +21,12 @@ class TravelSyncTests(unittest.TestCase):
   rs=[f for f in data['geometry']['features'] if f['properties']['kind']=='surface_route']
   self.assertEqual(len(rs),len([f for f in self.baseline['geometry']['features'] if f['properties']['kind']=='surface_route'])+1)
   self.assertTrue(any(f['properties']['from_name']=='Moscow' and f['properties']['to_name']=='Irkutsk' for f in rs))
+  legs={f['properties']['id']:f['properties'] for f in rs}
+  self.assertEqual([(legs[f'route-086-leg-0{i}']['from_name'],legs[f'route-086-leg-0{i}']['to_name']) for i in (1,2,3)], [('St Petersburg','Moscow'),('Moscow','Irkutsk'),('Irkutsk','Vladivostok')])
+  self.assertEqual(legs['route-086-leg-03']['months'],['2026-06'])
+  self.assertEqual(legs['route-087-leg-01']['mode'],'Bus')
+  self.assertEqual(legs['route-087-leg-02']['mode'],'Bus')
+  self.assertEqual(sum(f['count_status']=='recorded_flown' for f in data['flights']),277)
   self.assertEqual(len(data['places']),282)
   self.assertEqual(len(data['domestic_places']),69)
  def test_add_place_visit_flight_and_route(self):
