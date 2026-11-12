@@ -135,7 +135,7 @@ Sheets를 연결하지 않으면 `traveling/sheets/*.csv` 파일을 수정하고
 
 - About Me: `about/index.html`, `css/about.css`
 - Career: `career/index.html`, `css/career.css`, `js/career.js`
-- 이력서 교체: `assets/resume.pdf` 파일을 같은 이름으로 교체
+- 이력서 내용 및 형식 수정: `scripts/build_resume.py`에서 편집합니다. GitHub Actions가 배포 시 `_site/assets/resume.pdf`를 새로 생성하므로, 저장소의 기존 `assets/resume.pdf`를 직접 교체해도 배포본에 반영되지 않습니다. Career의 Resume 링크는 브라우저 새 탭에서 PDF를 엽니다.
 - 홈 문구·카드: `index.html`, `css/home.css`, `js/home.js`
 - Career의 TSMC/Georgia Tech/HAFS 로고 이미지는 원본처럼 외부 URL을 참조하며, 로딩 실패 시 텍스트 대체 로고를 표시합니다.
 - About Me의 인물 사진은 원본 ZIP부터 **Portrait 자리표시자**였으므로 실제 사진을 추가하려면 직접 넣어야 합니다.
