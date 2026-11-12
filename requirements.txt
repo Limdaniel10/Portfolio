@@ -5,3 +5,4 @@ markdown-it-py==3.0.0
 beautifulsoup4==4.13.4
 pycountry>=24.6,<30
 reportlab>=4.2,<5
+Pillow>=11.0,<13

@@ -75,6 +75,24 @@ def make_map(data,world):
  svg.append('</svg>')
  return '\n'.join(svg)+'\n' 
 
+def make_social_card(output):
+ from PIL import Image,ImageDraw,ImageFont
+ im=Image.new('RGB',(1200,630),'#f8f5ef'); dr=ImageDraw.Draw(im)
+ dr.rectangle((0,0,1200,12),fill='#8c715d')
+ dr.rectangle((65,82,120,88),fill='#8c715d')
+ def font(sz,serif=False):
+  f='/usr/share/fonts/truetype/dejavu/'+('DejaVuSerif.ttf' if serif else 'DejaVuSans.ttf')
+  try: return ImageFont.truetype(f,sz)
+  except OSError:return ImageFont.load_default()
+ dr.text((70,116),'CHAEHYUN LIM',font=font(85,True),fill='#30251f')
+ dr.text((73,251),'From nano to the unknown.',font=font(38,True),fill='#624735')
+ dr.line((70,376,1130,376),fill='#d9cec1',width=2)
+ for i,(n,c) in enumerate([('ABOUT','#b77a51'),('CAREER','#5b9072'),('TRAVEL','#6290b2'),('WRITING','#a4896c'),('READING','#967fa8')]):
+  x=75+218*i;dr.rectangle((x,416,x+188,514),fill=c)
+  dr.text((x+13,452),n,font=font(18),fill='#ffffff')
+ dr.text((75,562),'limdaniel10.github.io/Portfolio/',font=font(20),fill='#877b6f')
+ im.save(output/'assets/social-card.png',format='PNG',optimize=True)
+
 def build(base,output):
  if not base.startswith('/') or not base.endswith('/'):
   raise ValueError('base should look like /Portfolio/ or /')
@@ -99,6 +117,7 @@ def build(base,output):
    if p.is_dir():shutil.copytree(p,q)
    else:shutil.copy2(p,q)
  shutil.copytree(temp/'writing',output/'writing')
+ make_social_card(output)
  shutil.rmtree(temp)
  travel=parse_js_object(ROOT/'traveling/assets/data.js','TRAVEL')
  world=parse_js_object(ROOT/'traveling/assets/world.js','WORLD')

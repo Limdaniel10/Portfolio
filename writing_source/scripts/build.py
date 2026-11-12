@@ -29,7 +29,7 @@ def make_page(title,body,base,style,nav='Writing'):
   if href=='#top':a['href']='#top'
   elif href.startswith('#'):a['href']=base+'writing/'+('' if href=='#writing' else href[1:]+'/')
   elif href.startswith('../'):a['href']=base+href[3:]
- return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f5ef"><title>{esc(title)} — Chaehyun Lim</title><link rel="stylesheet" href="{base}writing/assets/style.css"></head><body id="top">{h}<main>{body}</main>{f}</body></html>'''
+ return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f5ef"><title>{esc(title)} — Chaehyun Lim</title><link rel="stylesheet" href="{base}writing/assets/style.css"><link rel="icon" type="image/svg+xml" href="{base}assets/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="Korean original essays and travel narratives by Chaehyun Lim."><meta property="og:image" content="https://limdaniel10.github.io/Portfolio/assets/social-card.png"><meta name="twitter:card" content="summary_large_image"></head><body id="top">{h}<main>{body}</main>{f}</body></html>'''
 
 def build(root=ROOT,base='/Portfolio/',out=None):
  global ROOT;ROOT=Path(root).resolve()
