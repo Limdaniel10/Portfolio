@@ -22,7 +22,7 @@ class TravelSyncTests(unittest.TestCase):
   actual={(v['place_id'],v['year'],m) for v in data['visits'] for m in v['months']}
   self.assertTrue(verified.issubset(actual))
   self.assertFalse(any(p['country_iso2']=='HN' for p in data['places']))
-  self.assertEqual(sum(f['count_status']=='recorded_flown' for f in data['flights']),277)
+  self.assertEqual(sum(f['count_status']=='recorded_flown' for f in data['flights']),278)
   rs=[f for f in data['geometry']['features'] if f['properties']['kind']=='surface_route']
   self.assertEqual(len(rs),len([f for f in self.baseline['geometry']['features'] if f['properties']['kind']=='surface_route'])+1)
   self.assertTrue(any(f['properties']['from_name']=='Moscow' and f['properties']['to_name']=='Irkutsk' for f in rs))
@@ -31,9 +31,21 @@ class TravelSyncTests(unittest.TestCase):
   self.assertEqual(legs['route-086-leg-03']['months'],['2026-06'])
   self.assertEqual(legs['route-087-leg-01']['mode'],'Bus')
   self.assertEqual(legs['route-087-leg-02']['mode'],'Bus')
-  self.assertEqual(sum(f['count_status']=='recorded_flown' for f in data['flights']),277)
+  self.assertEqual(sum(f['count_status']=='recorded_flown' for f in data['flights']),278)
   self.assertEqual(len(data['places']),282)
   self.assertEqual(len(data['domestic_places']),69)
+  # Rebooking is a separate actual flown leg. Preserve the cancelled ticket.
+  self.assertTrue(any(f['origin']=='NAP' and f['destination']=='GVA' and f['count_status']=='cancelled' for f in data['flights']))
+  self.assertTrue(any(f['origin']=='NAP' and f['destination']=='ZRH' and f['count_status']=='recorded_flown' for f in data['flights']))
+  self.assertTrue(any(a['iata']=='ZRH' for a in data['airports']))
+  expected_jp=[('place-0006',2011,'2011-07'),('place-0006',2011,'2011-08')]
+  actual={(v['place_id'],v['year'],m) for v in data['visits'] for m in v['months']}
+  self.assertTrue(all(v in actual for v in expected_jp))
+  self.assertIn(('place-0021',2026,'2026-05'),actual)
+  # Original Peru/Bolivia visits and cross-border route remain unchanged.
+  route_names={(f['properties']['from_name'],f['properties']['to_name']) for f in data['geometry']['features'] if f['properties'].get('kind')=='surface_route'}
+  self.assertIn(('Cusco','Puno'),route_names)
+  self.assertIn(('Puno','Copacabana'),route_names)
  def test_add_place_visit_flight_and_route(self):
   tables=copy.deepcopy(self.tables)
   tables['places'].append(dict(id='place-new-test',name='New Test Place',type='city',latitude=34.0,longitude=-112.0,country_iso2='US',first_visit_year=2026,count_as_city_or_town=True))

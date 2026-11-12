@@ -5,7 +5,19 @@ const regionName=new Intl.DisplayNames(['en'],{type:'region'});const cname=iso=>
 const years=[...new Set([...D.visits.map(x=>x.year),...D.flights.map(x=>x.year)])].filter(Boolean).sort((a,b)=>a-b);
 const monthName=m=>new Date(2020,m-1,1).toLocaleString('en',{month:'long'});const byPlace=new Map();D.visits.forEach(v=>{if(!byPlace.has(v.place_id))byPlace.set(v.place_id,[]);byPlace.get(v.place_id).push(v)});
 const map=L.map('map',{minZoom:1,maxZoom:12,zoomSnap:.25,scrollWheelZoom:false,preferCanvas:true,worldCopyJump:true}).setView([20,10],1.5);L.geoJSON(WORLD,{style:{color:'#bdcfdc',weight:.65,fillColor:'#f4f8fb',fillOpacity:1},interactive:false}).addTo(map);map.attributionControl.setPrefix(false);map.attributionControl.addAttribution('GeoNames · OurAirports · Natural Earth · OSM contributors');const layers=L.layerGroup().addTo(map);const pinIndex=new Map();
-function match(y,ms=[],cum=cumulative){if(!year)return true;if(!y)return false;if(month){if(cum&&y<year)return true;const key=`${year}-${String(month).padStart(2,'0')}`;if(!ms.length)return false;return cum?ms[0]<=key:ms.includes(key)}return cum?y<=year:y===year}
+function match(y,ms=[],cum=cumulative){
+  if(!year)return true;
+  if(!y && !ms.length)return false;
+  // A trip starting in December may continue into January: use each recorded
+  // YYYY-MM month instead of requiring v.year to match the selected year.
+  if(month){
+    const key=`${year}-${String(month).padStart(2,'0')}`;
+    if(ms.length)return cum?ms.some(m=>m<=key):ms.includes(key);
+    return false;
+  }
+  if(cum)return y<=year || ms.some(m=>Number(m.slice(0,4))<=year);
+  return y===year || ms.some(m=>Number(m.slice(0,4))===year);
+}
 function current(y,ms=[]){return year?match(y,ms,false):true}
 function visiblePlaces(cum=cumulative){return D.places.filter(p=>!year||(byPlace.get(p.id)||[]).some(v=>match(v.year,v.months||[],cum))||(!month&&p.first_visit_year&&(cum?p.first_visit_year<=year:p.first_visit_year===year)))}
 function select(y,m=null){year=y;month=m;tab='abroad';if($('#korea').open){$('#korea').open=false;$('#abroad').open=true;}$('#abroadBody').append($('#placeExplorer'));renderTimeline();render();}
