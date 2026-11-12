@@ -1,0 +1,150 @@
+﻿id,iata,name,municipality,country_iso2,latitude,longitude,source,type
+airport-AEP,AEP,Aeroparque Jorge Newbery,Buenos Aires,AR,-34.559419,-58.415536,https://ourairports.com/airports/SABE/,airport
+airport-ATH,ATH,Athens Eleftherios Venizelos International Airport,Spata-Artemida,GR,37.936401,23.9445,https://ourairports.com/airports/LGAV/,airport
+airport-ATL,ATL,Hartsfield Jackson Atlanta International Airport,Atlanta,US,33.6367,-84.428101,https://ourairports.com/airports/KATL/,airport
+airport-AUH,AUH,Zayed International Airport,Abu Dhabi,AE,24.440966,54.649237,https://ourairports.com/airports/OMAA/,airport
+airport-AXT,AXT,Akita Airport,Akita,JP,39.615601,140.218994,https://ourairports.com/airports/RJSK/,airport
+airport-BCN,BCN,Josep Tarradellas Barcelona-El Prat Airport,Barcelona,ES,41.2971,2.07846,https://ourairports.com/airports/LEBL/,airport
+airport-BEG,BEG,Belgrade Nikola Tesla Airport,Belgrade,RS,44.818401,20.309099,https://ourairports.com/airports/LYBE/,airport
+airport-BEL,BEL,Val de Cans/Júlio Cezar Ribeiro International Airport,Belém,BR,-1.379279,-48.476207,https://ourairports.com/airports/SBBE/,airport
+airport-BFS,BFS,Belfast International Airport,Belfast,GB,54.6575012207,-6.2158298492399995,https://ourairports.com/airports/EGAA/,airport
+airport-BGI,BGI,Grantley Adams International Airport,Bridgetown,BB,13.074667,-59.491034,https://ourairports.com/airports/TBPB/,airport
+airport-BGY,BGY,Il Caravaggio International Airport,Orio al Serio (BG),IT,45.669362,9.708851,https://ourairports.com/airports/LIME/,airport
+airport-BHD,BHD,George Best Belfast City Airport,Belfast,GB,54.618099,-5.8725,https://ourairports.com/airports/EGAC/,airport
+airport-BNE,BNE,Brisbane International Airport,Brisbane,AU,-27.384199142456055,153.11700439453125,https://ourairports.com/airports/YBBN/,airport
+airport-BOB,BOB,Bora Bora Airport,Motu Mute,PF,-16.444400787353516,-151.75100708007812,https://ourairports.com/airports/NTTB/,airport
+airport-BOG,BOG,El Dorado International Airport,Bogota,CO,4.70159,-74.1469,https://ourairports.com/airports/SKBO/,airport
+airport-BRU,BRU,Brussels Airport,Zaventem,BE,50.901402,4.48444,https://ourairports.com/airports/EBBR/,airport
+airport-BVA,BVA,Beauvais-Tillé airport,Beauvais,FR,49.454399,2.11278,https://ourairports.com/airports/LFOB/,airport
+airport-BWN,BWN,Brunei International Airport,Bandar Seri Begawan,BN,4.9442,114.928001,https://ourairports.com/airports/WBSB/,airport
+airport-BZE,BZE,Philip S. W. Goldson International Airport,Belize City,BZ,17.539951,-88.303556,https://ourairports.com/airports/MZBZ/,airport
+airport-CDG,CDG,Charles de Gaulle International Airport,"Paris (Roissy-en-France, Val-d'Oise)",FR,49.00896,2.554117,https://ourairports.com/airports/LFPG/,airport
+airport-CEB,CEB,Mactan Cebu International Airport,Cebu City/Lapu-Lapu City,PH,10.309261,123.97974,https://ourairports.com/airports/RPVM/,airport
+airport-CGK,CGK,Soekarno-Hatta International Airport,Jakarta,ID,-6.12557,106.655998,https://ourairports.com/airports/WIII/,airport
+airport-CJC,CJC,El Loa Airport,Calama,CL,-22.498199,-68.903603,https://ourairports.com/airports/SCCF/,airport
+airport-CJJ,CJJ,Cheongju International Airport,Cheongju,KR,36.71556,127.500289,https://ourairports.com/airports/RKTU/,airport
+airport-CJU,CJU,Jeju International Airport,Jeju City,KR,33.512058,126.492548,https://ourairports.com/airports/RKPC/,airport
+airport-CLE,CLE,Cleveland Hopkins International Airport,Cleveland,US,41.411701,-81.8498,https://ourairports.com/airports/KCLE/,airport
+airport-CPH,CPH,Copenhagen Kastrup Airport,Copenhagen,DK,55.617900848389,12.656000137329,https://ourairports.com/airports/EKCH/,airport
+airport-CTS,CTS,New Chitose Airport,Sapporo,JP,42.774753,141.690414,https://ourairports.com/airports/RJCC/,airport
+airport-CUK,CUK,Caye Caulker Airport,Caye Caulker,BZ,17.735015,-88.032862,https://ourairports.com/airports/BZ-CUK/,airport
+airport-CUN,CUN,Cancún International Airport,Cancún,MX,21.040817,-86.87347,https://ourairports.com/airports/MMUN/,airport
+airport-CUZ,CUZ,Alejandro Velasco Astete International Airport,Cusco,PE,-13.535699844400002,-71.9387969971,https://ourairports.com/airports/SPZO/,airport
+airport-DBV,DBV,Dubrovnik Ruđer Bošković Airport,Dubrovnik,HR,42.562247,18.265543,https://ourairports.com/airports/LDDU/,airport
+airport-DMK,DMK,Don Mueang International Airport,Bangkok,TH,13.9126,100.607002,https://ourairports.com/airports/VTBD/,airport
+airport-DPS,DPS,Denpasar I Gusti Ngurah Rai International Airport,"Kuta, Badung",ID,-8.748409,115.167123,https://ourairports.com/airports/WADD/,airport
+airport-DTW,DTW,Detroit Metropolitan Wayne County Airport,Detroit,US,42.21377,-83.353786,https://ourairports.com/airports/KDTW/,airport
+airport-DXB,DXB,Dubai International Airport,Dubai,AE,25.24979,55.370992,https://ourairports.com/airports/OMDB/,airport
+airport-DYG,DYG,Zhangjiajie Hehua International Airport,Zhangjiajie (Yongding),CN,29.104749,110.442786,https://ourairports.com/airports/ZGDY/,airport
+airport-EDI,EDI,Edinburgh Airport,"Ingliston, Edinburgh",GB,55.950145,-3.372288,https://ourairports.com/airports/EGPH/,airport
+airport-EWR,EWR,Newark Liberty International Airport,Newark,US,40.6894,-74.170545,https://ourairports.com/airports/KEWR/,airport
+airport-EZE,EZE,Ezeiza International Airport - Ministro Pistarini,Buenos Aires (Ezeiza),AR,-34.8222,-58.5358,https://ourairports.com/airports/SAEZ/,airport
+airport-FCO,FCO,Rome–Fiumicino Leonardo da Vinci International Airport,Rome,IT,41.804532,12.251998,https://ourairports.com/airports/LIRF/,airport
+airport-FEZ,FEZ,Fes Saïss International Airport,Saïss,MA,33.927299,-4.97796,https://ourairports.com/airports/GMFF/,airport
+airport-FLL,FLL,Fort Lauderdale Hollywood International Airport,Fort Lauderdale,US,26.072599,-80.152702,https://ourairports.com/airports/KFLL/,airport
+airport-FNC,FNC,Cristiano Ronaldo International Airport,Funchal,PT,32.697812,-16.774613,https://ourairports.com/airports/LPMA/,airport
+airport-FRA,FRA,Frankfurt Main Airport,Frankfurt am Main,DE,50.026706,8.55835,https://ourairports.com/airports/EDDF/,airport
+airport-FRS,FRS,Mundo Maya International Airport,San Benito,GT,16.913707,-89.866143,https://ourairports.com/airports/MGTK/,airport
+airport-FTE,FTE,El Calafate - Commander Armando Tola International Airport,El Calafate,AR,-50.280267,-72.053401,https://ourairports.com/airports/SAWC/,airport
+airport-FUK,FUK,Fukuoka Airport,Fukuoka,JP,33.585899353027344,130.4510040283203,https://ourairports.com/airports/RJFF/,airport
+airport-GEO,GEO,Cheddi Jagan International Airport,Georgetown,GY,6.49855,-58.254101,https://ourairports.com/airports/SYCJ/,airport
+airport-GMP,GMP,Seoul Gimpo International Airport,Seoul,KR,37.5583,126.791,https://ourairports.com/airports/RKSS/,airport
+airport-GND,GND,Maurice Bishop International Airport,Saint George's,GD,12.003996,-61.785302,https://ourairports.com/airports/TGPY/,airport
+airport-GPS,GPS,Seymour Galapagos Ecological Airport,Isla Baltra,EC,-0.453758,-90.2659,https://ourairports.com/airports/SEGS/,airport
+airport-GRU,GRU,São Paulo/Guarulhos–Governor André Franco Montoro International Airport,São Paulo,BR,-23.431274,-46.469954,https://ourairports.com/airports/SBGR/,airport
+airport-GRX,GRX,F.G.L. Airport Granada-Jaén Airport,Granada,ES,37.188702,-3.77736,https://ourairports.com/airports/LEGR/,airport
+airport-GUA,GUA,La Aurora International Airport,Guatemala City,GT,14.582896,-90.527515,https://ourairports.com/airports/MGGT/,airport
+airport-GUM,GUM,Antonio B. Won Pat International Airport,Hagåtña,GU,13.485,144.797282,https://ourairports.com/airports/PGUM/,airport
+airport-GVA,GVA,Geneva International Airport,Geneva,CH,46.238098,6.10895,https://ourairports.com/airports/LSGG/,airport
+airport-GYE,GYE,José Joaquín de Olmedo International Airport,Guayaquil,EC,-2.15742,-79.883598,https://ourairports.com/airports/SEGU/,airport
+airport-HAN,HAN,Noi Bai International Airport,Hanoi (Soc Son),VN,21.221201,105.806999,https://ourairports.com/airports/VVNB/,airport
+airport-HEL,HEL,Helsinki Vantaa Airport,Helsinki (Vantaa),FI,60.318363,24.963341,https://ourairports.com/airports/EFHK/,airport
+airport-IAH,IAH,George Bush Intercontinental Airport,Houston,US,29.9844,-95.3414,https://ourairports.com/airports/KIAH/,airport
+airport-IAS,IAS,Iaşi International Airport,Iaşi,RO,47.179633,27.621431,https://ourairports.com/airports/LRIA/,airport
+airport-ICN,ICN,Incheon International Airport,Seoul,KR,37.469101,126.450996,https://ourairports.com/airports/RKSI/,airport
+airport-IGR,IGR,Cataratas Del Iguazú International Airport,Puerto Iguazu,AR,-25.737301,-54.4734,https://ourairports.com/airports/SARI/,airport
+airport-IGU,IGU,Cataratas International Airport,Foz do Iguaçu,BR,-25.594167,-54.489444,https://ourairports.com/airports/SBFI/,airport
+airport-IPC,IPC,Mataveri International Airport,Isla De Pascua,CL,-27.165411,-109.421027,https://ourairports.com/airports/SCIP/,airport
+airport-ISL,ISL,İstanbul Atatürk Airport,Istanbul(Bakırköy),TR,40.971913,28.823714,https://ourairports.com/airports/LTBA/,airport
+airport-IST,IST,İstanbul Airport,Istanbul,TR,41.274874,28.732136,https://ourairports.com/airports/LTFM/,airport
+airport-JFK,JFK,John F. Kennedy International Airport,New York,US,40.639447,-73.779317,https://ourairports.com/airports/KJFK/,airport
+airport-KAI,KAI,Kaieteur Airport,Kaieteur Falls,GY,5.177349,-59.48898,https://ourairports.com/airports/SYKA/,airport
+airport-KEF,KEF,Keflavik International Airport,Reykjavík,IS,63.985001,-22.6056,https://ourairports.com/airports/BIKF/,airport
+airport-KIX,KIX,Kansai International Airport,Osaka,JP,34.427299,135.244003,https://ourairports.com/airports/RJBB/,airport
+airport-KUL,KUL,Kuala Lumpur International Airport,Sepang,MY,2.74558,101.709999,https://ourairports.com/airports/WMKK/,airport
+airport-KUT,KUT,David the Builder Kutaisi International Airport,Kopitnari,GE,42.177448,42.485353,https://ourairports.com/airports/UGKO/,airport
+airport-LAX,LAX,Los Angeles International Airport,Los Angeles,US,33.942501,-118.407997,https://ourairports.com/airports/KLAX/,airport
+airport-LBJ,LBJ,Komodo Airport,"Labuan Bajo, Manggarai Barat",ID,-8.480694,119.888306,https://ourairports.com/airports/WATO/,airport
+airport-LGA,LGA,LaGuardia Airport,New York,US,40.777199,-73.872597,https://ourairports.com/airports/KLGA/,airport
+airport-LGW,LGW,London Gatwick Airport,London,GB,51.148744,-0.185739,https://ourairports.com/airports/EGKK/,airport
+airport-LHR,LHR,London Heathrow Airport,London,GB,51.470748,-0.459909,https://ourairports.com/airports/EGLL/,airport
+airport-LIM,LIM,Jorge Chávez International Airport,Lima,PE,-12.0219,-77.114305,https://ourairports.com/airports/SPIM/,airport
+airport-LIS,LIS,Lisbon Humberto Delgado Airport,Lisbon,PT,38.7813,-9.13592,https://ourairports.com/airports/LPPT/,airport
+airport-LPQ,LPQ,Luang Phabang International Airport,Luang Phabang,LA,19.904273,102.167191,https://ourairports.com/airports/VLLB/,airport
+airport-LTN,LTN,London Luton Airport,"Luton, Luton",GB,51.874699,-0.368333,https://ourairports.com/airports/EGGW/,airport
+airport-LUX,LUX,Luxembourg-Findel International Airport,Luxembourg,LU,49.626845,6.212134,https://ourairports.com/airports/ELLX/,airport
+airport-LYR,LYR,"Svalbard Airport, Longyear",Longyearbyen,NO,78.246101,15.4656,https://ourairports.com/airports/ENSB/,airport
+airport-MBJ,MBJ,Sangster International Airport,Montego Bay,JM,18.50342,-77.91323,https://ourairports.com/airports/MKJS/,airport
+airport-MCO,MCO,Orlando International Airport,Orlando,US,28.429399490356445,-81.30899810791016,https://ourairports.com/airports/KMCO/,airport
+airport-MGA,MGA,Augusto C. Sandino (Managua) International Airport,Managua,NI,12.1415,-86.168198,https://ourairports.com/airports/MNMG/,airport
+airport-MIA,MIA,Miami International Airport,Miami,US,25.796011,-80.289751,https://ourairports.com/airports/KMIA/,airport
+airport-MLA,MLA,Malta International Airport,Valletta,MT,35.845932,14.491546,https://ourairports.com/airports/LMML/,airport
+airport-MRS,MRS,Marseille Provence Airport,"Marignane, Bouches-du-Rhône",FR,43.438088,5.2125,https://ourairports.com/airports/LFML/,airport
+airport-MXP,MXP,Milan Malpensa International Airport,Ferno (VA),IT,45.6306,8.72811,https://ourairports.com/airports/LIMC/,airport
+airport-NAP,NAP,Naples International Airport,Napoli,IT,40.886002,14.2908,https://ourairports.com/airports/LIRN/,airport
+airport-NAS,NAS,Lynden Pindling International Airport,Nassau,BS,25.039,-77.466202,https://ourairports.com/airports/MYNN/,airport
+airport-NCE,NCE,Nice-Côte d'Azur Airport,"Nice, Alpes-Maritimes",FR,43.658401,7.21587,https://ourairports.com/airports/LFMN/,airport
+airport-NOU,NOU,La Tontouta International Airport,Nouméa (La Tontouta),NC,-22.014601,166.212997,https://ourairports.com/airports/NWWW/,airport
+airport-NRT,NRT,Narita International Airport,Narita,JP,35.76858,140.388714,https://ourairports.com/airports/RJAA/,airport
+airport-OGL,OGL,Eugene F. Correia International Airport,Ogle,GY,6.805881,-58.107657,https://ourairports.com/airports/SYGO/,airport
+airport-OPO,OPO,Francisco de Sá Carneiro Airport,Porto,PT,41.2481002808,-8.68138980865,https://ourairports.com/airports/LPPR/,airport
+airport-ORD,ORD,Chicago O'Hare International Airport,Chicago,US,41.9786,-87.9048,https://ourairports.com/airports/KORD/,airport
+airport-ORY,ORY,Paris-Orly Airport,"Paris (Orly, Val-de-Marne)",FR,48.729499,2.358963,https://ourairports.com/airports/LFPO/,airport
+airport-OSL,OSL,Oslo-Gardermoen International Airport,Oslo (Gardermoen),NO,60.193901,11.1004,https://ourairports.com/airports/ENGM/,airport
+airport-OTP,OTP,Bucharest Henri Coandă International Airport,Otopeni,RO,44.571792,26.103285,https://ourairports.com/airports/LROP/,airport
+airport-PBM,PBM,Johan Adolf Pengel International Airport,Paramaribo,SR,5.45283,-55.187801,https://ourairports.com/airports/SMJP/,airport
+airport-PDL,PDL,João Paulo II Airport,Ponta Delgada,PT,37.7411994934,-25.6979007721,https://ourairports.com/airports/LPPD/,airport
+airport-PEK,PEK,Beijing Capital International Airport,Beijing,CN,40.077349,116.596702,https://ourairports.com/airports/ZBAA/,airport
+airport-PFO,PFO,Paphos International Airport,Paphos,CY,34.717999,32.485699,https://ourairports.com/airports/LCPH/,airport
+airport-POS,POS,Piarco International Airport,Port of Spain,TT,10.59535,-61.337568,https://ourairports.com/airports/TTPP/,airport
+airport-PPT,PPT,Fa'a'ā International Airport,Papeete,PF,-17.553472,-149.606936,https://ourairports.com/airports/NTAA/,airport
+airport-PRG,PRG,Václav Havel Airport Prague,Prague,CZ,50.100874,14.259911,https://ourairports.com/airports/LKPR/,airport
+airport-PTY,PTY,Tocumen International Airport,Tocumen,PA,9.07136,-79.383499,https://ourairports.com/airports/MPTO/,airport
+airport-PUS,PUS,Gimhae International Airport,Busan,KR,35.179501,128.938004,https://ourairports.com/airports/RKPK/,airport
+airport-RIX,RIX,Riga International Airport,Riga,LV,56.920752,23.970711,https://ourairports.com/airports/EVRA/,airport
+airport-RJK,RJK,Rijeka Airport,Rijeka(Omišalj),HR,45.216376,14.57085,https://ourairports.com/airports/LDRI/,airport
+airport-RMO,RMO,Chişinău International Airport,Chişinău,MD,46.92774,28.931704,https://ourairports.com/airports/LUKK/,airport
+airport-SAI,SAI,Siem Reap-Angkor International Airport,Siem Reap,KH,13.36974,104.223831,https://ourairports.com/airports/VDSA/,airport
+airport-SAL,SAL,El Salvador International Airport Saint Óscar Arnulfo Romero y Galdámez,San Salvador (San Luis Talpa),SV,13.44447,-89.055784,https://ourairports.com/airports/MSLP/,airport
+airport-SAW,SAW,Istanbul Sabiha Gökçen International Airport,"Pendik, Istanbul",TR,40.898602,29.3092,https://ourairports.com/airports/LTFJ/,airport
+airport-SCL,SCL,Comodoro Arturo Merino Benítez International Airport,Santiago,CL,-33.393001556396484,-70.78579711914062,https://ourairports.com/airports/SCEL/,airport
+airport-SCY,SCY,San Cristóbal Airport,Puerto Baquerizo Moreno,EC,-0.910206,-89.617401,https://ourairports.com/airports/SEST/,airport
+airport-SDQ,SDQ,Las Américas International Airport,Santo Domingo,DO,18.42970085144,-69.668899536133,https://ourairports.com/airports/MDSD/,airport
+airport-SGN,SGN,Tan Son Nhat International Airport,Ho Chi Minh City,VN,10.8188,106.652,https://ourairports.com/airports/VVTS/,airport
+airport-SIN,SIN,Singapore Changi Airport,Singapore,SG,1.35019,103.994003,https://ourairports.com/airports/WSSS/,airport
+airport-SJO,SJO,Juan Santamaría International Airport,San José (Alajuela),CR,9.99386,-84.208801,https://ourairports.com/airports/MROC/,airport
+airport-SJU,SJU,Luis Munoz Marin International Airport,San Juan,PR,18.4394,-66.001801,https://ourairports.com/airports/TJSJ/,airport
+airport-SOF,SOF,Sofia Airport,Sofia,BG,42.696357,23.417671,https://ourairports.com/airports/LBSF/,airport
+airport-SPN,SPN,Saipan International Airport,"I Fadang, Saipan",MP,15.119384,145.728848,https://ourairports.com/airports/PGSN/,airport
+airport-SPR,SPR,John Greif II Airport,San Pedro,BZ,17.9139,-87.9711,https://ourairports.com/airports/BZ-SPR/,airport
+airport-SPX,SPX,Sphinx International Airport,Al Jiza,EG,30.108179,30.895728,https://ourairports.com/airports/HESX/,airport
+airport-SSH,SSH,Sharm El Sheikh International Airport,Sharm El Sheikh,EG,27.977272,34.394717,https://ourairports.com/airports/HESH/,airport
+airport-STN,STN,London Stansted Airport,"London, Essex",GB,51.884998,0.235,https://ourairports.com/airports/EGSS/,airport
+airport-SVD,SVD,Argyle International Airport,Kingstown,VC,13.159725,-61.148801,https://ourairports.com/airports/TVSA/,airport
+airport-SVQ,SVQ,Seville Airport,Seville,ES,37.417999,-5.89311,https://ourairports.com/airports/LEZL/,airport
+airport-TIA,TIA,Tirana International Airport Mother Teresa,Rinas,AL,41.4147,19.7206,https://ourairports.com/airports/LATI/,airport
+airport-TLL,TLL,Lennart Meri Tallinn Airport,Tallinn,EE,59.413246,24.83264,https://ourairports.com/airports/EETN/,airport
+airport-TPE,TPE,Taiwan Taoyuan International Airport,Taoyuan,TW,25.0777,121.233002,https://ourairports.com/airports/RCTP/,airport
+airport-TPS,TPS,Vincenzo Florio Airport Trapani-Birgi,Trapani (TP),IT,37.9114,12.488,https://ourairports.com/airports/LICT/,airport
+airport-TRN,TRN,Turin Airport,Caselle Torinese (TO),IT,45.200802,7.64963,https://ourairports.com/airports/LIMF/,airport
+airport-TSF,TSF,Treviso Airport,Treviso (TV),IT,45.648399,12.1944,https://ourairports.com/airports/LIPH/,airport
+airport-TUN,TUN,Tunis Carthage International Airport,Tunis,TN,36.851002,10.2272,https://ourairports.com/airports/DTTA/,airport
+airport-UBN,UBN,Ulaanbaatar Chinggis Khaan International Airport,Ulaanbaatar (Sergelen),MN,47.646916,106.819833,https://ourairports.com/airports/ZMCK/,airport
+airport-UIO,UIO,Mariscal Sucre International Airport,Quito,EC,-0.125399,-78.354306,https://ourairports.com/airports/SEQM/,airport
+airport-VCE,VCE,Venice Marco Polo Airport,Venezia (VE),IT,45.505299,12.3519,https://ourairports.com/airports/LIPZ/,airport
+airport-VIE,VIE,Vienna International Airport,Vienna,AT,48.110298,16.5697,https://ourairports.com/airports/LOWW/,airport
+airport-VNO,VNO,Vilnius International Airport,Vilnius,LT,54.634102,25.285801,https://ourairports.com/airports/EYVI/,airport
+airport-VVO,VVO,Vladivostok International Airport,Artyom,RU,43.396256,132.148155,https://ourairports.com/airports/UHWW/,airport
+airport-YYC,YYC,Calgary International Airport,Calgary,CA,51.118822,-114.009933,https://ourairports.com/airports/CYYC/,airport
+airport-YYZ,YYZ,Toronto Pearson International Airport,Toronto,CA,43.675935,-79.629421,https://ourairports.com/airports/CYYZ/,airport
+airport-ZAG,ZAG,Zagreb Franjo Tuđman International Airport,Velika Gorica,HR,45.742901,16.0688,https://ourairports.com/airports/LDZA/,airport

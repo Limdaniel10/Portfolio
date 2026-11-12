@@ -1,0 +1,283 @@
+﻿id,name,type,latitude,longitude,country_iso2,first_visit_year,count_as_city_or_town
+place-0001,New York City,locality,40.71427,-74.00597,US,2008,True
+place-0002,Boston,locality,42.35843,-71.05977,US,2008,True
+place-0003,Washington DC,locality,38.89511,-77.03637,US,2008,True
+place-0004,Niagara Falls,locality,43.10012,-79.06627,CA,2008,True
+place-0005,Akita,locality,39.71667,140.11667,JP,2010,True
+place-0006,Tokyo,locality,35.6895,139.69171,JP,2010,True
+place-0007,Noumea,locality,-22.27407,166.44884,NC,2010,True
+place-0008,Bora Bora,island,-16.49956,-151.73714,PF,2011,False
+place-0009,Sapporo,locality,43.06667,141.35,JP,2013,True
+place-0010,Los Angeles,locality,34.05223,-118.24368,US,2013,True
+place-0011,Rome,locality,41.89193,12.51133,IT,2013,True
+place-0012,Naples,locality,40.85216,14.26811,IT,2013,True
+place-0013,Sorrento,locality,40.62678,14.37771,IT,2013,True
+place-0014,Pompeii,archaeological_site,40.75,14.48333,IT,2013,False
+place-0015,Venice,locality,45.43713,12.33265,IT,2013,True
+place-0016,Milan,locality,45.46427,9.18951,IT,2013,True
+place-0017,Florence,locality,43.77925,11.24626,IT,2013,True
+place-0018,Vatican City,locality,41.90268,12.45414,VA,2013,True
+place-0019,Interlaken,locality,46.68387,7.86638,CH,2013,True
+place-0020,Zurich,locality,47.36667,8.55,CH,2013,True
+place-0021,Paris,locality,48.85341,2.3488,FR,2013,True
+place-0022,London,locality,51.50853,-0.12574,GB,2013,True
+place-0023,Saipan,island,15.21233,145.7545,MP,2014,False
+place-0024,Istanbul,locality,41.01384,28.94966,TR,2014,True
+place-0025,Izmir,locality,38.41273,27.13838,TR,2014,True
+place-0026,Denizli,locality,37.77417,29.0875,TR,2014,True
+place-0027,Goreme,locality,38.64284,34.82885,TR,2014,True
+place-0028,Ankara,locality,39.91987,32.85427,TR,2014,True
+place-0029,Zhangjiajie,locality,29.12944,110.47833,CN,2015,True
+place-0030,Atlanta,locality,33.749,-84.38798,US,2015,True
+place-0031,Knoxville,locality,35.96064,-83.92074,US,2015,True
+place-0032,Beijing,locality,39.9075,116.39723,CN,2015,True
+place-0033,Tamuning,locality,13.48754,144.78143,GU,2017,True
+place-0034,Fukuoka,locality,33.6,130.41667,JP,2019,True
+place-0035,Taipei,locality,25.05306,121.52639,TW,2020,True
+place-0036,Jiufen,locality,25.10957,121.84424,TW,2020,True
+place-0037,Seville,locality,37.38283,-5.97317,ES,2022,True
+place-0038,Granada,locality,37.18817,-3.60667,ES,2022,True
+place-0039,Barcelona,locality,41.38879,2.15899,ES,2022,True
+place-0040,Amalfi,locality,40.6349,14.60238,IT,2022,True
+place-0041,Positano,locality,40.62829,14.48427,IT,2022,True
+place-0042,Geneva,locality,46.20222,6.14569,CH,2022,True
+place-0043,Brussels,locality,50.85045,4.34878,BE,2022,True
+place-0044,Boom,locality,51.09242,4.3717,BE,2022,True
+place-0045,San Juan,locality,18.46633,-66.10572,PR,2022,True
+place-0046,Bogota,locality,4.60971,-74.08175,CO,2022,True
+place-0047,Quito,locality,-0.22985,-78.52495,EC,2022,True
+place-0048,Puerto Baquerizo Moreno,locality,-0.90172,-89.61021,EC,2022,True
+place-0049,Puerto Ayora,locality,-0.74018,-90.3138,EC,2022,True
+place-0050,Puerto Villamil,locality,-0.95542,-90.96654,EC,2022,True
+place-0051,Panama City,locality,8.9936,-79.51973,PA,2022,True
+place-0052,San Jose,locality,9.93388,-84.08489,CR,2022,True
+place-0053,Alajuela,locality,10.01723,-84.21275,CR,2023,True
+place-0054,Fort Lauderdale,locality,26.12231,-80.14338,US,2023,True
+place-0055,Nassau,locality,25.05823,-77.34306,BS,2023,True
+place-0056,St. Petersburg,locality,27.77086,-82.67927,US,2023,True
+place-0057,Managua,locality,12.13282,-86.2504,NI,2023,True
+place-0058,Granada,locality,11.93062,-85.95368,NI,2023,True
+place-0059,Masaya,locality,11.97316,-86.09587,NI,2023,True
+place-0060,Rivas,locality,11.43977,-85.82749,NI,2023,True
+place-0061,Detroit,locality,42.33143,-83.04575,US,2023,True
+place-0062,Cleveland,locality,41.4995,-81.69541,US,2023,True
+place-0063,Santo Domingo,locality,18.47186,-69.89232,DO,2023,True
+place-0064,Bayahibe,locality,18.36795,-68.83946,DO,2023,True
+place-0065,Guatemala City,locality,14.64072,-90.51327,GT,2023,True
+place-0066,Antigua,locality,14.55636,-90.7332,GT,2023,True
+place-0067,Panajachel,locality,14.74185,-91.15676,GT,2023,True
+place-0068,Lanquin,locality,15.57568,-89.98078,GT,2023,True
+place-0069,Flores,locality,16.92258,-89.89941,GT,2023,True
+place-0070,Hillerod,locality,55.92791,12.30081,DK,2023,True
+place-0071,Copenhagen,locality,55.67594,12.56553,DK,2023,True
+place-0072,Chartres,locality,48.44685,1.48925,FR,2023,True
+place-0073,Chamonix,locality,45.92375,6.86933,FR,2023,True
+place-0074,Pisa,locality,43.70853,10.4036,IT,2023,True
+place-0075,Siena,locality,43.31822,11.33064,IT,2023,True
+place-0076,Munich,locality,48.13743,11.57549,DE,2023,True
+place-0077,Fussen,locality,47.57143,10.70171,DE,2023,True
+place-0078,Nuremberg,locality,49.45421,11.07752,DE,2023,True
+place-0079,Vienna,locality,48.20849,16.37208,AT,2023,True
+place-0080,Salzburg,locality,47.79941,13.04399,AT,2023,True
+place-0081,Prague,locality,50.08804,14.42076,CZ,2023,True
+place-0082,Budapest,locality,47.49835,19.04045,HU,2023,True
+place-0083,Bratislava,locality,48.14816,17.10674,SK,2023,True
+place-0084,Bruges,locality,51.20892,3.22424,BE,2023,True
+place-0085,Rotterdam,locality,51.9225,4.47917,NL,2023,True
+place-0086,Oxford,locality,51.75222,-1.25596,GB,2023,True
+place-0087,Salisbury,locality,51.06931,-1.79569,GB,2023,True
+place-0088,Windsor,locality,51.48333,-0.6,GB,2023,True
+place-0089,Belfast,locality,54.59682,-5.92541,GB,2023,True
+place-0090,Valletta,locality,35.89968,14.5148,MT,2023,True
+place-0091,Paphos,locality,34.77679,32.42451,CY,2023,True
+place-0092,Dublin,locality,53.33306,-6.24889,IE,2023,True
+place-0093,Sofia,locality,42.69751,23.32415,BG,2023,True
+place-0094,Ventura,locality,34.27834,-119.29317,US,2023,True
+place-0095,Anaheim,locality,33.83529,-117.9145,US,2023,True
+place-0096,San Diego,locality,32.71571,-117.16472,US,2023,True
+place-0097,San Francisco,locality,37.77493,-122.41942,US,2023,True
+place-0098,Edinburgh,locality,55.95206,-3.19648,GB,2023,True
+place-0099,Lisbon,locality,38.72509,-9.1498,PT,2023,True
+place-0100,Ponta Delgada,locality,37.73952,-25.66874,PT,2023,True
+place-0101,Funchal,locality,32.66568,-16.92547,PT,2023,True
+place-0102,Porto Moniz,locality,32.86681,-17.16667,PT,2023,True
+place-0103,Sao Vicente,locality,32.79673,-17.04323,PT,2023,True
+place-0104,Metz,locality,49.11911,6.17269,FR,2023,True
+place-0105,Luxembourg,locality,49.60982,6.13268,LU,2023,True
+place-0106,Helsingor,locality,56.03606,12.6136,DK,2023,True
+place-0107,Tunis,locality,36.81897,10.16579,TN,2023,True
+place-0108,Nice,locality,43.70313,7.26608,FR,2023,True
+place-0109,Monaco,locality,43.73718,7.42145,MC,2023,True
+place-0110,Bucharest,locality,44.43225,26.10626,RO,2023,True
+place-0111,Bran,locality,45.51667,25.35,RO,2023,True
+place-0112,Sinaia,locality,45.35,25.55,RO,2023,True
+place-0113,Brasov,locality,45.64861,25.60613,RO,2023,True
+place-0114,Rijeka,locality,45.32673,14.44241,HR,2023,True
+place-0115,Zagreb,locality,45.81444,15.97798,HR,2023,True
+place-0116,Cambridge,locality,52.2,0.11667,GB,2023,True
+place-0117,Kutaisi,locality,42.26791,42.69459,GE,2023,True
+place-0118,Tbilisi,locality,41.69143,44.83412,GE,2023,True
+place-0119,Mtskheta,locality,41.84514,44.71875,GE,2023,True
+place-0120,Gori,locality,41.98532,44.1129,GE,2023,True
+place-0121,Kazbegi,locality,42.65691,44.64311,GE,2023,True
+place-0122,Basel,locality,47.55839,7.57327,CH,2023,True
+place-0123,Belgrade,locality,44.80401,20.46513,RS,2023,True
+place-0124,Strasbourg,locality,48.58392,7.74553,FR,2023,True
+place-0125,Frankfurt,locality,50.11552,8.68417,DE,2023,True
+place-0126,Tsushima,island,34.33333,129.33333,JP,2023,False
+place-0127,Vilnius,locality,54.68916,25.2798,LT,2024,True
+place-0128,Reykjavik,locality,64.13548,-21.89541,IS,2024,True
+place-0129,Berlin,locality,52.52437,13.41053,DE,2024,True
+place-0130,Schwerin,locality,53.62937,11.41316,DE,2024,True
+place-0131,Porto,locality,41.1485,-8.61097,PT,2024,True
+place-0132,Ljubljana,locality,46.05108,14.50513,SI,2024,True
+place-0133,Postojna,locality,45.77435,14.21528,SI,2024,True
+place-0134,Sharm el-Sheikh,locality,27.91582,34.32995,EG,2024,True
+place-0135,Cairo,locality,30.06263,31.24967,EG,2024,True
+place-0136,Giza,locality,30.00944,31.20861,EG,2024,True
+place-0137,Beauvais,locality,49.43333,2.08333,FR,2024,True
+place-0138,Fez,locality,34.03313,-5.00028,MA,2024,True
+place-0139,Chefchaouen,locality,35.16878,-5.2636,MA,2024,True
+place-0140,Nantes,locality,47.21725,-1.55336,FR,2024,True
+place-0141,Melk,locality,48.22737,15.33186,AT,2024,True
+place-0142,St. Polten,locality,48.20762,15.63725,AT,2024,True
+place-0143,Vaduz,locality,47.14151,9.52154,LI,2024,True
+place-0144,Schaan,locality,47.16498,9.50867,LI,2024,True
+place-0145,Schaffhausen,locality,47.69732,8.63493,CH,2024,True
+place-0146,Bern,locality,46.94809,7.44744,CH,2024,True
+place-0147,Zermatt,locality,46.01998,7.74863,CH,2024,True
+place-0148,Kandersteg,locality,46.49467,7.67326,CH,2024,True
+place-0149,Le Havre,locality,49.49346,0.10785,FR,2024,True
+place-0150,Etretat,locality,49.70669,0.20523,FR,2024,True
+place-0151,Abu Dhabi,locality,24.45118,54.39696,AE,2024,True
+place-0152,Brisbane,locality,-27.46794,153.02809,AU,2024,True
+place-0153,Gold Coast,locality,-28.00029,153.43088,AU,2024,True
+place-0154,Ulaanbaatar,locality,47.90771,106.88324,MN,2024,True
+place-0155,Singapore,locality,1.28967,103.85007,SG,2024,True
+place-0156,Athens,locality,37.98376,23.72784,GR,2024,True
+place-0157,Kalabaca,locality,39.70444,21.62694,GR,2024,True
+place-0158,Kotor,locality,42.42067,18.76825,ME,2024,True
+place-0159,Dubrovnik,locality,42.64125,18.10909,HR,2024,True
+place-0160,Mostar,locality,43.34333,17.80806,BA,2024,True
+place-0161,Krakow,locality,50.06143,19.93658,PL,2024,True
+place-0162,Wieliczka,locality,49.98738,20.06473,PL,2024,True
+place-0163,Adrspach,locality,50.62154,16.09762,CZ,2024,True
+place-0164,Cesky Krumlov,locality,48.81091,14.31521,CZ,2024,True
+place-0165,Plzen,locality,49.74747,13.37759,CZ,2024,True
+place-0166,Bologna,locality,44.49381,11.33875,IT,2024,True
+place-0167,San Marino,locality,43.93667,12.44639,SM,2024,True
+place-0168,Marseille,locality,43.29695,5.38107,FR,2024,True
+place-0169,Cassis,locality,43.21571,5.53855,FR,2024,True
+place-0170,Varenna,locality,46.01078,9.28465,IT,2024,True
+place-0171,Bellagio,locality,45.98772,9.26182,IT,2024,True
+place-0172,Lecco,locality,45.85589,9.39704,IT,2024,True
+place-0173,Catania,locality,37.49223,15.07041,IT,2024,True
+place-0174,Taormina,locality,37.85358,15.28851,IT,2024,True
+place-0175,Palermo,locality,38.1166,13.3636,IT,2024,True
+place-0176,Trapani,locality,38.0176,12.53617,IT,2024,True
+place-0177,Riga,locality,56.946,24.10589,LV,2024,True
+place-0178,Tallinn,locality,59.43696,24.75353,EE,2024,True
+place-0179,Helsinki,locality,60.16952,24.93545,FI,2024,True
+place-0180,Turku,locality,60.45148,22.26869,FI,2024,True
+place-0181,Stockholm,locality,59.32938,18.06871,SE,2024,True
+place-0182,Oslo,locality,59.91273,10.74609,NO,2024,True
+place-0183,El Palmarcito,locality,13.50304,-89.42318,SV,2024,True
+place-0184,El Zonte,locality,13.49779,-89.44074,SV,2024,True
+place-0185,San Salvador,locality,13.68935,-89.18718,SV,2024,True
+place-0186,Toronto,locality,43.65333,-79.38389,CA,2024,True
+place-0187,Cancun,locality,21.17429,-86.84656,MX,2024,True
+place-0188,Montego Bay,locality,18.47116,-77.91883,JM,2024,True
+place-0189,Lima,locality,-12.04318,-77.02824,PE,2024,True
+place-0190,Cusco,locality,-13.53188,-71.96701,PE,2024,True
+place-0191,Puno,locality,-15.84003,-70.02198,PE,2024,True
+place-0192,Copacabana,locality,-16.1699,-69.07919,BO,2024,True
+place-0193,La Paz,locality,-16.5,-68.15,BO,2024,True
+place-0194,El Alto,locality,-16.50434,-68.16096,BO,2024,True
+place-0195,Uyuni,locality,-20.45967,-66.82503,BO,2024,True
+place-0196,San Pedro de Atacama,locality,-22.9111,-68.20113,CL,2024,True
+place-0197,Santiago,locality,-33.45694,-70.64827,CL,2024,True
+place-0198,Colonia del Sacramento,locality,-34.46262,-57.83976,UY,2024,True
+place-0199,Buenos Aires,locality,-34.61315,-58.37723,AR,2024,True
+place-0200,Puerto Iguazu,locality,-25.59912,-54.57355,AR,2024,True
+place-0201,Foz do Iguacu,locality,-25.54778,-54.58806,BR,2024,True
+place-0202,Ciudad del Este,locality,-25.5036,-54.65067,PY,2024,True
+place-0203,Sao Paulo,locality,-23.5475,-46.63611,BR,2025,True
+place-0204,Orlando,locality,28.53834,-81.37924,US,2025,True
+place-0205,Princeton,locality,40.34872,-74.65905,US,2025,True
+place-0206,Nashville,locality,36.16589,-86.78444,US,2025,True
+place-0207,Port of Spain,locality,10.66668,-61.51889,TT,2025,True
+place-0208,St George's,locality,12.05288,-61.75226,GD,2025,True
+place-0209,Port Elizabeth,locality,13.01102,-61.23548,VC,2025,True
+place-0210,Kingstown,locality,13.15527,-61.22742,VC,2025,True
+place-0211,Bridgetown,locality,13.10732,-59.62021,BB,2025,True
+place-0212,Milwaukee,locality,43.0389,-87.90647,US,2025,True
+place-0213,Chicago,locality,41.85003,-87.65005,US,2025,True
+place-0214,Champaign,locality,40.11642,-88.24338,US,2025,True
+place-0215,Calgary,locality,51.05011,-114.08529,CA,2025,True
+place-0216,Banff,locality,51.17622,-115.56982,CA,2025,True
+place-0217,Kyoto,locality,35.02107,135.75385,JP,2025,True
+place-0218,Cebu,locality,10.31672,123.89071,PH,2025,True
+place-0219,Moalboal,locality,9.94333,123.39917,PH,2025,True
+place-0220,Longyearbyen,locality,78.22334,15.64689,NO,2025,True
+place-0221,Georgetown,locality,6.80448,-58.15527,GY,2025,True
+place-0222,Paramaribo,locality,5.86638,-55.16682,SR,2025,True
+place-0223,Albina,locality,5.49788,-54.05522,SR,2025,True
+place-0224,Saint-Laurent-du-Maroni,locality,5.50153,-54.02916,GF,2025,True
+place-0225,Kourou,locality,5.16281,-52.64265,GF,2025,True
+place-0226,Belem,locality,-1.45583,-48.50444,BR,2025,True
+place-0227,El Chalten,locality,-49.3299,-72.88605,AR,2025,True
+place-0228,El Calafate,locality,-50.34075,-72.27682,AR,2025,True
+place-0229,Ataco,locality,13.87028,-89.84861,SV,2026,True
+place-0230,San Pedro,locality,17.91598,-87.9659,BZ,2026,True
+place-0231,Caye Caulker,locality,17.73659,-88.02761,BZ,2026,True
+place-0232,Chisinau,locality,47.00902,28.85938,MD,2026,True
+place-0233,Tiraspol,locality,46.84275,29.6284,MD,2026,True
+place-0234,Iasi,locality,47.16667,27.6,RO,2026,True
+place-0235,Turin,locality,45.07049,7.68682,IT,2026,True
+place-0236,Tirana,locality,41.32744,19.81866,AL,2026,True
+place-0237,Andorra la Vella,locality,42.50779,1.52109,AD,2026,True
+place-0238,Leon,locality,12.43527,-86.87862,NI,2026,True
+place-0239,Rapa Nui,island,-27.11667,-109.36667,CL,2026,False
+place-0240,St. Petersburg,locality,59.93863,30.31413,RU,2026,True
+place-0241,Moscow,locality,55.75204,37.61781,RU,2026,True
+place-0242,Irkutsk,locality,52.29566,104.29076,RU,2026,True
+place-0243,Khuzhir,locality,53.19389,107.33972,RU,2026,True
+place-0244,Vladivostok,locality,43.10562,131.87353,RU,2026,True
+place-0245,Hanoi,locality,21.0245,105.84117,VN,2026,True
+place-0246,Cat Ba,locality,20.72779,107.04819,VN,2026,True
+place-0247,Luang Prabang,locality,19.8933,102.1525,LA,2026,True
+place-0248,Bangkok,locality,13.75398,100.50144,TH,2026,True
+place-0249,Siem Reap,locality,13.36179,103.86056,KH,2026,True
+place-0250,Kuala Lumpur,locality,3.1412,101.68653,MY,2026,True
+place-0251,Bandar Seri Begawan,locality,4.89035,114.94006,BN,2026,True
+place-0252,Jakarta,locality,-6.21462,106.84513,ID,2026,True
+place-0253,Labuan Bajo,locality,-8.4964,119.8877,ID,2026,True
+place-0254,Yogyakarta,locality,-7.80139,110.36472,ID,2026,True
+place-0255,Malang,locality,-7.9797,112.6304,ID,2026,True
+place-0256,Canggu,locality,-8.64009,115.14011,ID,2026,True
+place-0257,Ubud,locality,-8.5098,115.2654,ID,2026,True
+place-0258,Ho Chi Minh City,locality,10.82302,106.62965,VN,2026,True
+place-0328,Anacapri,town,40.5517,14.21225,IT,2022,True
+place-0329,Monterosso al Mare,village,44.14666,9.65494,IT,2023,True
+place-0330,Vernazza,village,44.13501,9.68346,IT,2023,True
+place-0331,Corniglia,village,44.11988,9.70805,IT,2023,True
+place-0332,Manarola,village,44.10712,9.72899,IT,2023,True
+place-0333,Riomaggiore,village,44.09979,9.73869,IT,2023,True
+place-0334,Selcuk,town,37.95137,27.36849,TR,2014,True
+place-0335,Ephesus,archaeological_site,37.93972,27.34083,TR,2014,False
+place-0336,Pamukkale,attraction_and_locality,37.91644,29.11729,TR,2014,True
+place-0337,Carthage,archaeological_site_and_locality,36.86108,10.33161,TN,2023,True
+place-0338,Sidi Bou Said,town,36.8687,10.34174,TN,2023,True
+place-0339,Thingvellir,national_park,64.25806,-21.125,IS,2024,False
+place-0340,Geysir,attraction,64.31432,-20.30119,IS,2024,False
+place-0341,Gullfoss,attraction,64.32779,-20.12133,IS,2024,False
+place-0342,Chinggis Khaan Equestrian Statue,attraction,47.808083,107.529806,MN,2024,False
+place-0343,"Turtle Rock, Terelj",attraction,47.90743,107.42288,MN,2024,False
+place-0344,Aryabal Meditation Temple,temple,47.935503,107.42741,MN,2024,False
+place-0345,Houston,city,29.76328,-95.36327,US,2026,True
+place-0346,Galveston,city,29.30135,-94.7977,US,2026,True
+place-0347,Versailles,city_town,48.80359,2.13424,FR,2023,True
+place-0348,Niedernhausen,city_town,50.16307,8.31338,DE,2023,True
+place-0349,Nancy,city_town,48.68439,6.18496,FR,2024,True
+place-0350,Capri,town,40.55073,14.24263,IT,2022,True
+place-0351,Caserta,city,41.07262,14.33231,IT,2024,True

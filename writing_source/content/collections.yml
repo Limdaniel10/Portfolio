@@ -1,0 +1,60 @@
+- id: solo-abroad
+  title: 홀로 해외로
+  status: completed
+  order: 1
+  category: collections
+  volumes: null
+- id: milan-night
+  title: 밀라노의 밤
+  status: completed
+  order: 2
+  category: collections
+  volumes: null
+- id: ometepe
+  title: 오메테페의 노을
+  status: completed
+  order: 3
+  category: collections
+  volumes: null
+- id: caribbean
+  title: 카리브해 아일랜드 테이스팅
+  status: completed
+  order: 4
+  category: collections
+  volumes: null
+- id: el-salvador
+  title: 수업 째고 엘살바도르로 튐
+  status: completed
+  order: 5
+  category: collections
+  volumes: null
+- id: tallinn
+  title: 탈린엔 북풍이 분다
+  status: in-progress
+  order: 6
+  category: collections
+  volumes: null
+- id: arctic
+  title: 북극으로
+  status: in-progress
+  order: 7
+  category: collections
+  volumes: null
+- id: short-disappearance
+  title: 단기실종
+  status: in-progress
+  order: 8
+  category: collections
+  volumes: null
+- id: venezuela
+  title: 베네수엘라를 왜 가
+  status: in-progress
+  order: 9
+  category: collections
+  volumes: null
+- id: black-morning-glory
+  title: 검은 나팔꽃
+  status: planned
+  order: 10
+  category: fiction
+  volumes: 3

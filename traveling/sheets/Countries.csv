@@ -1,0 +1,100 @@
+﻿iso2,name,count_in_195,category
+KR,South Korea,True,country
+US,United States,True,country
+CA,Canada,True,country
+JP,Japan,True,country
+NC,New Caledonia,False,region_or_territory
+PF,French Polynesia,False,region_or_territory
+MP,Northern Mariana Islands,False,region_or_territory
+FR,France,True,country
+IT,Italy,True,country
+VA,Vatican,True,country
+CH,Switzerland,True,country
+GB,United Kingdom,True,country
+TR,Turkey,True,country
+CN,China,True,country
+GU,Guam,False,region_or_territory
+TW,Taiwan,False,region_or_territory
+ES,Spain,True,country
+BE,Belgium,True,country
+PR,Puerto Rico,False,region_or_territory
+CO,Colombia,True,country
+EC,Ecuador,True,country
+PA,Panama,True,country
+CR,Costa Rica,True,country
+BS,Bahamas,True,country
+NI,Nicaragua,True,country
+DO,Dominican Republic,True,country
+GT,Guatemala,True,country
+DK,Denmark,True,country
+DE,Germany,True,country
+AT,Austria,True,country
+CZ,Czechia,True,country
+NO,Norway,True,country
+HU,Hungary,True,country
+SK,Slovakia,True,country
+NL,The Netherlands,True,country
+MT,Malta,True,country
+CY,Cyprus,True,country
+IE,Ireland,True,country
+GB,United Kingdom,False,region_or_territory
+BG,Bulgaria,True,country
+PT,Portugal,True,country
+LU,Luxembourg,True,country
+TN,Tunisia,True,country
+MC,Monaco,True,country
+RO,Romania,True,country
+HR,Croatia,True,country
+GE,Georgia,True,country
+RS,Serbia,True,country
+LT,Lithuania,True,country
+IS,Iceland,True,country
+EG,Egypt,True,country
+LI,Liechtenstein,True,country
+SI,Slovenia,True,country
+MA,Morocco,True,country
+AE,United Arab Emirates,True,country
+AU,Australia,True,country
+MN,Mongolia,True,country
+SG,Singapore,True,country
+GR,Greece,True,country
+ME,Montenegro,True,country
+BA,Bosnia and Herzegovina,True,country
+PL,Poland,True,country
+SM,San Marino,True,country
+LV,Latvia,True,country
+EE,Estonia,True,country
+FI,Finland,True,country
+SE,Sweden,True,country
+SV,El Salvador,True,country
+MX,Mexico,True,country
+JM,Jamaica,True,country
+PE,Peru,True,country
+BO,Bolivia,True,country
+CL,Chile,True,country
+AR,Argentina,True,country
+UY,Uruguay,True,country
+BR,Brazil,True,country
+PY,Paraguay,True,country
+PH,Philippines,True,country
+TT,Trinidad and Tobago,True,country
+GD,Grenada,True,country
+VC,Saint Vincent and the Grenadines,True,country
+BB,Barbados,True,country
+GY,Guyana,True,country
+SR,Suriname,True,country
+GF,French Guiana,False,region_or_territory
+BZ,Belize,True,country
+MD,Moldova,True,country
+MD,Moldova,False,region_or_territory
+AL,Albania,True,country
+AD,Andorra,True,country
+HN,Honduras,True,country
+RU,Russia,True,country
+VN,Vietnam,True,country
+LA,Laos,True,country
+TH,Thailand,True,country
+KH,Cambodia,True,country
+MY,Malaysia,True,country
+BN,Brunei,True,country
+ID,Indonesia,True,country

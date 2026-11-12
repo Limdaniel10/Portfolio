@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "months": [
+    {
+      "year": 2020,
+      "month": 1,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "pages_read": 0
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "pages_read": 5178
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "pages_read": 8472
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "pages_read": 5152
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "pages_read": 12972
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "pages_read": 1240
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "pages_read": 5543
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "pages_read": 4859
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "pages_read": 6671
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "pages_read": 1779
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "pages_read": 1794
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "pages_read": 5134
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "pages_read": 15068
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "pages_read": 2502
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "pages_read": 2754
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "pages_read": 8832
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "pages_read": 4466
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "pages_read": 6679
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "pages_read": 11380
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "pages_read": 10017
+    },
+    {
+      "year": 2022,
+      "month": 5,
+      "pages_read": 8301
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "pages_read": 8012
+    },
+    {
+      "year": 2022,
+      "month": 7,
+      "pages_read": 11821
+    },
+    {
+      "year": 2022,
+      "month": 8,
+      "pages_read": 20292
+    },
+    {
+      "year": 2022,
+      "month": 9,
+      "pages_read": 11055
+    },
+    {
+      "year": 2022,
+      "month": 10,
+      "pages_read": 14697
+    },
+    {
+      "year": 2022,
+      "month": 11,
+      "pages_read": 10948
+    },
+    {
+      "year": 2022,
+      "month": 12,
+      "pages_read": 10039
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "pages_read": 3465
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "pages_read": 3077
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "pages_read": 17050
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "pages_read": 6804
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "pages_read": 831
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "pages_read": 0
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "pages_read": 0
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "pages_read": 3602
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "pages_read": 2784
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "pages_read": 14993
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "pages_read": 25619
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "pages_read": 4056
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "pages_read": 12638
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "pages_read": 3261
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "pages_read": 18039
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "pages_read": 3648
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "pages_read": 2408
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "pages_read": 1003
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "pages_read": 9968
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "pages_read": 7096
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "pages_read": 2476
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "pages_read": 2851
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "pages_read": 6073
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "pages_read": 2462
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "pages_read": 1803
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "pages_read": 576
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "pages_read": 4520
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "pages_read": 840
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "pages_read": 3584
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "pages_read": 8690
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "pages_read": 0
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "pages_read": 35956
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "pages_read": 3698
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "pages_read": 3654
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "pages_read": 1512
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "pages_read": 0
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "pages_read": 7341
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "pages_read": 0
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "pages_read": 1688
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "pages_read": 8020
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "pages_read": 0
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "pages_read": 9829
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "pages_read": 7503
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "pages_read": 1440
+    },
+    {
+      "year": 2026,
+      "month": 9,
+      "pages_read": 952
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "pages_read": 224
+    },
+    {
+      "year": 2026,
+      "month": 11,
+      "pages_read": 0
+    },
+    {
+      "year": 2026,
+      "month": 12,
+      "pages_read": 0
+    }
+  ]
+}

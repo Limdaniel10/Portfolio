@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+"""Run after build_site.py to catch broken Pages paths and data regression."""
+from __future__ import annotations
+import csv,json,re,sys
+from pathlib import Path
+from urllib.parse import urlsplit,unquote
+from bs4 import BeautifulSoup
+ROOT=Path(__file__).resolve().parents[1]
+SITE=ROOT/'_site'
+assert (SITE/'index.html').exists(),'Missing homepage'
+expected=('about','career','traveling','writing','reading')
+for section in expected:assert (SITE/section/'index.html').exists(),f'Missing /{section}/ index'
+assert (SITE/'assets/resume.pdf').stat().st_size>10000,'Missing resume'
+assert (SITE/'.nojekyll').exists()
+assert (SITE/'data/visited-world.svg').stat().st_size>1000
+travel=json.loads((SITE/'traveling/assets/data.js').read_text(encoding='utf8').strip().split('=',1)[1].rstrip(';'))
+assert sum(bool(c['count_in_195']) for c in travel['countries'])==json.loads((SITE/'data/countries.json').read_text())['totalCountries']
+assert len(travel['places'])>=282 and len(travel['domestic_places'])>=69
+assert len(travel['airport_overnights'])>=45
+books=json.loads((SITE/'reading/data/books.json').read_text())['books']
+months=json.loads((SITE/'reading/data/monthly-pages.json').read_text())['months']
+assert len(books)>=1400 and len(months)>=84
+writing=json.loads((SITE/'writing/writing-index.json').read_text())
+assert sum(len(c['chapters']) for c in writing['collections'])==107
+assert len(writing['essays'])==3
+failures=[];checked=0
+for html in SITE.rglob('index.html'):
+ soup=BeautifulSoup(html.read_text(encoding='utf8'),'html.parser')
+ for tag in soup.select('a[href],link[href],script[src],img[src]'):
+  raw=tag.get('href') or tag.get('src') or ''
+  if not raw or raw.startswith(('#','mailto:','tel:','data:','https://','http://')):continue
+  path=urlsplit(raw).path
+  if not path:continue
+  if path.startswith('/Portfolio/'):
+   target=SITE/unquote(path[len('/Portfolio/'):])
+  elif path.startswith('/'):
+   failures.append(f'{html.relative_to(SITE)} : absolute non-Portfolio link {path}')
+   continue
+  else:target=html.parent/unquote(path)
+  if target.is_dir():target/='index.html'
+  checked+=1
+  if not target.exists():failures.append(f'{html.relative_to(SITE)} : {raw} not found')
+  if len(failures)>100:break
+ if len(failures)>100:break
+if failures:
+ print('BROKEN LINKS (first 100):',*failures[:100],sep='\n  ')
+ sys.exit(1)
+print(f'PASS: home + five sections, {len(list(SITE.rglob("index.html")))} HTML pages, {checked} checked local links, {len(books)} books, 107 Writing chapters, {len(travel["places"])} abroad places')

@@ -1,0 +1,7 @@
+_site/
+.build_writing/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+.env

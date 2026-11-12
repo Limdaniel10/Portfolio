@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Archive · Chaehyun Lim</title>
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="reading-site-nav"><a class="reading-brand" href="../">CHAEHYUN LIM</a><nav aria-label="Main navigation"><a href="../">Home</a><a href="../about/">About</a><a href="../career/">Career</a><a href="../traveling/">Traveling</a><a href="../writing/">Writing</a><a href="./" aria-current="page">Reading</a></nav></header>
+<main><div class="eyebrow">Personal Archive / Books</div><h1>Reading Archive</h1><p class="sub">A personal record of books read since 2020. Select a year to explore its totals, then choose a month to browse the books and authors.</p>
+<p id="archiveStatus" class="archive-status" role="status" hidden>Loading reading data…</p>
+<section class="statgrid" aria-label="Lifetime reading statistics"><div class="stat"><strong id="totBooks">—</strong><span>Books Read</span></div><div class="stat"><strong id="totPages">—</strong><span>Pages Recorded</span></div></section>
+<h2>Reading by Year</h2><section class="panel"><div class="barlist" id="bars" aria-label="Select a year to explore reading activity"></div><div class="details"><strong id="selectedYear">—</strong><div class="detailnums"><div><span>Books read</span><b id="selectedBooks">—</b></div><div><span>Pages read</span><b id="selectedPages">—</b></div></div></div><p class="hint">Bar lengths represent the number of books read. Select a month below for its reading list.</p><div id="monthgrid" class="monthgrid"></div><div id="monthdetail" class="monthdetail" aria-live="polite"></div><section class="booksection" aria-labelledby="booksHeading">
+ <div class="bookhead"><div><h3 id="booksHeading">Books Read This Month</h3><p class="bookdesc" id="bookCount">Titles and primary authors</p></div></div>
+ <ol class="booklist" id="booklist" aria-live="polite"></ol>
+ <p id="bookempty" class="bookempty" hidden></p>
+ <button class="showmore" id="showmore" type="button" hidden></button>
+</section><p id="notionlink" class="archive"></p></section>
+<p class="foot">Reading counts come from completed titles. Page totals come only from monthly page records; newly added books may not yet be reflected in the page count.</p>
+</main><script src="app.js" defer></script></body></html>

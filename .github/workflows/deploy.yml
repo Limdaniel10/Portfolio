@@ -1,0 +1,82 @@
+name: Build and deploy full Portfolio
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Recheck connected Sheets hourly, at minute 17 UTC.
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: portfolio-pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install tools for Writing, Reading, and Traveling
+        run: python -m pip install -r requirements.txt
+      - name: Sync Reading from Google Sheets when configured; otherwise bundled CSV
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SHEETS_ID: ${{ vars.GOOGLE_SHEETS_ID }}
+        shell: bash
+        run: |
+          if [[ -n "$GOOGLE_SHEETS_ID" ]]; then
+            if [[ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]]; then
+              echo 'Reading sheet ID is set, but GOOGLE_SERVICE_ACCOUNT_JSON is missing' >&2
+              exit 1
+            fi
+            python scripts/sync_reading.py
+          else
+            python scripts/sync_reading.py --from-csv
+          fi
+      - name: Sync Traveling from Google Sheets when configured; otherwise bundled CSV
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_TRAVEL_SHEETS_ID: ${{ vars.GOOGLE_TRAVEL_SHEETS_ID }}
+        shell: bash
+        run: |
+          if [[ -n "$GOOGLE_TRAVEL_SHEETS_ID" ]]; then
+            if [[ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]]; then
+              echo 'GOOGLE_TRAVEL_SHEETS_ID is set, but GOOGLE_SERVICE_ACCOUNT_JSON is missing' >&2
+              exit 1
+            fi
+            python scripts/sync_travel.py
+          else
+            python scripts/sync_travel.py --from-csv
+          fi
+      - name: Build all pages and live visited-country homepage map
+        run: python scripts/build_site.py --base /Portfolio/
+      - name: Test Markdown auto-generation and source data checks
+        run: |
+          python writing_source/tests/test_build.py
+          python -m unittest discover -s tests -p "test_sync_*.py"
+      - name: Verify navigation and original content
+        run: python tests/test_integration.py
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload full site as one artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
