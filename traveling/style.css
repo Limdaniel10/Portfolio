@@ -24,3 +24,6 @@ header.shell nav a[aria-current="page"]{color:#126093;font-weight:750}
 header{height:76px}
 header nav a{padding-bottom:5px}
 header nav a[aria-current="page"]{color:var(--ink);font-weight:700;border-bottom:1px solid var(--blue)}
+
+/* Shuttle routes: distinct from private car legs. */
+.legend .bus{background:#956d35}

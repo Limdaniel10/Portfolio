@@ -15,7 +15,12 @@ class TravelSyncTests(unittest.TestCase):
   validate(self.tables,self.baseline)
   data=build_data(self.tables,self.baseline)
   self.assertEqual(sum(c['count_in_195'] for c in data['countries']),90)
-  self.assertEqual(len(data['geometry']['features']),len(self.baseline['geometry']['features']))
+  self.assertGreaterEqual(len(data['geometry']['features']),len(self.baseline['geometry']['features']))
+  self.assertEqual(data['country_basis'],194)
+  self.assertIn('Bus',data['transport_modes'])
+  rs=[f for f in data['geometry']['features'] if f['properties']['kind']=='surface_route']
+  self.assertEqual(len(rs),len([f for f in self.baseline['geometry']['features'] if f['properties']['kind']=='surface_route'])+1)
+  self.assertTrue(any(f['properties']['from_name']=='Moscow' and f['properties']['to_name']=='Irkutsk' for f in rs))
   self.assertEqual(len(data['places']),282)
   self.assertEqual(len(data['domestic_places']),69)
  def test_add_place_visit_flight_and_route(self):
@@ -30,7 +35,7 @@ class TravelSyncTests(unittest.TestCase):
   self.assertEqual(feats['place-new-test']['geometry']['coordinates'],[-112,34])
   self.assertEqual(feats['flight-new-test']['properties']['mode'],'Plane')
   self.assertEqual(feats['route-new-test']['properties']['mode'],'Car')
-  self.assertEqual(len(data['geometry']['features']),len(self.baseline['geometry']['features'])+3)
+  self.assertEqual(len(data['geometry']['features']),len(build_data(self.tables,self.baseline)['geometry']['features'])+3)
  def test_accidental_delete_rejected(self):
   tables=copy.deepcopy(self.tables);tables['places'].pop()
   with self.assertRaises(TravelDataError):validate(tables,self.baseline)

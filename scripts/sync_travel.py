@@ -110,6 +110,9 @@ def flight_coords(a,b):
 
 def build_data(tables,baseline):
  data={k:baseline[k] for k in ('schema_version','transport_modes','country_basis')}
+ # Author-confirmed count: 193 UN members plus Vatican City; Taiwan is excluded.
+ data['country_basis']=194
+ data['transport_modes']=sorted(set(data['transport_modes'])|{r['mode'] for r in tables['surface_routes']})
  for _,(key,_) in TABLES.items():
   if key!='surface_routes':data[key]=tables[key]
  orig={(f['properties']['kind'],f['properties'].get('id')):f for f in baseline['geometry']['features']}

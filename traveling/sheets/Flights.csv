@@ -160,8 +160,8 @@ flight-0156,2024,2024-05,UBN,CJJ,recorded_flown,transport
 flight-0157,2024,2024-06;2024-07;2024-08,PUS,SIN,recorded_flown,transport
 flight-0158,2024,2024-06,SIN,IST,recorded_flown,transport
 flight-0159,2024,2024-06,SAW,ATH,recorded_flown,transport
-flight-0160,2024,2024-06;2024-07;2024-08,ATH,ATH,recorded_flown,return_to_origin
-flight-0161,2024,2024-06;2024-07;2024-08,ATH,DBV,recorded_flown,transport
+flight-0160,2024,2024-06;2024-07;2024-08,ATH,ATH,recorded_flown,diversion_return_to_ath
+flight-0161,2024,2024-06;2024-07;2024-08,ATH,DBV,recorded_flown,next_day_replacement_after_diversion
 flight-0162,2024,2024-07,DBV,VIE,recorded_flown,transport
 flight-0163,2024,2024-07,PRG,VCE,recorded_flown,transport
 flight-0164,2024,2024-07,TSF,BVA,recorded_flown,transport
