@@ -37,7 +37,7 @@ def build(out):
  doc.addPageTemplates(PageTemplate(id='resume',frames=[Frame(36,25,540,740,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)]))
  a=[
  t('CHAEHYUN LIM','name'),
- t('Atlanta, GA  |  clim70@gatech.edu  |  linkedin.com/in/lim-chaehyun  |  limdaniel10.github.io/Portfolio/','contact'),
+ t('Atlanta, GA  |  clim70@gatech.edu  |  linkedin.com/in/lim-chaehyun  |  limdaniel10.github.io/Portfolio/career/','contact'),
  t('AEROSPACE SYSTEMS  |  HARDWARE INTEGRATION, TEST &amp; ELECTRIFICATION','tag'),
  *section('EDUCATION'),
  entry('Georgia Institute of Technology | M.S. Aerospace Engineering | Atlanta, GA','Expected May 2027',[]),

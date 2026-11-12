@@ -104,7 +104,7 @@ def build(base,output):
  world=parse_js_object(ROOT/'traveling/assets/world.js','WORLD')
  d=output/'data';d.mkdir()
  n=sum(bool(c['count_in_195']) for c in travel['countries'])
- (d/'countries.json').write_text(json.dumps({'totalCountries':n,'continents':6,'source':'traveling/assets/data.js'},indent=2)+'\n',encoding='utf8')
+ (d/'countries.json').write_text(json.dumps({'totalCountries':n,'continents':6,'airportNights':len(travel['airport_overnights']),'totalBooks':len(json.loads((ROOT/'reading/data/books.json').read_text(encoding='utf8'))['books']),'source':'traveling/assets/data.js + reading/data/books.json'},indent=2)+'\n',encoding='utf8')
  (d/'visited-world.svg').write_text(make_map(travel,world),encoding='utf8')
  print(f'Full site built: {output}, country highlights={n}, writing pages={len(list((output/"writing").rglob("index.html")))}')
 
