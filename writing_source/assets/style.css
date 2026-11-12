@@ -252,3 +252,5 @@
 .portal-section>.portal-grid{width:100%;margin:0 0 88px;box-sizing:border-box}
 @media(max-width:960px){.portal-section{width:calc(100% - 62px)}}
 @media(max-width:680px){.portal-section{width:calc(100% - 38px)}.portal-section>.portal-grid{margin-bottom:55px}}
+
+.archive-language-note{margin:13px 0 0;color:#8c715d;font-size:12px;letter-spacing:.02em;line-height:1.6}
