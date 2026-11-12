@@ -19,11 +19,3 @@
 .logo-card .logo-name{font-size:12px;font-weight:650;text-align:center;line-height:1.4}
 .logo-card small{font-size:10px;line-height:1.6}
 @media(max-width:680px){.logo-card{min-height:190px}.logo-card .logo-art{height:78px}}
-
-/* Project evidence: diagrams stay readable on desktop and mobile. */
-.project-media{margin:18px 0 10px;max-width:680px;border:1px solid var(--line);background:#f8fbf8;padding:12px}
-.project-media img{width:100%;height:auto;display:block;max-height:440px;object-fit:contain}
-.project-media figcaption,.media-caption{font-size:11px;line-height:1.6;color:var(--muted);margin:9px 0 0}
-.project-media-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
-.project-media-grid .project-media{margin:18px 0 0;min-width:0}
-@media(max-width:700px){.project-media-grid{grid-template-columns:1fr}.project-media{padding:8px}}
