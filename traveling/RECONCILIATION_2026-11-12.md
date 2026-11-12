@@ -1,7 +1,7 @@
 # Travel data reconciliation — 2026-11-12
 
 ## Author-confirmed policy
-- Flight count: 277 currently recorded flown legs; do not increase without reconciling the extra Naples–Geneva flight.
+- **Final author-confirmed flight count: 278 actually flown legs.** One separate cancelled NAP → GVA booking is excluded. NAP → ZRH was flown after cancellation, followed by a train to Geneva.
 - Countries: 193 UN members plus Vatican City are eligible; Taiwan is excluded. 90 visited countries are currently marked, unchanged.
 - Airport overnight stays: 45 (confirmed).
 - Country/territory map routes: schematic straight connecting lines, not literal track geometry.
@@ -16,14 +16,14 @@
 - 2026 ATL ↔ IAH round trip confirmed.
 
 ## Pending explicit confirmation — no inferred edits
-1. NAP → GVA, July 2022: author says cancelled then rebooked and flown; GitHub currently marks flight-0065 cancelled and counts 277 other flown legs. Changing it to flown yields 278. Confirm where that extra leg should reconcile before changing status/count.
+1. **Resolved:** NAP → GVA was cancelled; NAP → ZRH was flown the next day. Zurich → Geneva was by train, and the final flight total is 278.
 2. No globally geolocated city currently for 2026 Honduras; ask author.
 3. Additional year-country stay periods lack dated place references: 2011 JP; 2022 PA; 2024 BE; 2025 CL, PE, DK, GT; 2026 FR, FI, EE, CN. Ask author before adding visit/place coordinates.
 4. Workbook flight-pair mismatches were previously audited; confirmed pairs above were kept, without inventing new legs.
 
 ## Data integrity notes
 - Country code GB and MD duplicate category variants are present in the original archived country data and intentionally preserved.
-- The surface route CSV now has 143 schematic legs, one more than the previous baseline because Moscow was confirmed as an intermediate train stop.
+- The surface route CSV has **144 schematic legs**, two more than the original 142: Moscow was added as an intermediate train stop; Zurich Airport → Geneva was added as a 2022 rail transfer.
 - The only non-rendered flown flight geometry is ATH → ATH, as its endpoints coincide.
 
 ## Additional author verification — 2026-11-12 (follow-up)
@@ -40,4 +40,9 @@
 - **France, 2026:** Paris was visited in the existing 2026-05-23..25 country-stay window. Attached existing place-0021; exact day(s) in the city were not separately specified.
 - **Peru → Bolivia:** route Lima → Cusco → Puno → Copacabana confirmed as an itinerary, already represented by place-0189/0190/0191/0192 and late-2024 surface legs Cusco → Puno → Copacabana. No claim about exact transit method for the Lima leg was added; original 2024-12 route dates preserved. The 2024-12 / 2025-01 cross-year visits were already recorded, and the map filter was corrected to honor 2025-01 when the record's primary year is 2024. Recorded 2025-01 SCL → LIM → PTY flights support a separate 2025 stop in Peru but do not establish a second Cusco/Puno/Copacabana trip.
 - **Naples cancellation and rebooking:** confirmed cancelled NAP → GVA in July 2022 and actually flown NAP → ZRH on the following day. Kept the existing cancelled record flight-0065, created flown flight-0279 NAP → ZRH, and added ZRH using OurAirports coordinates. Exact day is not confirmed: assigned 2022-07 month only.
-- **Flight-count discrepancy is OPEN:** prior user-confirmed tally 277 flown legs; the source had 277 already recorded flown, and NAP → ZRH was absent. The new independently confirmed flown leg makes **278 recorded flown legs** in GitHub. No other flight was silently deleted or reclassified to force 277. A duplicate/unreconciled leg elsewhere may still exist, so 278 is the current dataset count, not a fully reconciled lifetime final tally.
+- **Flight-count discrepancy RESOLVED by the author:** 278 flown flight legs is the final agreed count, including NAP → ZRH and excluding cancelled NAP → GVA. No other flight was deleted or reclassified.
+
+## Final author confirmation — flight total and Swiss rail transfer
+- User confirmed **278 flights** as the final flown-leg total, superseding the earlier 277 estimate. Exactly one cancelled booking remains excluded from this count.
+- The July 2022 replacement flight was Naples (NAP) → Zurich (ZRH), followed by **train from Zurich to Geneva**. A schematic rail segment `route-093-leg-01` was added from the recorded Zurich Airport coordinate to the existing Geneva city coordinate; the exact train station and day are not claimed.
+- Flight total shown on Traveling is 278, derived from the Flights CSV at build time (with an HTML fallback also updated).
