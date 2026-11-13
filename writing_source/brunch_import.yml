@@ -9,6 +9,7 @@ supplied_urls:
   - https://brunch.co.kr/@lim-eat-less/244
   - https://brunch.co.kr/@lim-eat-less/255
   - https://brunch.co.kr/@lim-eat-less/258
+  - https://brunch.co.kr/@lim-eat-less/259
 
 # Sources are exclusively the author's published Brunch entries.
 # Do not infer unpublished titles, dates, article URLs, or missing prose.
@@ -84,6 +85,9 @@ collections:
         title: 돌고 돌아 남항
         date: '2025-01-19'
         url: 'https://brunch.co.kr/@lim-eat-less/258'
+      - chapter: 9
+        title: 54, 아직 젊습니다
+        url: 'https://brunch.co.kr/@lim-eat-less/259'
   venezuela:
     aliases: ['베네수엘라를 왜 가?', '베네수엘라를 왜 가']
     book_url: 'https://brunch.co.kr/brunchbook/guiana'
