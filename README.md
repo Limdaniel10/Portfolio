@@ -91,7 +91,7 @@ Markdown 내용은 배포 시 HTML 페이지로 자동 변환됩니다.
 
 파일 추가 후 GitHub에 commit/push하면 GitHub Actions가 **작품 목차, 해당 회차 페이지, 이전·다음 회차 링크, 전체 목록 JSON을 모두 자동 갱신**합니다. 별도 HTML 또는 JSON 수작업이 필요 없습니다. 새로운 작품은 `writing_source/content/collections.yml`에 작품 메타데이터를 한 번 추가해야 합니다.
 
-**현재 Writing 원고 상태 (2026-11-12 업데이트):** `el-salvador`의 1~13화와 `arctic`의 1~7화는 저자의 Brunch 원문을 Markdown으로 보관합니다. `tallinn` 1~9화, `venezuela` 1화, `short-disappearance` 1화는 검증 가능한 작가 원문 주소를 찾지 못해 임의로 작성하지 않았습니다. 다른 작품의 과거 미확인 원고는 `writing_source/MISSING_TEXT.csv`와 실제 Markdown을 확인하세요. 원고를 추가할 때는 `writing_source/content/collections/<작품ID>/NNN.md` 하나씩 넣습니다. 안전한 수집 도구는 `writing_source/scripts/sync_brunch_originals.py`, 출처 매핑은 `writing_source/brunch_import.yml`입니다.
+**현재 Writing 원고 상태 (2026-11-12 업데이트):** `el-salvador` 1~13화, `arctic` 1~7화, `tallinn` 1~9화, `venezuela` 1화, `short-disappearance` 1화는 저자의 Brunch 원문을 Markdown으로 보관합니다(총 31편). `tallinn` 9화는 8화의 공식 다음 회차 링크(`/259`)에서 추가로 확인했습니다. 다른 작품의 미확보 원고는 `writing_source/MISSING_TEXT.csv`를 참조하세요. 새 원고는 `writing_source/content/collections/<작품ID>/NNN.md`에 추가하며, 수집 도구(`writing_source/scripts/sync_brunch_originals.py`)와 출처 매핑(`writing_source/brunch_import.yml`)은 기존 본문을 자동으로 덮어쓰지 않습니다.
 
 ## 4. Reading — Google Sheets 연동
 
