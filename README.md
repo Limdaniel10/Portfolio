@@ -169,3 +169,13 @@ python -m http.server 8000 --directory _site
 - 원고 본문 누락: `writing_source/MISSING_TEXT.csv` 확인. 작성자가 직접 Markdown 본문을 추가해야 합니다.
 
 이 ZIP은 기존 사이트를 대신하는 **단일 통합본**이며 기존 데이터 손실을 피하기 위해 기존 아카이브·원고·이력서를 그대로 포함합니다.
+
+## 다국어 화면 (2026-11)
+
+- 기본 언어는 영어(en). 추가 선택 가능: 한국어(ko), 중국어 간체(zh-Hans), 스페인어(es), 중국어 번체(zh-Hant), 프랑스어(fr), 독일어(de).
+- js/i18n.js: 사이트 공통 메뉴·주요 소개 문구·언어 설정(localStorage).
+- js/i18n-about.js: About의 소개, 수치, 타임라인, 향후 계획, 연락처 전체 번역.
+- js/i18n-career.js: Career의 5개 프로젝트, 경험, 학력, 기술 및 연락처 상세 번역.
+- 영어 원본은 HTML에 그대로 유지. 다른 언어는 가벼운 JS 번역 사전으로 적용하여 언어별로 HTML을 복제하지 않음.
+- 원본 에세이, 책 제목·인용문, 상세 여행 기록은 자동 번역하지 않음. Writing의 한국어 에세이는 lang=ko로 표기.
+- 번역 수정 시 python tests/test_i18n.py를 실행. GitHub Pages 빌드에도 동일한 테스트 포함.
