@@ -241,6 +241,12 @@ async function initializeHighlights(){
    left.append(el("strong","highlight-book-title",note.title),
                el("span","highlight-book-author",note.author||""),
                el("span","highlight-book-preview",note.preview||""));
+   // A matching title is not proof of identical editions or authors.
+   // Preserve the original annotation and clearly identify the Books ledger author.
+   if(note.book && note.match_status==="Books title priority; Notion author differs"){
+      left.append(el("span","highlight-books-discrepancy",
+          "Books match: "+note.book.author+" · Original highlight attribution: "+note.author));
+   }
    title.append(left,el("span","highlight-book-source","HIGHLIGHT "+note.source+" · "+String(note.ordinal).padStart(2,"0")));
    card.append(title);
    const body=el("div","highlight-book-content");

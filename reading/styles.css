@@ -71,3 +71,6 @@
 .highlight-book-source{white-space:normal}
 .highlight-book-title{font-size:18px}.highlight-first-passage{font-size:17px}.highlight-passage{font-size:14px}
 }
+
+/* Keep homonymous author conflicts visible even when a user links by title. */
+.highlight-books-discrepancy{display:block;font-size:10px;line-height:1.65;color:var(--muted);font-style:italic;margin-top:5px}

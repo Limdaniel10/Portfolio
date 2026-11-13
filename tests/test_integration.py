@@ -32,6 +32,12 @@ assert {e['id']:e['book_id'] for e in highlight_data if e['id'] in known}==known
 
 assert all(e['title'] and e['text'] and e['review_status'] for e in highlight_data)
 assert {e['book_id'] for e in highlight_data if e['book_id']} <= {b['id'] for b in books}
+# User-approved title-priority linkage keeps divergent original attribution visible.
+for ident,bid in (('HII-022','BK-000611'),('HII-025','BK-000365')):
+ item=next(e for e in highlight_data if e['id']==ident)
+ assert item['book_id']==bid and item['review_status']=='Approved'
+ assert item['match_status']=='Books title priority; Notion author differs'
+
 assert 'ORIGINAL NOTEBOOKS' not in (SITE/'reading/index.html').read_text(encoding='utf8')
 assert 'Manage highlights in Google Sheets' in (SITE/'reading/index.html').read_text(encoding='utf8')
 
