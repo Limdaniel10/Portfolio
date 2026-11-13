@@ -487,7 +487,11 @@
       "previous_quote": "마지막으로 22년차 파키슨병 환자로서 환자로서 버킷 리스트에 대해 말하자면 나는 더 이상 버킷 리스트에 연연하지 않기로 했다. 몸이 허락하는 대로, 그리고 내 삶이 허락하는 대로 흘러가듯 살아가고 싶다.",
       "previous_quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "photo_quote_verified": true,
-      "photo_audit_date": "2026-11-13"
+      "photo_audit_date": "2026-11-13",
+      "published_date": "2025-07-06",
+      "date_source": "Brunch publication date fallback: no dated record slide",
+      "date_verification_note": "Brunch post has two quote images but no separate dated reading-log image; writing date cannot be established from photo.",
+      "photo_date_verified": false
     },
     {
       "id": "BR-000460",
@@ -537,7 +541,11 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/458",
       "verification": "Brunch photo quote verified; written date image unavailable",
       "photo_quote_verified": true,
-      "photo_audit_date": "2026-11-13"
+      "photo_audit_date": "2026-11-13",
+      "published_date": "2025-07-03",
+      "date_source": "Brunch publication date fallback: no dated record slide",
+      "date_verification_note": "Brunch post has two quote images but no separate dated reading-log image; writing date cannot be established from photo.",
+      "photo_date_verified": false
     },
     {
       "id": "BR-000457",
@@ -1324,7 +1332,8 @@
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
-      "photo_source_conflict": "Quote slide footer cites 김영하 <퀴즈쇼>, but dated slide and Brunch page identify 알베르토 몬디 <널 보러 왔어>; verify image footer."
+      "photo_source_conflict": "Quote slide footer cites 김영하 <퀴즈쇼>, but dated slide and Brunch page identify 알베르토 몬디 <널 보러 왔어>; verify image footer.",
+      "quote_attribution_status": "needs_author_review_due_to_photo_footer_conflict"
     },
     {
       "id": "BR-000411",
