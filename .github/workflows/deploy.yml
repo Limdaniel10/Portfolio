@@ -87,6 +87,9 @@ jobs:
           python writing_source/tests/test_build.py
           python -m unittest discover -s tests -p "test_sync_*.py"
           node --check js/i18n.js
+          node --check js/i18n-about.js
+          node --check js/i18n-career.js
+          python tests/test_i18n.py
           node --check reading/app.js
           node --check writing_source/assets/reading-notes.js
       - name: Verify navigation and original content
