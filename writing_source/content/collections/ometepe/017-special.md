@@ -10,7 +10,7 @@ brunch_url: https://brunch.co.kr/@lim-eat-less/45
 notion_source: null
 source_note: Author text from Notion
 ---
-2023. 03. 21 · Day 4
+2023\. 03. 21 · Day 4
 
 숙소 근처 식당에서 샌드위치로 가볍게 끼니를 때운 후 Brightline 기차역으로 향했다.
 
