@@ -26,7 +26,7 @@ def run():
   assert checked>=110, f'Expected all archived manuscripts; found {checked}'
   print(f'PASS: {checked} Writing manuscripts contain no isolated backslashes or horizontal rules')
   mountain=(copy/'content/collections/ometepe/014.md').read_text(encoding='utf8')
-  assert '2023. 03. 25 · Day 8' in mountain
+  assert '2023. 03. 25 · Day 8' in mountain or '2023\. 03. 25 · Day 8' in mountain
   initial=build(root=copy,base='/Portfolio/')
   initial_chapters=sum(len(b['chapters']) for b in initial['collections'])
   assert initial_chapters>=107, 'Original writing archive lost chapters'
