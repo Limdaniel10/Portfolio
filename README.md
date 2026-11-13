@@ -91,7 +91,7 @@ Markdown 내용은 배포 시 HTML 페이지로 자동 변환됩니다.
 
 파일 추가 후 GitHub에 commit/push하면 GitHub Actions가 **작품 목차, 해당 회차 페이지, 이전·다음 회차 링크, 전체 목록 JSON을 모두 자동 갱신**합니다. 별도 HTML 또는 JSON 수작업이 필요 없습니다. 새로운 작품은 `writing_source/content/collections.yml`에 작품 메타데이터를 한 번 추가해야 합니다.
 
-**중요한 원고 상태:** ZIP에 보존된 기존 회차 107개 중 **105개는 원본 본문 텍스트가 없었습니다.** 나머지 2개는 예시/복구 문서 내용이 들어 있습니다. 제목, 번호, 확인 가능한 Brunch 링크는 보존했고, 본문 없는 회차는 안내 메시지를 표시합니다. 파일별로 `writing_source/MISSING_TEXT.csv` 참조. 원고를 채우려면 해당 `.md` 파일의 `---` 메타데이터 아래에 본문을 추가하세요. 자동으로 원고를 만들어내지는 않습니다.
+**현재 Writing 원고 상태 (2026-11-12 업데이트):** `el-salvador`의 1~13화와 `arctic`의 1~7화는 저자의 Brunch 원문을 Markdown으로 보관합니다. `tallinn` 1~9화, `venezuela` 1화, `short-disappearance` 1화는 검증 가능한 작가 원문 주소를 찾지 못해 임의로 작성하지 않았습니다. 다른 작품의 과거 미확인 원고는 `writing_source/MISSING_TEXT.csv`와 실제 Markdown을 확인하세요. 원고를 추가할 때는 `writing_source/content/collections/<작품ID>/NNN.md` 하나씩 넣습니다. 안전한 수집 도구는 `writing_source/scripts/sync_brunch_originals.py`, 출처 매핑은 `writing_source/brunch_import.yml`입니다.
 
 ## 4. Reading — Google Sheets 연동
 
@@ -105,7 +105,7 @@ Markdown 내용은 배포 시 HTML 페이지로 자동 변환됩니다.
 4. GitHub `Portfolio` → **Settings → Secrets and variables → Actions**에서
    - **Repository secret**: `GOOGLE_SERVICE_ACCOUNT_JSON` = 서비스 계정 JSON 키 **전체 내용** (파일은 Git에 절대로 올리지 말 것)
    - **Repository variable**: `GOOGLE_SHEETS_ID` = Sheet URL의 `/d/`와 `/edit` 사이 ID
-5. **Actions → Build and deploy full Portfolio → Run workflow**로 시험합니다. 설정이 정상이면 매시 17분(UTC)에 변경 여부를 다시 확인하고 자동 배포합니다. 수동 Git commit 없이 Google Sheet 행을 추가해도 공개 사이트가 갱신됩니다.
+5. **Actions → Build and deploy full Portfolio → Run workflow**로 시험합니다. 설정이 정상이면 매일 12:17 UTC에 변경 여부를 다시 확인하고 자동 배포합니다. 수동 Git commit 없이 Google Sheet 행을 추가해도 공개 사이트가 갱신됩니다.
 
 계산 규칙은 고정입니다: **완독 권수 = Books의 `CompletedDate`**, **페이지 수 = MonthlyPages의 `PagesRead`**. 책별 페이지 수를 합산하지 않습니다. 월/연도 중복, 책 ID 중복, 과거 기록 삭제, 잘못된 날짜 등을 검사합니다.
 
