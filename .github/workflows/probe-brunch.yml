@@ -1,0 +1,20 @@
+name: Check Brunch manuscript availability
+on:
+  push:
+    paths:
+      - scripts/probe_brunch.py
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install scraper parsing tools
+        run: python -m pip install requests==2.32.5 beautifulsoup4==4.13.4
+      - name: Test access to all 13 original Brunch articles
+        run: python scripts/probe_brunch.py
