@@ -8,7 +8,6 @@ status: text
 brunch_url: null
 source_note: Revised sample manuscript (DOCX), not the Notion original
 ---
-
 지난겨울의 나는 여전히 불효자식이었다. 방학이면 방학마다 여행을 우선해, 1년 반 동안 집에 들어가지 않았다.
 
 미국에서 한국으로 갈 비행기를 끊느니 그 돈으로 여행하는 게 낫다는 핑계를 댔다. 여행에도 돈은 적잖이 들었다. 그저 여행이 하고 싶었다. 삼십여 나라를 돌아다니면서 한국은 한 번도 찾지 않았다.
