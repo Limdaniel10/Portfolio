@@ -183,3 +183,138 @@ async function initialize() {
   }
 }
 initialize();
+
+
+/* Reading > Notion Highlights: dates come from Books, never from Notion pages. */
+async function initializeHighlights(){
+ const root=document.getElementById("highlightArchive"), search=document.getElementById("highlightSearch");
+ const filter=document.getElementById("highlightSource"), count=document.getElementById("highlightCount");
+ const total=document.getElementById("highlightTotal"), linked=document.getElementById("highlightLinked");
+ const empty=document.getElementById("highlightEmpty");
+ if(!root||!search||!filter||!count||!total||!linked||!empty)return;
+ const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;};
+ const norm=s=>String(s||"").normalize("NFKC").toLocaleLowerCase().replace(/[\s\p{P}\p{S}]/gu,"");
+ try{
+  const [r1,r2]=await Promise.all([fetch("./data/highlights.json",{cache:"no-cache"}),fetch("./data/books.json",{cache:"no-cache"})]);
+  if(!r1.ok||!r2.ok)throw Error("Highlight or book records unavailable");
+  const [data,ledger]=await Promise.all([r1.json(),r2.json()]);
+  if(!Array.isArray(data.entries)||!Array.isArray(ledger.books))throw Error("Invalid highlight data");
+  const byID=new Map(),byTitle=new Map();
+  for(const b of ledger.books){
+   byID.set(b.id,b);
+   const key=norm(b.title);
+   if(!byTitle.has(key))byTitle.set(key,[]);
+   byTitle.get(key).push(b);
+  }
+  const notes=data.entries.map(n=>{
+   let b=n.book_id?byID.get(n.book_id):null;
+   if(b&&norm(b.title)!==norm(n.title))b=null;
+   if(!b){
+    const candidates=byTitle.get(norm(n.title))||[];
+    if(candidates.length===1&&norm(candidates[0].author)===norm(n.author))b=candidates[0];
+   }
+   if(b&&!Number.isInteger(Number(b.month)))b=null;
+   return {...n,book:b||null,year:b?Number(b.year):null,month:b?Number(b.month):null};
+  });
+  total.textContent=fmt(notes.length);
+  linked.textContent=fmt(notes.filter(n=>n.book).length);
+  function noteCard(note,show){
+   const card=el("details","highlight-book");card.open=show;
+   const title=el("summary","highlight-book-heading");
+   const left=el("span","highlight-book-left");
+   left.append(el("strong","highlight-book-title",note.title),
+               el("span","highlight-book-author",note.author||""),
+               el("span","highlight-book-preview",note.preview||""));
+   title.append(left,el("span","highlight-book-source","HIGHLIGHT "+note.source+" · "+String(note.ordinal).padStart(2,"0")));
+   card.append(title);
+   const body=el("div","highlight-book-content");
+   const paragraphs=String(note.text||"").split(/\n{2,}/).map(s=>s.trim()).filter(Boolean);
+   if(paragraphs.length){
+    paragraphs.forEach((p,i)=>body.append(el("p",i===0?"highlight-first-passage":"highlight-passage",p)));
+   }else{
+    body.append(el("p","highlight-missing-passage","This Notion entry has no text passage. Open the source notebook for more context."));
+   }
+   const links=el("div","highlight-book-actions");
+   if(note.notion_url.startsWith("https://app.notion.com/")){
+    const a=el("a","highlight-original-link","View original on Notion ↗");
+    a.href=note.notion_url;a.target="_blank";a.rel="noopener noreferrer";links.append(a);
+   }
+   if(note.book){
+    const btn=el("button","highlight-find-book","Find completed month ↗");
+    btn.type="button";
+    btn.addEventListener("click",()=>{
+      if(!years.some(y=>y.year===note.year))return;
+      activeYear=note.year;activeMonth=note.month;showAllBooks=false;
+      draw();
+      document.getElementById("reading-years")?.scrollIntoView({behavior:"smooth",block:"start"});
+    });
+    links.append(btn);
+   }
+   body.append(links);card.append(body);return card;
+  }
+  function group(cls,label,arr,open){
+   const d=el("details",cls);d.open=open;
+   const header=el("summary","highlight-group-heading");
+   header.append(el("strong","highlight-group-name",label),
+                 el("span","highlight-group-count",fmt(arr.length)+" "+(arr.length===1?"highlight":"highlights")),
+                 el("span","highlight-group-plus","+"));
+   d.append(header);return d;
+  }
+  function render(){
+   const q=search.value.trim().toLocaleLowerCase(),src=filter.value;
+   const selection=notes.filter(n=>(src==="all"||n.source===src)&&(!q||[n.title,n.author,n.preview,n.text].join(" ").toLocaleLowerCase().includes(q)));
+   const byYear=new Map(),orphan=new Map();
+   for(const n of selection){
+    if(n.book){
+     if(!byYear.has(n.year))byYear.set(n.year,new Map());
+     const months=byYear.get(n.year);
+     if(!months.has(n.month))months.set(n.month,[]);
+     months.get(n.month).push(n);
+    }else{
+     if(!orphan.has(n.source))orphan.set(n.source,[]);
+     orphan.get(n.source).push(n);
+    }
+   }
+   const frag=document.createDocumentFragment();
+   const yKeys=[...byYear.keys()].sort((a,b)=>b-a);
+   yKeys.forEach((y,yi)=>{
+    const months=byYear.get(y),all=[...months.values()].flat();
+    const year=group("highlight-year",String(y),all,!!q||yi===0);
+    const content=el("div","highlight-year-body");
+    [...months.keys()].sort((a,b)=>b-a).forEach((m,mi)=>{
+     const arr=months.get(m).slice().sort((a,b)=>Number(a.book.month_order||0)-Number(b.book.month_order||0)||a.title.localeCompare(b.title,"ko"));
+     const month=group("highlight-month",MONTHS[m-1]+" "+y,arr,!!q||(yi===0&&mi===0));
+     const list=el("div","highlight-book-list");
+     arr.forEach(n=>list.append(noteCard(n,!!q)));
+     month.append(list);content.append(month);
+    });
+    year.append(content);frag.append(year);
+   });
+   if(orphan.size){
+    const all=[...orphan.values()].flat();
+    const other=group("highlight-year","Completion date not linked",all,!!q||!yKeys.length);
+    const content=el("div","highlight-year-body");
+    content.append(el("p","highlight-unlinked-caption","These original passages have no unambiguous matching book or reread in the ledger. No date has been assigned."));
+    ["I","II","III","IV"].filter(s=>orphan.has(s)).forEach(s=>{
+      const arr=orphan.get(s).slice().sort((a,b)=>a.ordinal-b.ordinal);
+      const sourceGroup=group("highlight-month","Highlight "+s,arr,!!q||!yKeys.length);
+      const list=el("div","highlight-book-list");
+      arr.forEach(n=>list.append(noteCard(n,!!q)));
+      sourceGroup.append(list);content.append(sourceGroup);
+    });
+    other.append(content);frag.append(other);
+   }
+   root.replaceChildren(frag);
+   count.textContent=fmt(selection.length)+" of "+fmt(notes.length)+" collected highlights";
+   empty.hidden=selection.length!==0;
+  }
+  search.addEventListener("input",render);
+  filter.addEventListener("change",render);
+  render();
+ }catch(e){
+  console.error("Reading Notion Highlights unavailable",e);
+  root.replaceChildren(el("p","highlight-error","Notion highlights are temporarily unavailable."));
+  count.textContent="Archive unavailable";
+ }
+}
+initializeHighlights();

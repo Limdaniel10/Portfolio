@@ -10,5 +10,36 @@
 <div class="month-section"><div class="month-section-title"><div><div class="eyebrow">02 / The months</div><h3>A closer look.</h3></div><p>Choose a month for its titles and pages.</p></div><div id="monthgrid" class="monthgrid"></div><div id="monthdetail" class="monthdetail" aria-live="polite"></div></div>
 <section class="booksection" aria-labelledby="booksHeading"><div class="bookhead"><div><div class="eyebrow">03 / On the shelf</div><h3 id="booksHeading">Books read this month</h3><p class="bookdesc" id="bookCount">Titles and primary authors</p></div><span class="shelf-mark" aria-hidden="true">↘</span></div><ol class="booklist" id="booklist" aria-live="polite"></ol><p id="bookempty" class="bookempty" hidden></p><button class="showmore" id="showmore" type="button" hidden></button></section><p id="notionlink" class="archive"></p></div></section>
 
+
+<section class="reading-section highlight-section" id="reading-highlights" aria-labelledby="highlightsHeading">
+  <div class="section-heading">
+    <div><div class="eyebrow">04 / The highlighted pages</div><h2 id="highlightsHeading">Lines worth keeping.</h2></div>
+    <p class="aside-note">Notion Highlight I–IV · Sorted by book completion month.</p>
+  </div>
+  <div class="highlight-panel">
+    <div class="highlight-intro">
+      <div><span class="highlight-eyebrow">A PERSONAL ARCHIVE / THE MARGINS</span>
+      <p>Some books stay with me through a single line. Open a year, then a month, and rediscover passages from the books I have read.</p>
+      <p class="highlight-explainer">The year and month come from my completed-book list—not the date I captured the passage in Notion. Unmatched entries remain in a separate group without invented dates.</p></div>
+      <div class="highlight-stats"><div><strong id="highlightTotal">—</strong><span>HIGHLIGHTS</span></div><div><strong id="highlightLinked">—</strong><span>LINKED BOOKS</span></div></div>
+    </div>
+    <div class="highlight-toolbar">
+      <label for="highlightSearch">Search books, authors &amp; passages</label>
+      <label for="highlightSource">Notion collection</label>
+      <input type="search" id="highlightSearch" placeholder="Search a book or a remembered line…" autocomplete="off"/>
+      <select id="highlightSource"><option value="all">All four collections</option>
+        <option value="I">Highlight I</option><option value="II">Highlight II</option>
+        <option value="III">Highlight III</option><option value="IV">Highlight IV</option>
+      </select>
+    </div>
+    <div class="highlight-status-row"><span id="highlightCount">Loading the collection…</span><span>YEAR → MONTH → BOOK</span></div>
+    <div id="highlightArchive" class="highlight-archive" aria-live="polite"></div>
+    <p class="highlight-empty" id="highlightEmpty" hidden>No highlights match this search.</p>
+    <div class="highlight-source-links"><span>ORIGINAL NOTEBOOKS</span>
+      <a href="https://app.notion.com/p/185f8fb4581b800ab924c9a33cb6fd31" target="_blank" rel="noopener noreferrer">Highlight I ↗</a><a href="https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09" target="_blank" rel="noopener noreferrer">Highlight II ↗</a><a href="https://app.notion.com/p/186f8fb4581b80fd85a6f4d2dc45ec08" target="_blank" rel="noopener noreferrer">Highlight III ↗</a><a href="https://app.notion.com/p/187f8fb4581b80e6bea3cfb06eddc078" target="_blank" rel="noopener noreferrer">Highlight IV ↗</a>
+    </div>
+  </div>
+</section>
+
 <p class="foot">Book counts come from completion dates. Page totals come from separate monthly reading records, not an estimate of the length of individual books.</p>
 </main><footer class="shell site-footer"><span>© 2026 Chaehyun Lim</span><span>READING / THE ARCHIVE</span><a href="#top">Back to top ↑</a></footer><script src="app.js" defer></script></body></html>

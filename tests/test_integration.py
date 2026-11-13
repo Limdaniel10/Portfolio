@@ -21,6 +21,14 @@ books=json.loads((SITE/'reading/data/books.json').read_text())['books']
 months=json.loads((SITE/'reading/data/monthly-pages.json').read_text())['months']
 assert len(books)>=1400 and len(months)>=84
 assert 'reading-notes-section' not in (SITE/'reading/index.html').read_text(encoding='utf8')
+assert 'id="reading-highlights"' in (SITE/'reading/index.html').read_text(encoding='utf8')
+highlight_data=json.loads((SITE/'reading/data/highlights.json').read_text(encoding='utf8'))['entries']
+assert len(highlight_data)==337 and len({e['id'] for e in highlight_data})==337
+assert {s:sum(e['source']==s for e in highlight_data) for s in ('I','II','III','IV')}=={'I':100,'II':100,'III':100,'IV':37}
+assert sum(bool(e['book_id']) for e in highlight_data)==270
+assert all(e['title'] and e['notion_url'].startswith('https://app.notion.com/') for e in highlight_data)
+assert {e['book_id'] for e in highlight_data if e['book_id']} <= {b['id'] for b in books}
+
 assert 'id="wr-archive"' in (SITE/'writing/readings/index.html').read_text(encoding='utf8')
 assert len(json.loads((SITE/'writing/assets/reading-notes.json').read_text(encoding='utf8'))['notes'])==182
 
