@@ -14,7 +14,7 @@ GB,United Kingdom,True,country
 TR,Turkey,True,country
 CN,China,True,country
 GU,Guam,False,region_or_territory
-TW,Taiwan,False,region_or_territory
+TW,Taiwan,True,country
 ES,Spain,True,country
 BE,Belgium,True,country
 PR,Puerto Rico,False,region_or_territory
