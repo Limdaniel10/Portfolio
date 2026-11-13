@@ -32,11 +32,19 @@ assert {e['id']:e['book_id'] for e in highlight_data if e['id'] in known}==known
 
 assert all(e['title'] and e['text'] and e['review_status'] for e in highlight_data)
 assert {e['book_id'] for e in highlight_data if e['book_id']} <= {b['id'] for b in books}
-# User-approved title-priority linkage keeps divergent original attribution visible.
-for ident,bid in (('HII-022','BK-000611'),('HII-025','BK-000365')):
- item=next(e for e in highlight_data if e['id']==ident)
- assert item['book_id']==bid and item['review_status']=='Approved'
- assert item['match_status']=='Books title priority; Notion author differs'
+# The user confirmed Heo Yeon is the author of the two completed catalogue entries.
+by_book={b['id']:b for b in books}
+assert by_book['BK-000611']['author']=='허연'
+assert by_book['BK-000636']['author']=='허연'
+assert by_book['BK-000365']['author']=='무라카미 하루키'
+by_highlight={e['id']:e for e in highlight_data}
+assert by_highlight['HII-022']['book_id']=='BK-000611'
+assert by_highlight['HII-022']['author']=='허연'
+assert by_highlight['HII-022']['review_status']=='Approved'
+# Hemingway's identically titled book was unfinished; it must not attach to Murakami.
+assert by_highlight['HII-025']['author']=='어니스트 헤밍웨이'
+assert not by_highlight['HII-025']['book_id']
+assert by_highlight['HII-025']['review_status']=='Unfinished'
 
 assert 'ORIGINAL NOTEBOOKS' not in (SITE/'reading/index.html').read_text(encoding='utf8')
 assert 'Manage highlights in Google Sheets' in (SITE/'reading/index.html').read_text(encoding='utf8')
