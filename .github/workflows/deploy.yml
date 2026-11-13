@@ -94,6 +94,7 @@ jobs:
           python writing_source/tests/test_build.py
           python -m unittest discover -s tests -p "test_sync_*.py"
           node --check reading/app.js
+          node --check writing_source/assets/reading-notes.js
       - name: Verify navigation and original content
         run: python tests/test_integration.py
       - name: Configure GitHub Pages

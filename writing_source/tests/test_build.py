@@ -32,6 +32,11 @@ def run():
   # 182 book reflections are indexed under Writing / Readings.
   html=(copy/'_site/writing/readings/index.html').read_text(encoding='utf8')
   assert 'id="wr-archive"' in html and 'reading-notes.js' in html
+  assert 'Selected passages are kept from my Notion highlights.' not in html
+  wr_script=(copy/'_site/writing/assets/reading-notes.js').read_text(encoding='utf8')
+  assert 'make("details","wr-year")' in wr_script
+  assert 'yearBody.append(section)' in wr_script
+  assert 'monthName(month)' in wr_script
   payload=json.loads((copy/'_site/writing/assets/reading-notes.json').read_text(encoding='utf8'))
   assert len(payload['notes'])==182
   assert (copy/'_site/writing/assets/reading-notes.css').exists()
