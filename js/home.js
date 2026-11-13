@@ -10,6 +10,7 @@ fetch('data/countries.json', { cache: 'no-cache' }).then(r => {
   if (Number.isFinite(n)) {
     document.getElementById('country-count').textContent = `${n} countries`;
     document.getElementById('travel-tile-count').textContent = `${n} countries`;
+    window.PortfolioI18n?.refreshCounts();
   }
 }).catch(err => console.info('Travel count: displaying bundled fallback.', err));
 fetch('reading/data/books.json', { cache: 'no-cache' }).then(r => {
@@ -19,5 +20,6 @@ fetch('reading/data/books.json', { cache: 'no-cache' }).then(r => {
   if (Array.isArray(data.books)) {
     document.getElementById('reading-tile-count').textContent =
       `${data.books.length.toLocaleString('en-US')} books`;
+    window.PortfolioI18n?.refreshCounts();
   }
 }).catch(err => console.info('Reading count: displaying bundled fallback.', err));
