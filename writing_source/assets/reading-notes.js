@@ -16,7 +16,7 @@
   };
   const draw=()=>{
    const q=search.value.trim().toLocaleLowerCase(),mode=filter.value;
-   const selected=notes.filter(n=>(mode!=="quoted"||!!n.quote)&&(mode!=="pending"||!n.reflection)&&(!q||[n.title,n.author,n.reflection,n.quote].join(" ").toLocaleLowerCase().includes(q)));
+   const selected=notes.filter(n=>(mode!=="quoted"||!!n.quote)&&(mode!=="pending"||(!n.reflection&&!n.quote))&&(!q||[n.title,n.author,n.reflection,n.quote].join(" ").toLocaleLowerCase().includes(q)));
    // Explicit year → month → book hierarchy; works automatically for future years.
    const years=new Map();
    for(const n of selected){
@@ -54,7 +54,8 @@
        content.append(make("blockquote","wr-quote",n.quote));
        content.append(make("p","wr-source-label",n.verification==="Notion exact match"?"NOTION HIGHLIGHT · MATCHED":"SELECTED PASSAGE"));
      }
-     content.append(n.reflection?make("p","wr-reflection",n.reflection):make("p","wr-pending","Reflection not yet transcribed. Read the original Brunch post."));
+     if(n.reflection)content.append(make("p","wr-reflection",n.reflection));
+     else if(!n.quote)content.append(make("p","wr-pending","Original content not yet transcribed. Read the Brunch post."));
      if(n.brunch_url.startsWith("https://brunch.co.kr/")){
        const link=make("a","wr-link","Read original on Brunch ↗");
        link.href=n.brunch_url;link.target="_blank";link.rel="noopener noreferrer";content.append(link);
