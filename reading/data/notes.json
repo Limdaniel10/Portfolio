@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "source": "ReadingNotes",
+  "notes": [
+    {
+      "id": "RN-0004",
+      "book_id": "BK-000833",
+      "title": "오빠가 돌아왔다",
+      "author": "김영하",
+      "date": "2025-05-14",
+      "reflection": "금요일의 해가 지고\n주중의 소음이 멎는다.\n주말은 연기와 같은 것.\n다 타버리기 전까지\n오늘을 즐기자.",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/406",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Reflection verified; quote pending"
+    },
+    {
+      "id": "RN-0003",
+      "book_id": "BK-000900",
+      "title": "파리 스케치",
+      "author": "어니스트 헤밍웨이",
+      "date": "2025-05-12",
+      "reflection": "헤밍웨이처럼 글을 쓰고 싶었다. 하드 보일드함을 탐내 줄이고 줄이고 또 줄였더니 남는 건 온점 하나뿐. 아, 오늘도 나는 내 재능의 한계를 실감하며, 피를 토하는 심정으로 글을 쓴다. 방금 적은 이 문장에서 줄일 게 없나 생각하니, '뿐' 뒤의 온점만 남아 치켜뜬 왼 눈동자처럼 나를 비웃는다. 그리하여 다시 Ctrl Z. 이토록 나의 재능은 한미해, 나는 쓰고 또 쓰는 수밖에 없다.",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/404",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Reflection verified; quote pending"
+    },
+    {
+      "id": "RN-0002",
+      "book_id": "",
+      "title": "잃어버린 시절을 찾아서",
+      "author": "마르셀 프루스트",
+      "date": "2025-02-28",
+      "reflection": "어제는 가방을 학교에 두고 왔다.\n집으로 돌아가는 길, 어깨가 가벼워\n운수가 좋은 날이겠거니 지레짐작했던 내가 틀렸다.\n오늘은 방에서 양말을 잃어버렸다.\n분명 주머니에 넣었는데 사라졌다.\n도서관에 도착해 기지개를 켜니,\n청바지 아래로 양말이 툭 떨어졌다.\n어제, 비가 내렸는지 도무지 알 길이 없다.\n나는 물리적 우발성의 바깥에서 머물고,\n일상은 가방 없는 퇴근길처럼, 양말 품은 청바지처럼 흘러간다.",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@@eQZr/307",
+      "quote_source": "https://app.notion.com/p/185f8fb4581b800ab924c9a33cb6fd31",
+      "verification": "Reflection verified; quote pending"
+    },
+    {
+      "id": "RN-0001",
+      "book_id": "BK-000445",
+      "title": "매일 읽겠습니다",
+      "author": "황보름",
+      "date": "2025-01-28",
+      "reflection": "그럼에도, 어제도, 오늘도, 내일도",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/260",
+      "quote_source": "https://app.notion.com/p/185f8fb4581b800ab924c9a33cb6fd31",
+      "verification": "Reflection verified; quote pending"
+    }
+  ]
+}
