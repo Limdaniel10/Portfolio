@@ -14,9 +14,15 @@ class TravelSyncTests(unittest.TestCase):
  def test_complete_archive_survives_round_trip(self):
   validate(self.tables,self.baseline)
   data=build_data(self.tables,self.baseline)
-  self.assertEqual(sum(c['count_in_195'] for c in data['countries']),90)
+  self.assertEqual(sum(c['count_in_195'] for c in data['countries']),91)
+  taiwan=[c for c in data['countries'] if c['iso2']=='TW']
+  self.assertEqual(len(taiwan),1)
+  self.assertTrue(taiwan[0]['count_in_195'])
+  self.assertEqual(taiwan[0]['category'],'country')
+  territories=[c for c in data['countries'] if not c['count_in_195'] and c['category']=='region_or_territory' and c['iso2'] not in ('GB','MD')]
+  self.assertEqual(len(territories),6)
   self.assertGreaterEqual(len(data['geometry']['features']),len(self.baseline['geometry']['features']))
-  self.assertEqual(data['country_basis'],194)
+  self.assertEqual(data['country_basis'],196)
   self.assertIn('Bus',data['transport_modes'])
   verified={('place-0043',2024,'2024-02'),('place-0071',2025,'2025-10'),('place-0066',2025,'2025-12'),('place-0178',2026,'2026-05'),('place-0032',2026,'2026-06')}
   actual={(v['place_id'],v['year'],m) for v in data['visits'] for m in v['months']}
