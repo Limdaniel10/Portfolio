@@ -47,7 +47,7 @@ def validate_notes(rows):
         output.append({
           "id":r["NoteID"],"book_id":r["BookID"],"title":r["Title"],"author":r["Author"],
           "date":r["PublishedDate"],"reflection":r["Reflection"],
-          "quote":r["SelectedQuote"] if r["Verification"]=="Quote approved" else "",
+          "quote":r["SelectedQuote"] if r["Verification"] in ("Quote approved","Notion exact match") else "",
           "brunch_url":url,"quote_source":r["QuoteSourceURL"],"verification":r["Verification"]
         })
     output.sort(key=lambda n:(n["date"],n["id"]),reverse=True)

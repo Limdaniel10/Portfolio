@@ -231,7 +231,10 @@ async function initializeNotes(){
           info.append(el("strong","note-book-title",note.title),el("small","note-book-author",note.author||""));
           top.append(info,el("time","note-date",note.date));
           const content=el("div","note-body");
-          if(note.quote)content.append(el("blockquote","note-quote",note.quote));
+          if(note.quote){
+            content.append(el("blockquote","note-quote",note.quote));
+            content.append(el("div","note-provenance",note.verification==="Notion exact match"?"NOTION HIGHLIGHT · AUTO-MATCHED":"SELECTED PASSAGE"));
+          }
           content.append(el("p","note-reflection",note.reflection));
           if(note.brunch_url&&String(note.brunch_url).startsWith("https://brunch.co.kr/")){
             const link=el("a","note-brunch-link","Read original reflection ↗");
