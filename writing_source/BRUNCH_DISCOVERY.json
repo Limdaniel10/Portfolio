@@ -40,13 +40,13 @@
     ]
   },
   "tallinn": {
-    "book_url": null,
+    "book_url": "https://brunch.co.kr/brunchbook/windblowsnorth",
     "published_links": [],
     "debug": null,
     "article_neighbors": []
   },
   "venezuela": {
-    "book_url": null,
+    "book_url": "https://brunch.co.kr/brunchbook/guiana",
     "published_links": [],
     "debug": null,
     "article_neighbors": []
@@ -298,16 +298,16 @@
     "SKIP_EXISTING arctic/005",
     "SKIP_EXISTING arctic/006",
     "SKIP_EXISTING arctic/007",
-    "NO_SOURCE tallinn/001",
-    "NO_SOURCE tallinn/002",
-    "NO_SOURCE tallinn/003",
-    "NO_SOURCE tallinn/004",
-    "NO_SOURCE tallinn/005",
-    "NO_SOURCE tallinn/006",
-    "NO_SOURCE tallinn/007",
-    "NO_SOURCE tallinn/008",
+    "IMPORTED tallinn/001 6063 chars",
+    "IMPORTED tallinn/002 2649 chars",
+    "IMPORTED tallinn/003 1834 chars",
+    "IMPORTED tallinn/004 4499 chars",
+    "IMPORTED tallinn/005 3768 chars",
+    "IMPORTED tallinn/006 6050 chars",
+    "IMPORTED tallinn/007 3213 chars",
+    "IMPORTED tallinn/008 5031 chars",
     "NO_SOURCE tallinn/009",
-    "NO_SOURCE venezuela/001",
-    "NO_SOURCE short-disappearance/001"
+    "IMPORTED venezuela/001 1835 chars",
+    "IMPORTED short-disappearance/001 1488 chars"
   ]
 }
