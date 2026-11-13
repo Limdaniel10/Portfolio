@@ -13,7 +13,9 @@ class ReadingNotesTests(unittest.TestCase):
         notes=validate_notes(self.rows)
         self.assertEqual(len(notes),182)
         self.assertEqual(sum(bool(n["reflection"]) for n in notes),175)
-        self.assertEqual(sum(bool(n["quote"]) for n in notes),131)
+        self.assertEqual(sum(bool(n["quote"]) for n in notes),
+                         sum(r[9] in ("Quote approved","Notion exact match") and bool(r[6])
+                             for r in self.rows[1:] if r and r[10]=="TRUE"))
         self.assertTrue(all(n["title"] and n["author"] and n["brunch_url"] for n in notes))
         self.assertTrue(all(n["verification"]=="Needs review" for n in notes if not n["reflection"]))
 
