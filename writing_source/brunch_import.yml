@@ -49,10 +49,55 @@ collections:
         url: 'https://brunch.co.kr/@lim-eat-less/516'
   tallinn:
     aliases: ['탈린엔 북풍이 분다', '탈린에는 북풍이 분다']
+    book_url: 'https://brunch.co.kr/brunchbook/windblowsnorth'
     count: 9
+    chapters:
+      - chapter: 1
+        title: 트라파니에는 모래바람이 분다
+        date: '2024-09-29'
+        url: 'https://brunch.co.kr/@lim-eat-less/229'
+      - chapter: 2
+        title: 왜 하필, 북유럽
+        date: '2024-10-05'
+        url: 'https://brunch.co.kr/@lim-eat-less/235'
+      - chapter: 3
+        title: 북풍의 벽
+        date: '2024-10-18'
+        url: 'https://brunch.co.kr/@lim-eat-less/236'
+      - chapter: 4
+        title: 서늘한 온기
+        date: '2024-10-19'
+        url: 'https://brunch.co.kr/@lim-eat-less/246'
+      - chapter: 5
+        title: 리가의 온도
+        date: '2024-11-02'
+        url: 'https://brunch.co.kr/@lim-eat-less/247'
+      - chapter: 6
+        title: 바람 불면 쓰러질 폰
+        date: '2024-11-09'
+        url: 'https://brunch.co.kr/@lim-eat-less/244'
+      - chapter: 7
+        title: 태양은 떠오른다
+        date: '2024-12-01'
+        url: 'https://brunch.co.kr/@lim-eat-less/255'
+      - chapter: 8
+        title: 돌고 돌아 남항
+        date: '2025-01-19'
+        url: 'https://brunch.co.kr/@lim-eat-less/258'
   venezuela:
     aliases: ['베네수엘라를 왜 가?', '베네수엘라를 왜 가']
+    book_url: 'https://brunch.co.kr/brunchbook/guiana'
     count: 1
+    chapters:
+      - chapter: 1
+        title: 베네수엘라로
+        date: '2026-01-03'
+        url: 'https://brunch.co.kr/@lim-eat-less/519'
   short-disappearance:
     aliases: ['단기실종']
     count: 1
+    chapters:
+      - chapter: 1
+        title: 파리 지하철의 그녀
+        date: '2026-11-10'
+        url: 'https://brunch.co.kr/@lim-eat-less/522'
