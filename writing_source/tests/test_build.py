@@ -31,6 +31,21 @@ def run():
   initial=build(root=copy,base='/Portfolio/')
   initial_chapters=sum(len(b['chapters']) for b in initial['collections'])
   assert initial_chapters>=107, 'Original writing archive lost chapters'
+  # The full 13-chapter El Salvador series is imported from the author's Brunch.
+  salvador=next(b for b in initial['collections'] if b['id']=='el-salvador')
+  assert len(salvador['chapters'])==13
+  assert all(c['status']=='text' and c['has_body'] and c['brunch_url'] for c in salvador['chapters'])
+  for chapter in range(1,14):
+   slug=f'{chapter:03d}'
+   manuscript=copy/f'content/collections/el-salvador/{slug}.md'
+   original=manuscript.read_text(encoding='utf8')
+   body=original.split('\n---\n',1)[-1].strip()
+   assert len(body)>650, f'Incomplete El Salvador chapter {chapter}: {len(body)} characters'
+   rendered=copy/f'_site/writing/articles/el-salvador/{slug}/index.html'
+   assert rendered.exists(), f'El Salvador chapter {chapter} missing generated page'
+   html=BeautifulSoup(rendered.read_text(encoding='utf8'),'html.parser')
+   assert len(html.select_one('.essay-reading-body').get_text(strip=True))>450
+  print('PASS: 13 original El Salvador chapters contain complete Markdown and published HTML pages')
   assert all(len(b['chapters'])>=baseline for b,baseline in zip(initial['collections'][:5],[40,20,17,17,13])), 'Archived collections lost chapters'
   assert (copy/'_site/writing/articles/solo-abroad/001/index.html').exists()
   # A date starting with "2023. 03." is prose, NOT two ordered lists.
