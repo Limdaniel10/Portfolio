@@ -2,8 +2,8 @@
 /* Lightweight interface-only localization. Original articles, quotations, book titles,
    travel records and technical project details are never machine-translated. */
 (() => {
-  const codes = ["en", "ko", "zh-Hans", "es"];
-  const names = ["English", "한국어", "中文", "Español"];
+  const codes = ["en", "ko", "zh-Hans", "es", "zh-Hant", "fr", "de"];
+  const names = ["English", "한국어", "简体中文", "Español", "繁體中文", "Français", "Deutsch"];
   const navLabels = {
     Home: ["Home", "홈", "首页", "Inicio"],
     Career: ["Career", "경력", "经历", "Trayectoria"],
@@ -94,6 +94,391 @@
     "Follow the journey": ["Follow the journey", "여행 따라가기", "跟随旅程", "Seguir el viaje"],
     "A little more about me": ["A little more about me", "더 알아보기", "了解更多", "Más sobre mí"]
   };
+  const extraLocales = {
+    "nav": {
+      "Home": [
+        "首頁",
+        "Accueil",
+        "Startseite"
+      ],
+      "Career": [
+        "職涯",
+        "Parcours",
+        "Werdegang"
+      ],
+      "Travel": [
+        "旅行",
+        "Voyages",
+        "Reisen"
+      ],
+      "Writing": [
+        "寫作",
+        "Écrits",
+        "Texte"
+      ],
+      "Reading": [
+        "閱讀",
+        "Lectures",
+        "Lektüre"
+      ],
+      "About": [
+        "關於我",
+        "À propos",
+        "Über mich"
+      ]
+    },
+    "texts": {
+      "home": {
+        ".hero .tagline": [
+          "跨越尺度的好奇心。",
+          "La curiosité à toutes les échelles.",
+          "Neugier auf jeder Ebene."
+        ],
+        ".hero .intro": [
+          "鑽研工程細節，探索廣闊世界，記錄沿途故事。",
+          "Comprendre les détails. Explorer le monde. Écrire les histoires.",
+          "Details durchdenken. Die Welt erkunden. Geschichten erzählen."
+        ],
+        ".panel-heading span:first-child": [
+          "走過的世界",
+          "LE MONDE PARCOURU",
+          "DIE ENTDECKTE WELT"
+        ],
+        ".map-note": [
+          "地圖標示了我曾造訪的國家。",
+          "Les pays visités sont mis en évidence sur la carte.",
+          "Besuchte Länder sind auf der Karte hervorgehoben."
+        ],
+        ".map-link": [
+          "探索旅程 <span aria-hidden=\"true\">↗</span>",
+          "Explorer mes voyages <span aria-hidden=\"true\">↗</span>",
+          "Reisen entdecken <span aria-hidden=\"true\">↗</span>"
+        ],
+        ".tile:nth-child(1) h2": [
+          "職涯",
+          "Parcours",
+          "Werdegang"
+        ],
+        ".tile:nth-child(2) h2": [
+          "寫作",
+          "Écrits",
+          "Texte"
+        ],
+        ".tile:nth-child(3) h2": [
+          "旅行",
+          "Voyages",
+          "Reisen"
+        ],
+        ".tile:nth-child(4) h2": [
+          "閱讀",
+          "Lectures",
+          "Lektüre"
+        ],
+        ".tile:nth-child(1) p": [
+          "喬治亞理工 · 工程師",
+          "Georgia Tech · Ingénieur",
+          "Georgia Tech · Ingenieur"
+        ],
+        ".tile:nth-child(2) p": [
+          "5 部 Brunch 散文集",
+          "5 recueils d’essais sur Brunch",
+          "5 Essay-Sammlungen auf Brunch"
+        ],
+        ".about-link": [
+          "進一步認識我 <span>↗</span>",
+          "En savoir plus sur moi <span>↗</span>",
+          "Mehr über mich <span>↗</span>"
+        ]
+      },
+      "about": {
+        ".about-hero .lead": [
+          "不同的追尋。<br>同一份好奇心。",
+          "Des passions diverses.<br>Une même curiosité.",
+          "Viele Interessen.<br>Eine Neugier."
+        ],
+        ".about-hero .prose": [
+          "我來自韓國釜山，正在喬治亞理工學院完成航太工程碩士學位。我喜歡探索事物運作的原理，也熱愛世界各地的風景、書籍與故事。",
+          "Originaire de Busan, en Corée du Sud, je termine un master en ingénierie aérospatiale à Georgia Tech. Je m’intéresse au fonctionnement des choses autant qu’aux lieux, aux livres et aux histoires qui nous entourent.",
+          "Ich komme aus Busan in Südkorea und schließe gerade meinen Master in Luft- und Raumfahrttechnik an der Georgia Tech ab. Mich begeistern technische Zusammenhänge ebenso wie Orte, Bücher und Geschichten."
+        ],
+        "#numbers .section-heading h2": [
+          "數字裡的點滴。",
+          "Quelques chiffres, une histoire.",
+          "Ein Leben in Zahlen."
+        ],
+        ".pursuit-grid a:nth-child(1) p": [
+          "設計、測試、學習。",
+          "Concevoir, tester, apprendre.",
+          "Entwickeln, testen, lernen."
+        ],
+        ".pursuit-grid a:nth-child(2) p": [
+          "值得珍藏的故事。",
+          "Des histoires à garder près de soi.",
+          "Geschichten, die bleiben."
+        ],
+        ".pursuit-grid a:nth-child(3) p": [
+          "旅途中的某個角落。",
+          "Quelque part en chemin.",
+          "Irgendwo unterwegs."
+        ],
+        ".pursuit-grid a:nth-child(4) p": [
+          "留在心裡的書頁。",
+          "Des pages qui restent en mémoire.",
+          "Seiten, die in Erinnerung bleiben."
+        ],
+        ".about-section:nth-of-type(3) .section-heading h2": [
+          "現在與下一步。",
+          "Aujourd’hui et demain.",
+          "Jetzt und als Nächstes."
+        ]
+      },
+      "career": {
+        ".hero-main .intro": [
+          "從航太系統與實驗測試，到半導體製造。",
+          "Des systèmes aérospatiaux et des essais expérimentaux à la fabrication de semi-conducteurs.",
+          "Von Raumfahrtsystemen und experimentellen Tests zur Halbleiterfertigung."
+        ],
+        ".hero-main .sub": [
+          "在喬治亞理工學院接受航太工程訓練，參與機器人測試自動化、混合動力推進、電池測試與硬體整合等專案。",
+          "Formé en ingénierie aérospatiale à Georgia Tech, avec une expérience en automatisation des essais robotiques, propulsion hybride-électrique, tests de batteries et intégration matérielle.",
+          "Ausgebildet in Luft- und Raumfahrttechnik an der Georgia Tech, mit Erfahrung in automatisierten Robotertests, hybrid-elektrischen Antrieben, Batterietests und Hardwareintegration."
+        ],
+        "#work .section-head h2": [
+          "精選專案",
+          "Projets sélectionnés",
+          "Ausgewählte Projekte"
+        ]
+      },
+      "traveling": {
+        ".hero .lead": [
+          "以走過的地方，<br>與其間的旅程記錄人生。",
+          "Une vie mesurée en lieux<br>et en chemins parcourus.",
+          "Ein Leben, gemessen in Orten<br>und den Wegen dazwischen."
+        ],
+        ".hero .intro": [
+          "六大洲，熟悉的街道與陌生的天際。<br>一本持續寫下去的個人地圖集。",
+          "Six continents. Des rues familières et des horizons inconnus.<br>Un atlas personnel toujours en devenir.",
+          "Sechs Kontinente. Vertraute Straßen und neue Horizonte.<br>Ein persönlicher Atlas, der weiterwächst."
+        ],
+        "#atlas .sectionhead h2": [
+          "持續延伸的旅程地圖。",
+          "Un atlas en mouvement.",
+          "Ein Atlas in Bewegung."
+        ],
+        "#atlas .sectionhead p": [
+          "展開年份，探索每個月的旅程。",
+          "Ouvrez une année, puis explorez chaque mois.",
+          "Ein Jahr öffnen und die Monate erkunden."
+        ],
+        "#places .sectionhead h2": [
+          "旅途中的地方。",
+          "Au fil des voyages.",
+          "Orte am Wegesrand."
+        ],
+        "#highlights .sectionhead h2": [
+          "旅途留下的記憶。",
+          "Ce que les voyages laissent.",
+          "Was von den Reisen bleibt."
+        ],
+        "#allYears": [
+          "所有年份 ↗",
+          "Toutes les années ↗",
+          "Alle Jahre ↗"
+        ],
+        "#cumulative": [
+          "累計",
+          "Cumulé",
+          "Kumuliert"
+        ],
+        "#periodOnly": [
+          "僅顯示所選期間",
+          "Période seule",
+          "Nur Zeitraum"
+        ],
+        "#resetMap": [
+          "↗ 世界地圖",
+          "↗ Vue du monde",
+          "↗ Weltkarte"
+        ]
+      },
+      "reading": {
+        ".reading-hero .lead": [
+          "每一本書的字裡行間，<br>都是人生的紀錄。",
+          "Une vie entre les lignes,<br>livre après livre.",
+          "Ein Leben zwischen den Zeilen,<br>Buch für Buch."
+        ],
+        ".reading-hero .prose": [
+          "記錄讀完的書、每月閱讀的頁數，以及值得反覆回味的想法。可以依年份、月份或書名瀏覽。",
+          "Un carnet de lectures achevées, de pages lues chaque mois et d’idées à retrouver. Parcourez les années, les mois ou les titres.",
+          "Ein Archiv gelesener Bücher, monatlicher Seitenzahlen und Gedanken, zu denen ich zurückkehre. Entdecke Jahre, Monate und Titel."
+        ],
+        "#reading-years .section-heading h2": [
+          "歲月中的書頁。",
+          "Des pages au fil du temps.",
+          "Seiten im Lauf der Zeit."
+        ],
+        "#reading-years .section-heading .aside-note": [
+          "先選年份，再選月份。",
+          "Choisissez une année, puis un mois.",
+          "Erst ein Jahr, dann einen Monat wählen."
+        ],
+        "#metricBooks": [
+          "書籍",
+          "Livres",
+          "Bücher"
+        ],
+        "#metricPages": [
+          "頁數",
+          "Pages",
+          "Seiten"
+        ],
+        ".month-section-title h3": [
+          "逐月細看。",
+          "Regarder de plus près.",
+          "Ein genauerer Blick."
+        ],
+        "#highlightsHeading": [
+          "值得珍藏的句子。",
+          "Des phrases à garder.",
+          "Sätze, die bleiben."
+        ]
+      },
+      "writing": {
+        ".hero-lead": [
+          "把旅途中的故事收藏在這裡。",
+          "Des histoires d’ailleurs, réunies ici.",
+          "Geschichten von unterwegs, an einem Ort."
+        ],
+        ".archive-language-note": [
+          "旅行散文以韓文寫成，最初連載於 Brunch。",
+          "Ces récits de voyage ont été écrits en coréen et publiés initialement sur Brunch.",
+          "Diese Reiseessays wurden ursprünglich auf Koreanisch verfasst und auf Brunch veröffentlicht."
+        ],
+        ".portal-grid .portal-card:nth-child(1) h2": [
+          "作品集",
+          "Recueils",
+          "Sammlungen"
+        ],
+        ".portal-grid .portal-card:nth-child(2) h2": [
+          "小說",
+          "Fiction",
+          "Belletristik"
+        ],
+        ".portal-grid .portal-card:nth-child(3) h2": [
+          "散文",
+          "Essais",
+          "Essays"
+        ],
+        ".portal-grid .portal-card:nth-child(4) h2": [
+          "讀書筆記",
+          "Lectures",
+          "Lektüren"
+        ],
+        ".portal-grid .portal-card:nth-child(1) p": [
+          "旅行散文與連載中的故事",
+          "Récits de voyage et séries en cours",
+          "Reiseessays und laufende Serien"
+        ],
+        ".portal-grid .portal-card:nth-child(2) p": [
+          "一個橫跨三冊的虛構世界",
+          "Un univers imaginé en trois volumes",
+          "Eine erdachte Welt in drei Bänden"
+        ],
+        ".portal-grid .portal-card:nth-child(3) p": [
+          "獨立故事、片段與隨想",
+          "Récits, scènes et réflexions indépendants",
+          "Einzelne Geschichten, Szenen und Gedanken"
+        ],
+        ".portal-grid .portal-card:nth-child(4) p": [
+          "一行、一段與讀書心得",
+          "Une phrase, un paragraphe, des notes de lecture",
+          "Ein Satz, ein Absatz und Buchbesprechungen"
+        ]
+      }
+    },
+    "generic": {
+      "Back to top ↑": [
+        "返回頂部 ↑",
+        "Retour en haut ↑",
+        "Nach oben ↑"
+      ],
+      "Selected Work": [
+        "精選專案",
+        "Projets sélectionnés",
+        "Ausgewählte Projekte"
+      ],
+      "Experience": [
+        "經歷",
+        "Expérience",
+        "Erfahrung"
+      ],
+      "Education": [
+        "學歷",
+        "Formation",
+        "Ausbildung"
+      ],
+      "Skills & Credentials": [
+        "技能與證照",
+        "Compétences et certifications",
+        "Fähigkeiten und Qualifikationen"
+      ],
+      "Connect": [
+        "聯絡我",
+        "Contact",
+        "Kontakt"
+      ],
+      "Many interests, one direction.": [
+        "興趣多元，方向如一。",
+        "Des intérêts variés, une direction.",
+        "Viele Interessen, ein Weg."
+      ],
+      "Somewhere in between.": [
+        "一路走來。",
+        "Entre les étapes.",
+        "Dazwischen."
+      ],
+      "Now & next.": [
+        "現在與下一步。",
+        "Aujourd’hui et demain.",
+        "Jetzt und als Nächstes."
+      ],
+      "Different pursuits.": [
+        "不同的追尋。",
+        "Des passions diverses.",
+        "Viele Interessen."
+      ],
+      "Still writing.": [
+        "持續寫作中。",
+        "Toujours en train d’écrire.",
+        "Ich schreibe weiter."
+      ],
+      "Writing home": [
+        "寫作首頁",
+        "Accueil des écrits",
+        "Schreiben: Startseite"
+      ],
+      "Explore the archive": [
+        "瀏覽作品",
+        "Explorer les archives",
+        "Archiv entdecken"
+      ],
+      "Follow the journey": [
+        "探索旅程",
+        "Suivre le voyage",
+        "Der Reise folgen"
+      ],
+      "A little more about me": [
+        "進一步認識我",
+        "En savoir plus sur moi",
+        "Mehr über mich"
+      ]
+    }
+  };
+  for (const [name, translations] of Object.entries(extraLocales.nav)) navLabels[name].push(...translations);
+  for (const [pageName, items] of Object.entries(extraLocales.texts)) {
+    for (const [selector, translations] of Object.entries(items)) texts[pageName][selector].push(...translations);
+  }
+  for (const [name, translations] of Object.entries(extraLocales.generic)) generic[name].push(...translations);
   let chosen = "en";
   try { const saved = localStorage.getItem("portfolio-language"); if (codes.includes(saved)) chosen = saved; } catch (_) {}
   const requested = new URLSearchParams(window.location.search).get("lang");
@@ -139,7 +524,10 @@
     "",
     "안내: 메뉴와 주요 소개 문구만 번역됩니다. 작품 본문과 도서·여행 기록은 원어로 유지됩니다.",
     "提示：仅导航和主要简介提供翻译。文章正文、书籍及旅行记录保持原文。",
-    "Nota: solo se traducen los menús y las introducciones principales. Los textos, libros y registros de viaje conservan su idioma original."
+    "Nota: solo se traducen los menús y las introducciones principales. Los textos, libros y registros de viaje conservan su idioma original.",
+    "提示：僅導覽選單與主要介紹提供翻譯。文章、書籍與旅行紀錄均保留原文。",
+    "Remarque : seuls les menus et les principales présentations sont traduits. Les articles, livres et récits de voyage restent dans leur langue d’origine.",
+    "Hinweis: Nur Menüs und zentrale Einleitungstexte sind übersetzt. Artikel, Bücher und Reiseaufzeichnungen bleiben in ihrer Originalsprache."
   ];
   const main = document.querySelector("main");
   if (main) main.prepend(notice);
@@ -147,7 +535,7 @@
     chosen = lang;
     const i = codes.indexOf(chosen);
     select.value = chosen;
-    select.setAttribute("aria-label", ["Interface language", "화면 언어", "界面语言", "Idioma de la interfaz"][i]);
+    select.setAttribute("aria-label", ["Interface language", "화면 언어", "界面语言", "Idioma de la interfaz", "介面語言", "Langue de l’interface", "Sprache der Oberfläche"][i]);
     document.documentElement.lang = chosen;
     document.documentElement.dataset.interfaceLanguage = chosen;
     navLinks.forEach((el, j) => {
@@ -175,12 +563,12 @@
       if (!node) continue;
       const n = node.textContent.match(/[\d,]+/);
       if (!n) continue;
-      node.textContent = [n[0] + " countries", n[0] + "개국", n[0] + " 个国家", n[0] + " países"][i];
+      node.textContent = [n[0] + " countries", n[0] + "개국", n[0] + " 个国家", n[0] + " países", n[0] + " 個國家", n[0] + " pays", n[0] + " Länder"][i];
     }
     const books = document.getElementById("reading-tile-count");
     if (books) {
       const n = books.textContent.match(/[\d,]+\+?/);
-      if (n) books.textContent = [n[0] + " books", n[0] + "권", n[0] + " 本书", n[0] + " libros"][i];
+      if (n) books.textContent = [n[0] + " books", n[0] + "권", n[0] + " 本书", n[0] + " libros", n[0] + " 本書", n[0] + " livres", n[0] + " Bücher"][i];
     }
   }
   select.addEventListener("change", () => apply(select.value));
