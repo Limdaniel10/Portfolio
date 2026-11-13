@@ -176,6 +176,27 @@
         'Pour échanger sur un projet ou une collaboration, retrouvez-moi sur <a href="https://www.linkedin.com/in/lim-chaehyun/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>. Vous pouvez également m’écrire depuis la <a href="../career/">page Parcours ↗</a>.',
         'Für berufliche Anfragen und Kooperationen erreichen Sie mich auf <a href="https://www.linkedin.com/in/lim-chaehyun/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> oder per E-Mail über die <a href="../career/">Karriereseite ↗</a>.'
       ),
+      ".orbit-center > strong": tr(
+        "부산", "釜山", "Busan", "釜山", "Busan", "Busan"
+      ),
+      "#path .accordion-stack details:nth-child(1) .time-row:nth-child(1) strong": tr(
+        "부산", "釜山", "Busan", "釜山", "Busan", "Busan"
+      ),
+      "#path .accordion-stack details:nth-child(1) .time-row:nth-child(2) strong": tr(
+        "용인", "龙仁", "Yongin", "龍仁", "Yongin", "Yongin"
+      ),
+      "#path .accordion-stack details:nth-child(1) .time-row:nth-child(3) strong": tr(
+        "안양", "安养", "Anyang", "安養", "Anyang", "Anyang"
+      ),
+      "#path .accordion-stack details:nth-child(1) .time-row:nth-child(4) strong": tr(
+        "애틀랜타", "亚特兰大", "Atlanta", "亞特蘭大", "Atlanta", "Atlanta"
+      ),
+      "#path .accordion-stack details:nth-child(1) .time-row:nth-child(5) strong": tr(
+        "옥스퍼드 · 메츠", "牛津 · 梅斯", "Oxford · Metz", "牛津 · 梅斯", "Oxford · Metz", "Oxford · Metz"
+      ),
+      "#path .accordion-stack details:nth-child(1) .time-row:nth-child(6) strong": tr(
+        "피닉스", "菲尼克斯", "Phoenix", "鳳凰城", "Phoenix", "Phoenix"
+      ),
       ".site-footer > span:nth-child(2)": tr(
         "ABOUT / 개인 아카이브", "ABOUT / 个人档案", "ABOUT / ARCHIVO PERSONAL",
         "ABOUT / 個人檔案", "ABOUT / ARCHIVES PERSONNELLES", "ABOUT / PERSÖNLICHES ARCHIV"
