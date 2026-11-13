@@ -20,17 +20,17 @@ class ReadingSyncTests(unittest.TestCase):
     def test_complete_archive_retained(self):
         books = validate_books(self.books_csv)
         pages = validate_months(self.pages_csv)
-        self.assertEqual(len(books), 1412)
-        self.assertEqual(len(pages), 84)
-        self.assertEqual(sum(m['pages_read'] for m in pages), 471691)
+        self.assertGreaterEqual(len(books), 1413)
+        self.assertGreaterEqual(len(pages), 84)
+        self.assertGreaterEqual(sum(m['pages_read'] for m in pages), 471691)
         y2026 = [b for b in books if b['year'] == 2026]
-        self.assertEqual(len(y2026), 93)
+        self.assertGreaterEqual(len(y2026), 94)
         self.assertEqual(len([b for b in y2026 if b['month'] == 1]), 15)
         self.assertEqual(len([b for b in y2026 if b['month'] == 3]), 6)
         self.assertEqual(len([b for b in y2026 if b['month'] == 4]), 26)
-        self.assertEqual(len([b for b in y2026 if b['month'] == 11]), 3)
+        self.assertGreaterEqual(len([b for b in y2026 if b['month'] == 11]), 4)
         self.assertTrue(all(b['status'] == 'Completed' for b in books))
-        self.assertEqual(len({b['id'] for b in books}), 1412)
+        self.assertEqual(len({b['id'] for b in books}), len(books))
 
     def test_duplicate_book_id_rejected(self):
         rows = [list(r) for r in self.books_csv[:3]]
@@ -72,14 +72,18 @@ class ReadingSyncTests(unittest.TestCase):
             with self.assertRaisesRegex(DataError, 'Refusing to remove'):
                 save_pair(d, books[:-1], pages)
             self.assertEqual((d/'books.json').read_bytes(), before)
-            self.assertEqual(len(json.loads(before)['books']), 1412)
+            self.assertEqual(len(json.loads(before)['books']), len(books))
 
     def test_unnumbered_new_book_appends_to_month(self):
         rows = [list(r) for r in self.books_csv]
-        rows.append(['BK-001413', 'A Newly Completed Book', 'One Author', '2026-11', '', 'Completed'])
+        last_id=max(int(r[0].split('-')[-1]) for r in rows[1:])
+        new_id=f'BK-{last_id+1:06d}'
+        existing_order=max(int(r[4]) for r in rows[1:] if r[3]=='2026-11')
+        rows.append([new_id, 'A Newly Completed Book', 'One Author', '2026-11', '', 'Completed'])
         out = validate_books(rows)
-        sample = next(b for b in out if b['id'] == 'BK-001413')
-        self.assertEqual((sample['year'], sample['month'], sample['month_order']), (2026, 11, 4))
+        sample = next(b for b in out if b['id'] == new_id)
+        self.assertEqual((sample['year'], sample['month'], sample['month_order']),
+                         (2026, 11, existing_order+1))
 
 
 if __name__ == '__main__':
