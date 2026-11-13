@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # Recheck connected Sheets hourly, at minute 17 UTC.
-    - cron: '17 * * * *'
+    # Refresh connected Sheets once daily at 12:17 UTC (07:17 EST / 08:17 EDT).
+    - cron: '17 12 * * *'
   workflow_dispatch:
 
 permissions:
