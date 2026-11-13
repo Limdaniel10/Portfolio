@@ -107,4 +107,4 @@ document.getElementById("travelCountriesTotal").textContent = D.countries.filter
 document.getElementById("travelFlightsTotal").textContent = D.flights.filter(x=>x.count_status==="recorded_flown").length;
 document.getElementById("travelNightsTotal").textContent = D.airport_overnights.length;
 document.getElementById('koreaPlaceCount').textContent = `${D.domestic_places.length} places · undated`;
-document.getElementById('countryBasisText').textContent = `${D.countries.filter(x => x.count_in_195).length} countries · UN members + Vatican City (Taiwan excluded)`;
+document.getElementById('countryBasisText').textContent = `${D.countries.filter(x => x.count_in_195).length} countries visited, including Taiwan · ${D.countries.filter(x => !x.count_in_195 && x.category === 'region_or_territory' && !['GB','MD'].includes(x.iso2)).length} additional overseas territories tracked separately`;
