@@ -1,4 +1,4 @@
-import json,sys,tempfile,shutil,re
+import json,sys,tempfile,shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -15,12 +15,13 @@ def run():
   checked=0
   for source in (copy/'content').rglob('*.md'):
    raw=source.read_text(encoding='utf8')
-   marker=re.match(r'^---\\s*\\n[\\s\\S]*?\\n---\\s*\\n',raw)
-   assert marker, f'{source}: missing frontmatter'
-   body=raw[marker.end():]
-   for n,line in enumerate(body.splitlines(),start=1):
-    assert not re.fullmatch(r'\\s*\\\\\\s*',line), f'{source}:{n} has stray backslash'
-    assert not re.fullmatch(r'\\s*(?:-{3,}|_{3,}|\\*{3,})\\s*',line), f'{source}:{n} has unwanted horizontal rule'
+   lines=raw.splitlines()
+   end_meta=next((i for i,line in enumerate(lines[1:],start=1) if line.strip()=='---'),None)
+   assert lines and lines[0].strip()=='---' and end_meta is not None, f'{source}: missing frontmatter'
+   for n,line in enumerate(lines[end_meta+1:],start=end_meta+2):
+    stripped=line.strip()
+    assert stripped!=chr(92), f'{source}:{n} has stray backslash'
+    assert not (len(stripped)>=3 and len(set(stripped))==1 and stripped[0] in '-_*'), f'{source}:{n} has unwanted horizontal rule'
    checked+=1
   assert checked>=110, f'Expected all archived manuscripts; found {checked}'
   mountain=(copy/'content/collections/ometepe/014.md').read_text(encoding='utf8')
