@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: import-brunch
@@ -63,3 +64,7 @@ jobs:
           else
             echo 'No new verifiable original texts to import.'
           fi
+      - name: Rebuild and deploy the portfolio with the imported chapters
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
