@@ -35,7 +35,7 @@
       ".pursuit-grid a:nth-child(2) p": ["Stories worth carrying.", "오래 간직할 이야기들.", "值得珍藏的故事。", "Historias que vale la pena guardar."],
       ".pursuit-grid a:nth-child(3) p": ["Somewhere along the way.", "여정의 어느 길목에서.", "旅途中的某个地方。", "En algún lugar del camino."],
       ".pursuit-grid a:nth-child(4) p": ["Pages that stay with me.", "마음에 오래 남은 책들.", "那些留在心里的书页。", "Páginas que permanecen conmigo."],
-      ".about-section:nth-of-type(3) .section-heading h2": ["Now &amp; next.", "지금, 그리고 다음.", "当下与未来。", "Ahora y después."]
+      "#present .section-heading h2": ["Now &amp; next.", "지금, 그리고 다음.", "当下与未来。", "Ahora y después."]
     },
     career: {
       ".hero-main .intro": ["From aerospace systems and experimental testing to semiconductor manufacturing.", "항공우주 시스템과 실험·시험에서 반도체 제조까지.", "从航天系统与实验测试，到半导体制造。", "De los sistemas aeroespaciales y las pruebas experimentales a la fabricación de semiconductores."],
@@ -226,7 +226,7 @@
           "Des pages qui restent en mémoire.",
           "Seiten, die in Erinnerung bleiben."
         ],
-        ".about-section:nth-of-type(3) .section-heading h2": [
+        "#present .section-heading h2": [
           "現在與下一步。",
           "Aujourd’hui et demain.",
           "Jetzt und als Nächstes."
@@ -488,6 +488,10 @@
     location.pathname.includes("/reading/") ? "reading" :
     location.pathname.includes("/about/") ? "about" :
     location.pathname.includes("/writing/") ? "writing" : "home";
+  // Additional translations are loaded only on About and Career.
+  // The English version always uses the existing, source-authored HTML.
+  const detailedTranslations = window.PortfolioDetailedTranslations?.[page];
+  if (detailedTranslations) Object.assign(texts[page], detailedTranslations);
   const host = document.querySelector(".site-nav .shell, header.top, header.shell, .topbar-inner");
   if (!host) return;
   const picker = document.createElement("div");
@@ -551,7 +555,7 @@
       if (variants && el.children.length === 0) el.textContent = variants[i];
     });
     notice.textContent = noteText[i];
-    notice.hidden = i === 0;
+    notice.hidden = i === 0 || page === "about" || page === "career";
     try { localStorage.setItem("portfolio-language", chosen); } catch (_) {}
     refreshCounts();
   }
