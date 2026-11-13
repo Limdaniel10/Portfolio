@@ -1705,7 +1705,7 @@
       "preview": "“당장 떠날 수 있다면 북극이라도 갈 거야.”",
       "text": "“당장 떠날 수 있다면 북극이라도 갈 거야.”\n\n그는 이미 허무해서 아무것도 아닌 세상을 현실적으로 살고 싶지 않았던 것이다.\n\n“오사카는 먹다가 망하고, 교토는 입다가 망한다.”\n\n내 삶의 기념으로서 무엇을 남길 건가. 봄에 피는 꽃. 산에 우는 뻐꾸기. 가을은 단풍 잎새.",
       "book_id": "BK-000611",
-      "match_status": "Books title priority; Notion author differs",
+      "match_status": "Author corrected to 허연 in Books and Notion; first completion",
       "review_status": "Approved",
       "suggested_book_id": "",
       "suggested_title": ""
@@ -1746,9 +1746,9 @@
       "author": "어니스트 헤밍웨이",
       "preview": "그나저나 중위님, 장님은 내뿜는 연기를 볼 수 없어서 담배를 피우지 않는다는 이야기를 들어보셨습니까?",
       "text": "그나저나 중위님, 장님은 내뿜는 연기를 볼 수 없어서 담배를 피우지 않는다는 이야기를 들어보셨습니까?",
-      "book_id": "BK-000365",
-      "match_status": "Books title priority; Notion author differs",
-      "review_status": "Approved",
+      "book_id": "",
+      "match_status": "Hemingway unfinished; Murakami completed as a different work",
+      "review_status": "Unfinished",
       "suggested_book_id": "",
       "suggested_title": ""
     },
