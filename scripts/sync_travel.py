@@ -110,8 +110,9 @@ def flight_coords(a,b):
 
 def build_data(tables,baseline):
  data={k:baseline[k] for k in ('schema_version','transport_modes','country_basis')}
- # Author-confirmed count: 193 UN members plus Vatican City; Taiwan is excluded.
- data['country_basis']=194
+ # Personal travel-count reference: 193 UN members + 2 UN observer states + Taiwan.
+ # The legacy count_in_195 field remains the site-wide included-in-total flag.
+ data['country_basis']=196
  data['transport_modes']=sorted(set(data['transport_modes'])|{r['mode'] for r in tables['surface_routes']})
  for _,(key,_) in TABLES.items():
   if key!='surface_routes':data[key]=tables[key]
