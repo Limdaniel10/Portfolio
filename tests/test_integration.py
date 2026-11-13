@@ -23,15 +23,17 @@ assert len(books)>=1400 and len(months)>=84
 assert 'reading-notes-section' not in (SITE/'reading/index.html').read_text(encoding='utf8')
 assert 'id="reading-highlights"' in (SITE/'reading/index.html').read_text(encoding='utf8')
 highlight_data=json.loads((SITE/'reading/data/highlights.json').read_text(encoding='utf8'))['entries']
-assert len(highlight_data)==337 and len({e['id'] for e in highlight_data})==337
-assert {s:sum(e['source']==s for e in highlight_data) for s in ('I','II','III','IV')}=={'I':100,'II':100,'III':100,'IV':37}
-assert sum(bool(e['book_id']) for e in highlight_data)==292
+assert len(highlight_data)>=337 and len({e['id'] for e in highlight_data})==len(highlight_data)
+assert all(sum(e['source']==s for e in highlight_data)>=expected for s,expected in (('I',100),('II',100),('III',100),('IV',37)))
+assert sum(bool(e['book_id']) for e in highlight_data)>=292
 # Multiple-read works must map to the earliest matching completed book.
 known={'HII-034':'BK-000098','HI-067':'BK-000488','HIII-085':'BK-000301','HIII-089':'BK-000609'}
 assert {e['id']:e['book_id'] for e in highlight_data if e['id'] in known}==known
 
-assert all(e['title'] and e['notion_url'].startswith('https://app.notion.com/') for e in highlight_data)
+assert all(e['title'] and e['text'] and e['review_status'] for e in highlight_data)
 assert {e['book_id'] for e in highlight_data if e['book_id']} <= {b['id'] for b in books}
+assert 'ORIGINAL NOTEBOOKS' not in (SITE/'reading/index.html').read_text(encoding='utf8')
+assert 'Manage highlights in Google Sheets' in (SITE/'reading/index.html').read_text(encoding='utf8')
 
 assert 'id="wr-archive"' in (SITE/'writing/readings/index.html').read_text(encoding='utf8')
 assert len(json.loads((SITE/'writing/assets/reading-notes.json').read_text(encoding='utf8'))['notes'])==182
