@@ -48,17 +48,10 @@ jobs:
           else
             python scripts/sync_reading.py --from-csv
           fi
-      - name: Sync Reading Notes from Google Sheets when configured; otherwise bundled CSV
-        env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-          GOOGLE_SHEETS_ID: ${{ vars.GOOGLE_SHEETS_ID }}
-        shell: bash
-        run: |
-          if [[ -n "$GOOGLE_SHEETS_ID" ]]; then
-            python scripts/sync_reading_notes.py
-          else
-            python scripts/sync_reading_notes.py --from-csv
-          fi
+      # Writing / Readings quotes and dates are curated against Brunch photos.
+      # Never regenerate them from the legacy ReadingNotes sheet/CSV during deploy.
+      - name: Validate curated Writing photo notes (no Sheets overwrite)
+        run: python writing_source/tests/test_photo_audit.py
       - name: Sync full Highlights archive from Google Sheets
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
