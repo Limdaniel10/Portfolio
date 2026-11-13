@@ -1,0 +1,45 @@
+# Sources are exclusively the author's published Brunch entries.
+# Do not infer unpublished titles, dates, article URLs, or missing prose.
+author: lim-eat-less
+collections:
+  arctic:
+    aliases: ['북극으로']
+    book_url: 'https://brunch.co.kr/brunchbook/arctic'
+    count: 7
+    chapters:
+      - chapter: 1
+        title: 우리가 런던에 다시 올 수 있을까
+        date: '2025-10-05'
+        url: 'https://brunch.co.kr/@lim-eat-less/502'
+      - chapter: 2
+        title: 재회하지 못한다
+        date: '2025-10-19'
+        url: 'https://brunch.co.kr/@lim-eat-less/503'
+      - chapter: 3
+        title: 실패한 여행
+        date: '2025-10-26'
+        url: 'https://brunch.co.kr/@lim-eat-less/511'
+      - chapter: 4
+        title: 북극만큼 멀어져
+        date: '2025-11-02'
+        url: 'https://brunch.co.kr/@lim-eat-less/504'
+      - chapter: 5
+        title: 에트르타의 벼랑 끝에 서
+        date: '2025-11-08'
+        url: 'https://brunch.co.kr/@lim-eat-less/513'
+      - chapter: 6
+        title: 북극으로
+        date: '2025-11-16'
+        url: 'https://brunch.co.kr/@lim-eat-less/506'
+      - chapter: 7
+        title: 북극으로 가는 길
+        date: '2025-11-23'
+  tallinn:
+    aliases: ['탈린엔 북풍이 분다', '탈린에는 북풍이 분다']
+    count: 9
+  venezuela:
+    aliases: ['베네수엘라를 왜 가?', '베네수엘라를 왜 가']
+    count: 1
+  short-disappearance:
+    aliases: ['단기실종']
+    count: 1
