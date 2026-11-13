@@ -247,7 +247,24 @@ def main() -> int:
                     }
             except (requests.RequestException, ValueError) as exc:
                 print(f"BOOK_UNAVAILABLE {book_id}: {exc}")
-        discovery_report[book_id] = {"book_url": book_url, "published_links": [{"url": u, "label": label} for u, label in published], "debug": source_debug}
+        article_neighbors = []
+        if book_id == "arctic":
+            try:
+                previous_article = fetch(session, "https://brunch.co.kr/@lim-eat-less/506")
+                article_neighbors = [
+                    {"url": urljoin("https://brunch.co.kr", a.get("href", "")), "text": a.get_text(" ", strip=True)[:160],
+                     "title": a.get("title","")}
+                    for a in previous_article.select("a[href]")
+                    if ARTICLE_URL.search(a.get("href", ""))
+                ]
+                if len(known) >= 7 and not known[6].get("url"):
+                    matches = [n for n in article_neighbors if "북극으로 가는 길" in (n["text"] + n["title"])]
+                    if len(matches) == 1:
+                        known[6]["url"] = matches[0]["url"]
+                        print(f"FOUND_ARCTIC_EPISODE_7 {matches[0]['url']}")
+            except (requests.RequestException, ValueError) as exc:
+                print(f"ARTICLE_NEIGHBOR_UNAVAILABLE {exc}")
+        discovery_report[book_id] = {"book_url": book_url, "published_links": [{"url": u, "label": label} for u, label in published], "debug": source_debug, "article_neighbors": article_neighbors}
         for no in range(1, data["count"] + 1):
             entry = next((c for c in known if c["chapter"] == no), {})
             title = entry.get("title", "")
