@@ -69,7 +69,7 @@
     .art-books i:nth-child(2){left:50px;height:126px;background:#ac8b73}
     .art-books i:nth-child(3){left:89px;transform:rotate(10deg);height:114px}
     .art-books i:nth-child(4){left:132px;transform:rotate(18deg);height:84px;background:#d2bda9}
-    .art-flower{right:35px;top:70px;width:172px;height:170px;opacity:.31;transform:rotate(21deg)}
+    .art-flower{right:29px;top:64px;width:182px;height:182px;opacity:.44;transform:rotate(-4deg)}
     .art-flower svg{height:100%;width:100%}
     .art-quote{right:50px;top:47px;font:300 225px/.8 var(--serif);color:#ac9480;opacity:.19}
     .art-notes{right:37px;top:62px;width:161px;height:143px;opacity:.34}
