@@ -1,4 +1,5 @@
-import json,sys,tempfile,shutil
+import json,sys,tempfile,shutil,re
+from bs4 import BeautifulSoup
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -38,6 +39,37 @@ def run():
    assert '<ol start="2023">' not in content, f'{slug}: year was parsed as list'
    assert '2023. 03.' in content, f'{slug}: date text missing'
   assert '<p>2023. 03. 24 · Day 7</p>' in (copy/'_site/writing/articles/ometepe/011/index.html').read_text(encoding='utf8')
+  # Audit every published HTML chapter, not just its Markdown source.
+  verified_dates=0
+  inspected_pages=0
+  for manuscript in (copy/'content').rglob('*.md'):
+   raw=manuscript.read_text(encoding='utf8')
+   front_end=re.search(r'\A---\s*\n[\s\S]*?\n---\s*\n',raw)
+   assert front_end, f'{manuscript}: bad frontmatter'
+   body=raw[front_end.end():]
+   if not body.strip() or 'status: missing' in raw[:front_end.end()]:continue
+   folder=manuscript.parent.name if manuscript.parent.name!='essays' else 'essays'
+   if folder not in ('essays','readings'):
+    slug='articles/'+folder+'/'+manuscript.stem
+   else:slug='articles/'+folder+'/'+manuscript.stem
+   page=copy/'_site/writing'/slug/'index.html'
+   assert page.exists(), f'Missing rendered page: {manuscript}'
+   soup=BeautifulSoup(page.read_text(encoding='utf8'),'html.parser')
+   article=soup.select_one('.essay-reading-body')
+   assert article is not None, f'Missing rendered prose: {manuscript}'
+   assert not article.select('hr'), f'Unexpected horizontal line in {manuscript}'
+   assert all(p.get_text(strip=True)!=chr(92) for p in article.select('p')),f'Stray backslash in {manuscript}'
+   for line in body.splitlines():
+    date=re.match(r'^\s*((?:20\d{2}|\d{2}))\\?\.\s+(\d{1,2})\.\s*(\d{1,2})',line)
+    if not date:continue
+    expect=f'{date.group(1)}. {date.group(2)}. {date.group(3)}'
+    paragraphs=[re.sub(r'\s+',' ',p.get_text(' ',strip=True)) for p in article.select('p')]
+    assert any(expect in text for text in paragraphs),f'Date rendered as list or missing: {manuscript}: {line!r}'
+    verified_dates+=1
+   inspected_pages+=1
+  assert inspected_pages>=95, f'Expected published manuscripts, got {inspected_pages}'
+  assert verified_dates>=50, f'Date coverage unexpectedly low: {verified_dates}'
+  print(f'PASS: {inspected_pages} published Writing pages inspected in HTML; {verified_dates} dates render as paragraphs; no unwanted horizontal rules')
   book_before=next(b for b in initial['collections'] if b['id']=='solo-abroad')
   target_folder=copy/'content/collections/solo-abroad'
   ids=[int(p.stem) for p in target_folder.glob('*.md') if p.stem.isdigit()]
