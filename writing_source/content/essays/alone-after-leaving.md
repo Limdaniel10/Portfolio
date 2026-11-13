@@ -8,7 +8,6 @@ status: text
 brunch_url: null
 source_note: Revised sample manuscript (DOCX), not the Notion original
 ---
-
 “잘 다녀오너라.”
 
 아버지가 역에 내려주며 하신 말씀이다. 역까지 가는 반 시간 동안 안전에 관한 잔소리, 잔소리를 빙자한 걱정을 길게 늘어놓으셨지만 기억나는 건 마지막 한마디뿐이다.
