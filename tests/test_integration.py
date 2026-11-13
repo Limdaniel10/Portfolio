@@ -11,6 +11,13 @@ assert (SITE/'index.html').exists(),'Missing homepage'
 expected=('about','career','traveling','writing','reading')
 for section in expected:assert (SITE/section/'index.html').exists(),f'Missing /{section}/ index'
 assert (SITE/'assets/resume.pdf').stat().st_size>10000,'Missing resume'
+# Four-language selector should be available on the home and all five sections.
+assert (SITE/'js/i18n.js').exists() and (SITE/'css/i18n.css').exists(), 'Missing localization files'
+for section in ('', *expected):
+    page = SITE / section / 'index.html' if section else SITE / 'index.html'
+    markup = page.read_text(encoding='utf8')
+    assert 'i18n.js' in markup and 'i18n.css' in markup, f'Missing language control on {section or "home"}'
+assert all(code in (SITE/'js/i18n.js').read_text(encoding='utf8') for code in ('en', 'ko', 'zh-Hans', 'es'))
 assert (SITE/'.nojekyll').exists()
 assert (SITE/'data/visited-world.svg').stat().st_size>1000
 travel=json.loads((SITE/'traveling/assets/data.js').read_text(encoding='utf8').strip().split('=',1)[1].rstrip(';'))
