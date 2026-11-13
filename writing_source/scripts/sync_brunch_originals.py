@@ -8,6 +8,7 @@ Missing/unpublished sources are reported and never fabricated.
 from __future__ import annotations
 
 import argparse
+import json
 import datetime as dt
 import html
 import re
@@ -161,7 +162,8 @@ def discover_book_urls(session: requests.Session, targets: dict) -> dict[str, st
         for url in candidate_urls[:45]:
             try:
                 book = fetch(session, url)
-                title = book.get_text(" ", strip=True)[:1200]
+                tag = book.select_one('meta[property="og:title"]')
+                title = ((tag.get("content", "") if tag else "") + " " + " ".join(h.get_text(" ", strip=True) for h in book.select("h1,h2")[:5]))
                 for book_id, record in targets.items():
                     if book_id in discovered or record.get("book_url"):
                         continue
@@ -223,6 +225,7 @@ def main() -> int:
     session = requests.Session()
     discovered = discover_book_urls(session, books)
     report = []
+    discovery_report = {}
     for book_id, data in books.items():
         book_url = data.get("book_url") or discovered.get(book_id)
         known = data.get("chapters") or []
@@ -232,6 +235,7 @@ def main() -> int:
                 published = book_links(fetch(session, book_url), data["count"])
             except (requests.RequestException, ValueError) as exc:
                 print(f"BOOK_UNAVAILABLE {book_id}: {exc}")
+        discovery_report[book_id] = {"book_url": book_url, "published_links": [{"url": u, "label": label} for u, label in published]}
         for no in range(1, data["count"] + 1):
             entry = next((c for c in known if c["chapter"] == no), {})
             title = entry.get("title", "")
@@ -268,6 +272,8 @@ def main() -> int:
                 time.sleep(0.8)
             except (requests.RequestException, ValueError) as exc:
                 report.append(f"UNAVAILABLE {book_id}/{no:03d}: {exc}")
+    discovery_report["results"] = report
+    (ROOT / "BRUNCH_DISCOVERY.json").write_text(json.dumps(discovery_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("\n".join(report))
     print(f"Total importable: {sum(x.startswith(('IMPORTED','DRY_RUN')) for x in report)}; "
           f"unavailable: {sum(x.startswith(('NO_SOURCE','BAD_URL','UNAVAILABLE')) for x in report)}")
