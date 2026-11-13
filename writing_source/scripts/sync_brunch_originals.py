@@ -212,6 +212,39 @@ def write_chapter(book_id: str, number: int, title: str, date: str | None,
     return "IMPORTED"
 
 
+def inspect_supplied_links(session: requests.Session, urls: list[str]) -> list[dict]:
+    """Fetch source metadata for user-supplied articles before assigning chapters."""
+    unique = list(dict.fromkeys(urls))
+    rows = []
+    for url in unique:
+        row = {"url": url}
+        try:
+            soup = fetch(session, url)
+            row["title"] = get_source_title(soup)
+            row["published_date"] = get_published_date(soup)
+            row["og_title"] = (soup.select_one('meta[property="og:title"]') or {}).get("content")
+            row["author"] = (soup.select_one('meta[property="article:author"]') or {}).get("content")
+            row["brunchbooks"] = [
+                {"title": a.get_text(" ", strip=True)[:160], "href": urljoin("https://brunch.co.kr", a.get("href", ""))}
+                for a in soup.select('a[href*="/brunchbook/"]')[:12]
+            ]
+            row["headings"] = [a.get_text(" ", strip=True) for a in soup.select("h1,h2,h3")[:12]]
+            try:
+                body = extract_article(soup, url)
+                row["body_chars"] = len(body)
+                row["opening"] = body[:350]
+                row["backslashes"] = body.count(chr(92))
+                row["date_lines"] = [line for line in body.splitlines()
+                    if re.match(r"^20[0-9]{2}[.] [0-9]{2}[.] [0-9]{2}", line)][:6]
+            except ValueError as exc:
+                row["body_error"] = str(exc)
+        except (requests.RequestException, ValueError) as exc:
+            row["error"] = str(exc)
+        rows.append(row)
+        time.sleep(0.3)
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--force", action="store_true", help="Replace authored text; default preserves existing prose")
@@ -299,6 +332,7 @@ def main() -> int:
                 time.sleep(0.8)
             except (requests.RequestException, ValueError) as exc:
                 report.append(f"UNAVAILABLE {book_id}/{no:03d}: {exc}")
+    discovery_report["supplied_url_audit"] = inspect_supplied_links(session, manifest.get("supplied_urls", []))
     discovery_report["results"] = report
     (ROOT / "BRUNCH_DISCOVERY.json").write_text(json.dumps(discovery_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("\n".join(report))
