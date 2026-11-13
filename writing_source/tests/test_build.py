@@ -1,4 +1,4 @@
-import json,sys,tempfile,shutil
+import json,sys,tempfile,shutil,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -10,6 +10,21 @@ def run():
   shutil.copytree(ROOT/'content',copy/'content')
   shutil.copytree(ROOT/'assets',copy/'assets')
   shutil.copytree(ROOT/'scripts',copy/'scripts')
+  # Every published manuscript should be clean prose, with no exported linebreak
+  # backslashes or Markdown horizontal rules that show up as stray visual marks.
+  checked=0
+  for source in (copy/'content').rglob('*.md'):
+   raw=source.read_text(encoding='utf8')
+   marker=re.match(r'^---\\s*\\n[\\s\\S]*?\\n---\\s*\\n',raw)
+   assert marker, f'{source}: missing frontmatter'
+   body=raw[marker.end():]
+   for n,line in enumerate(body.splitlines(),start=1):
+    assert not re.fullmatch(r'\\s*\\\\\\s*',line), f'{source}:{n} has stray backslash'
+    assert not re.fullmatch(r'\\s*(?:-{3,}|_{3,}|\\*{3,})\\s*',line), f'{source}:{n} has unwanted horizontal rule'
+   checked+=1
+  assert checked>=110, f'Expected all archived manuscripts; found {checked}'
+  mountain=(copy/'content/collections/ometepe/014.md').read_text(encoding='utf8')
+  assert '2023. 03. 25 · Day 8' in mountain
   initial=build(root=copy,base='/Portfolio/')
   initial_chapters=sum(len(b['chapters']) for b in initial['collections'])
   assert initial_chapters>=107, 'Original writing archive lost chapters'
