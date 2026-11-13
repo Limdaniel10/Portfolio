@@ -32,6 +32,12 @@ def run():
   assert initial_chapters>=107, 'Original writing archive lost chapters'
   assert all(len(b['chapters'])>=baseline for b,baseline in zip(initial['collections'][:5],[40,20,17,17,13])), 'Archived collections lost chapters'
   assert (copy/'_site/writing/articles/solo-abroad/001/index.html').exists()
+  # A date starting with "2023. 03." is prose, NOT two ordered lists.
+  for slug in ('011','014','017-special'):
+   content=(copy/f'_site/writing/articles/ometepe/{slug}/index.html').read_text(encoding='utf8')
+   assert '<ol start="2023">' not in content, f'{slug}: year was parsed as list'
+   assert '2023. 03.' in content, f'{slug}: date text missing'
+  assert '<p>2023. 03. 24 · Day 7</p>' in (copy/'_site/writing/articles/ometepe/011/index.html').read_text(encoding='utf8')
   book_before=next(b for b in initial['collections'] if b['id']=='solo-abroad')
   target_folder=copy/'content/collections/solo-abroad'
   ids=[int(p.stem) for p in target_folder.glob('*.md') if p.stem.isdigit()]
