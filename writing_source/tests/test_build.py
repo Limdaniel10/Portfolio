@@ -39,6 +39,7 @@ def run():
    assert '<ol start="2023">' not in content, f'{slug}: year was parsed as list'
    assert '2023. 03.' in content, f'{slug}: date text missing'
   assert '<p>2023. 03. 24 · Day 7</p>' in (copy/'_site/writing/articles/ometepe/011/index.html').read_text(encoding='utf8')
+  assert '<p>2023. 11. 01: 팔도 도시락</p>' in (copy/'_site/writing/articles/milan-night/005/index.html').read_text(encoding='utf8'), 'Milan chapter 5 date must render as regular prose'
   # Audit every published HTML chapter, not just its Markdown source.
   verified_dates=0
   inspected_pages=0
