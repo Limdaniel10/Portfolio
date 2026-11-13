@@ -46,3 +46,5 @@
 @media(max-width:680px){.reading-notes-section{padding-top:58px}.notes-panel{padding:22px 16px 26px}.notes-overview{grid-template-columns:minmax(0,1fr) 75px;gap:12px}.notes-counter strong{font-size:34px}.notes-month-title{font-size:21px}.note-book-title{font-size:19px}.note-card-heading{gap:10px}.note-reflection{font-size:12px}}
 
 .note-provenance{font-size:9px;letter-spacing:.12em;color:var(--muted);margin:-7px 0 18px 18px}
+
+.note-transcription-pending{font-size:12px;line-height:1.75;color:var(--muted);font-style:italic;margin:0 0 15px}

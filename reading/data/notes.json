@@ -51,6 +51,30 @@
       "verification": "Notion exact match"
     },
     {
+      "id": "BR-000484",
+      "book_id": "BK-000558",
+      "title": "신의 망치",
+      "author": "아서 클라크",
+      "date": "2025-07-27",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/484",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Needs review"
+    },
+    {
+      "id": "BR-000483",
+      "book_id": "BK-000559",
+      "title": "짧은 소설 쓰는 법",
+      "author": "이문영",
+      "date": "2025-07-27",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/483",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Needs review"
+    },
+    {
       "id": "BR-000482",
       "book_id": "BK-000560",
       "title": "잘될 수밖에 없는 너에게",
@@ -147,6 +171,30 @@
       "verification": "Reflection verified; quote pending"
     },
     {
+      "id": "BR-000473",
+      "book_id": "BK-000607",
+      "title": "쓰기의 감각",
+      "author": "앤 라모",
+      "date": "2025-07-17",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/473",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Needs review"
+    },
+    {
+      "id": "BR-000472",
+      "book_id": "BK-000610",
+      "title": "매끄러운 세계와 그 적들",
+      "author": "한나 렌",
+      "date": "2025-07-16",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/472",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Needs review"
+    },
+    {
       "id": "BR-000471",
       "book_id": "BK-000608",
       "title": "헤세가 사랑한 순간들",
@@ -157,6 +205,18 @@
       "brunch_url": "https://brunch.co.kr/@lim-eat-less/471",
       "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "verification": "Notion exact match"
+    },
+    {
+      "id": "BR-000470",
+      "book_id": "BK-000459",
+      "title": "우리의 정류장과 필사의 밤",
+      "author": "김이설",
+      "date": "2025-07-14",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/470",
+      "quote_source": "",
+      "verification": "Needs review"
     },
     {
       "id": "BR-000469",
@@ -529,6 +589,18 @@
       "brunch_url": "https://brunch.co.kr/@lim-eat-less/437",
       "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "verification": "Notion exact match"
+    },
+    {
+      "id": "BR-000436",
+      "book_id": "BK-000476",
+      "title": "당신은 결국 무엇이든 해내는 사람",
+      "author": "김상현",
+      "date": "2025-06-11",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/436",
+      "quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
+      "verification": "Needs review"
     },
     {
       "id": "BR-000435",
@@ -1069,6 +1141,18 @@
       "brunch_url": "https://brunch.co.kr/@lim-eat-less/385",
       "quote_source": "https://app.notion.com/p/185f8fb4581b800ab924c9a33cb6fd31",
       "verification": "Notion exact match"
+    },
+    {
+      "id": "BR-000384",
+      "book_id": "",
+      "title": "눈물을 마시는 새 1",
+      "author": "이영도",
+      "date": "2025-04-24",
+      "reflection": "",
+      "quote": "",
+      "brunch_url": "https://brunch.co.kr/@lim-eat-less/384",
+      "quote_source": "https://app.notion.com/p/185f8fb4581b800ab924c9a33cb6fd31",
+      "verification": "Needs review"
     },
     {
       "id": "BR-000383",

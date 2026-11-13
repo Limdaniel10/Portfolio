@@ -32,8 +32,10 @@ def validate_notes(rows):
             raise DataError("ReadingNotes row %d: invalid ShowOnSite"%rownum)
         if show not in ("TRUE","YES","1"):
             continue
-        if not r["Title"] or not r["Author"] or not r["Reflection"]:
-            raise DataError("ReadingNotes row %d: incomplete public reflection"%rownum)
+        if not r["Title"] or not r["Author"]:
+            raise DataError("ReadingNotes row %d: missing title/author"%rownum)
+        if not r["Reflection"] and r["Verification"]!="Needs review":
+            raise DataError("ReadingNotes row %d: empty reflection must be Needs review"%rownum)
         try:
             day=date.fromisoformat(r["PublishedDate"])
         except ValueError as exc:

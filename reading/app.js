@@ -203,7 +203,7 @@ async function initializeNotes(){
     if(!response.ok)throw new Error("Notes data HTTP "+response.status);
     const data=await response.json();
     if(!Array.isArray(data.notes))throw new Error("Invalid notes schema");
-    const notes=data.notes.filter(n=>n&&n.title&&n.reflection&&n.date);
+    const notes=data.notes.filter(n=>n&&n.title&&n.author&&n.date);
     total.textContent=fmt(notes.length);
     function render(){
       const term=search.value.trim().toLocaleLowerCase();
@@ -235,7 +235,11 @@ async function initializeNotes(){
             content.append(el("blockquote","note-quote",note.quote));
             content.append(el("div","note-provenance",note.verification==="Notion exact match"?"NOTION HIGHLIGHT · AUTO-MATCHED":"SELECTED PASSAGE"));
           }
-          content.append(el("p","note-reflection",note.reflection));
+          if(note.reflection){
+            content.append(el("p","note-reflection",note.reflection));
+          }else{
+            content.append(el("p","note-transcription-pending","Written reflection not yet transcribed. Read the original Brunch post."));
+          }
           if(note.brunch_url&&String(note.brunch_url).startsWith("https://brunch.co.kr/")){
             const link=el("a","note-brunch-link","Read original reflection ↗");
             link.href=note.brunch_url;link.target="_blank";link.rel="noopener noreferrer";content.append(link);
