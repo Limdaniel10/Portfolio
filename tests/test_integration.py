@@ -25,7 +25,11 @@ assert 'id="reading-highlights"' in (SITE/'reading/index.html').read_text(encodi
 highlight_data=json.loads((SITE/'reading/data/highlights.json').read_text(encoding='utf8'))['entries']
 assert len(highlight_data)==337 and len({e['id'] for e in highlight_data})==337
 assert {s:sum(e['source']==s for e in highlight_data) for s in ('I','II','III','IV')}=={'I':100,'II':100,'III':100,'IV':37}
-assert sum(bool(e['book_id']) for e in highlight_data)==270
+assert sum(bool(e['book_id']) for e in highlight_data)==292
+# Multiple-read works must map to the earliest matching completed book.
+known={'HII-034':'BK-000098','HI-067':'BK-000488','HIII-085':'BK-000301','HIII-089':'BK-000609'}
+assert {e['id']:e['book_id'] for e in highlight_data if e['id'] in known}==known
+
 assert all(e['title'] and e['notion_url'].startswith('https://app.notion.com/') for e in highlight_data)
 assert {e['book_id'] for e in highlight_data if e['book_id']} <= {b['id'] for b in books}
 

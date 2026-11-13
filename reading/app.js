@@ -207,13 +207,22 @@ async function initializeHighlights(){
    byTitle.get(key).push(b);
   }
   const notes=data.entries.map(n=>{
+   // An explicitly selected BookID from HighlightCandidates is authoritative,
+   // including edition/title variants. Never guess when multiple titles or authors collide.
    let b=n.book_id?byID.get(n.book_id):null;
-   if(b&&norm(b.title)!==norm(n.title))b=null;
-   if(!b){
-    const candidates=byTitle.get(norm(n.title))||[];
-    if(candidates.length===1&&norm(candidates[0].author)===norm(n.author))b=candidates[0];
+   if(!b && !n.book_id){
+     const candidates=byTitle.get(norm(n.title))||[];
+     if(candidates.length===1&&norm(candidates[0].author)===norm(n.author))b=candidates[0];
    }
-   if(b&&!Number.isInteger(Number(b.month)))b=null;
+   if(b){
+     // Group all rereads of the same work under its FIRST completed month.
+     // New rereads in Books should never move previously saved highlights.
+     const sameWork=(byTitle.get(norm(b.title))||[]).filter(x=>norm(x.author)===norm(b.author));
+     sameWork.sort((x,y)=>String(x.completed_date||"").localeCompare(String(y.completed_date||""))||
+                      Number(x.month_order||0)-Number(y.month_order||0)||x.id.localeCompare(y.id));
+     if(sameWork.length)b=sameWork[0];
+   }
+   if(b&&(!Number.isInteger(Number(b.month))||Number(b.month)<1||Number(b.month)>12))b=null;
    return {...n,book:b||null,year:b?Number(b.year):null,month:b?Number(b.month):null};
   });
   total.textContent=fmt(notes.length);
