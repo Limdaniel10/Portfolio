@@ -59,7 +59,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--from-csv",action="store_true")
     parser.add_argument("--csv",type=Path,default=ROOT/"reading/sheets/ReadingNotes.csv")
-    parser.add_argument("--output",type=Path,default=ROOT/"reading/data/notes.json")
+    parser.add_argument("--output",type=Path,default=ROOT/"writing_source/assets/reading-notes.json")
     args=parser.parse_args()
     if args.from_csv:
         with args.csv.open(encoding="utf-8-sig",newline="") as stream:

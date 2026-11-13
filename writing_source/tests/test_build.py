@@ -29,6 +29,12 @@ def run():
   mountain=(copy/'content/collections/ometepe/014.md').read_text(encoding='utf8')
   assert '2023. 03. 25 · Day 8' in mountain or '2023\. 03. 25 · Day 8' in mountain
   initial=build(root=copy,base='/Portfolio/')
+  # 182 book reflections are indexed under Writing / Readings.
+  html=(copy/'_site/writing/readings/index.html').read_text(encoding='utf8')
+  assert 'id="wr-archive"' in html and 'reading-notes.js' in html
+  payload=json.loads((copy/'_site/writing/assets/reading-notes.json').read_text(encoding='utf8'))
+  assert len(payload['notes'])==182
+  assert (copy/'_site/writing/assets/reading-notes.css').exists()
   initial_chapters=sum(len(b['chapters']) for b in initial['collections'])
   assert initial_chapters>=107, 'Original writing archive lost chapters'
   # The full 13-chapter El Salvador series is imported from the author's Brunch.

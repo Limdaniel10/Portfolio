@@ -20,6 +20,10 @@ assert len(travel['airport_overnights'])>=45
 books=json.loads((SITE/'reading/data/books.json').read_text())['books']
 months=json.loads((SITE/'reading/data/monthly-pages.json').read_text())['months']
 assert len(books)>=1400 and len(months)>=84
+assert 'reading-notes-section' not in (SITE/'reading/index.html').read_text(encoding='utf8')
+assert 'id="wr-archive"' in (SITE/'writing/readings/index.html').read_text(encoding='utf8')
+assert len(json.loads((SITE/'writing/assets/reading-notes.json').read_text(encoding='utf8'))['notes'])==182
+
 writing=json.loads((SITE/'writing/writing-index.json').read_text())
 # Compare against the live Markdown source, not hardcoded chapter/essay totals.
 # New chapters, essays, readings and fiction must deploy without editing tests.

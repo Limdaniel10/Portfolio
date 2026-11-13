@@ -87,6 +87,12 @@ def build(root=ROOT,base='/Portfolio/',out=None):
   chapters_html=''.join(f'<a class="chapter-row" href="{esc(chapter_href(c))}"{chapter_attrs(c)}><span class="chapter-number">{"SPECIAL" if c["special"] else str(c["chapter"]).zfill(2)}</span><span class="chapter-title">{esc(c["title"])}</span><span class="chapter-arrow">↗</span></a>' for c in b['chapters'] if c['status']!='missing') or '<p class="empty-note">No chapters yet. Add a Markdown file to this collection.</p>'
   view=f'<section class="shell detail-view" style="display:block"><div class="detail-breadcrumb"><a href="{base}writing/">Writing</a><span>/</span><a href="{base}writing/collections/">Collections</a><span>/</span>{esc(b["title"])}</div><div class="book-detail"><div><div class="book-cover book-{b["order"]}"><span class="book-kicker">{esc(b["status"])}</span><strong class="book-name">{esc(b["title"])}</strong></div></div><div><div class="eyebrow">{esc(b["status"])}</div><h2>{esc(b["title"])}</h2><p>{esc(BOOK_DESCRIPTIONS.get(b["id"],"Original Korean-language essays, first shared on Brunch."))}</p><p>{sum(c["status"]!="missing" for c in b["chapters"])} published chapters · Read here or follow the original Brunch publication.</p><div class="toc"><div class="toc-head"><h3>Table of contents</h3><span>{sum(c["status"]!="missing" for c in b["chapters"])} entries</span></div><div class="chapter-list">{chapters_html}</div></div></div></div></section>'
   (p/'index.html').write_text(make_page(b['title'],view,base,''),encoding='utf8')
+ # Book-reflection data belongs to Writing / Readings, not the Reading ledger.
+ notes_path=ROOT/'assets/reading-notes.json'
+ if not notes_path.exists():raise ValueError('Writing Readings archive data missing')
+ reading_notes=json.loads(notes_path.read_text(encoding='utf8')).get('notes',[])
+ if len(reading_notes)<180 or len({n.get('id') for n in reading_notes})!=len(reading_notes):
+  raise ValueError('Writing Readings archive incomplete or duplicate IDs')
  # landing page original visual blocks preserved
  home=BeautifulSoup((ROOT/'assets/home-fragment.html').read_text(),'html.parser')
  for a in home.select('a[href]'):
@@ -96,7 +102,7 @@ def build(root=ROOT,base='/Portfolio/',out=None):
   if card:
    count=sum(len(b['chapters']) for b in books.values() if b['category']==btype) if btype in ('collections','fiction') else len(essays if btype=='essays' else readings)
    small=card.select_one('.card-bottom small')
-   if small:small.string=("Planned Korean SF trilogy" if section=="fiction" else "Notes in progress" if section=="readings" else f"{count} entries" if section!="collections" else f'{sum(b["status"]=="completed" for b in books.values())} complete · {sum(b["status"]=="in-progress" for b in books.values())} in progress')
+   if small:small.string=("Planned Korean SF trilogy" if section=="fiction" else f"{len(reading_notes)} reflections" if section=="readings" else f"{count} entries" if section!="collections" else f'{sum(b["status"]=="completed" for b in books.values())} complete · {sum(b["status"]=="in-progress" for b in books.values())} in progress')
  (site/'index.html').write_text(make_page('Writing',str(home),base,''),encoding='utf8')
  for cat in ['collections','fiction','essays','readings']:
   p=site/cat;p.mkdir(exist_ok=True)
@@ -104,11 +110,21 @@ def build(root=ROOT,base='/Portfolio/',out=None):
    arr=[b for b in books.values() if b['category']==cat];arr.sort(key=lambda x:x['order'])
    groups=[('Completed Works',[b for b in arr if b['status']=='completed']),('Works in progress',[b for b in arr if b['status']=='in-progress']),('Planned fiction',[b for b in arr if b['status']=='planned'])]
    body=''.join(f'<section class="content-section"><div class="section-header"><h3>{label}</h3></div><div class="book-grid">'+''.join(f'<a class="book-entry" href="{base}writing/book/{b["id"]}/"><div class="book-cover book-{b["order"]}"><span class="book-kicker">{esc(b["status"])}</span><strong class="book-name">{esc(b["title"])}</strong></div><div class="book-caption"><strong>{esc(b["title"])}</strong><span>{len(b["chapters"])} chapters ↗</span></div></a>' for b in group)+'</div></section>' for label,group in groups if group)
+  elif cat=='readings':
+   future=''.join(f'<a class="chapter-row" href="{esc(a["url"])}"><span class="chapter-title">{esc(a["title"])}</span><span class="chapter-arrow">↗</span></a>' for a in readings)
+   body=(f'<div class="wr-intro"><div class="eyebrow">ONE HUNDRED DAYS · ONE LINE A DAY</div><h3>A line, a book, a thought.</h3><p>Short reflections on the books that stayed with me. Written in Korean, originally published on Brunch. Selected passages are kept from my Notion highlights.</p><div class="wr-count"><strong>{len(reading_notes)}</strong><span>BOOK REFLECTIONS · 2025</span></div></div>'
+         '<div class="wr-controls"><label for="wr-search">Search the archive</label><input type="search" id="wr-search" placeholder="Book, author, or a line from a reflection…" autocomplete="off"><label class="wr-filter-label" for="wr-filter">Show</label><select id="wr-filter"><option value="all">All entries</option><option value="quoted">With selected passages</option><option value="pending">Not yet transcribed</option></select></div>'
+         '<div id="wr-archive" class="wr-archive" aria-live="polite"><p class="wr-status">Loading reflections…</p></div><p class="wr-status" id="wr-empty" hidden>No matching reflections.</p>')
+   if future:body+='<section class="wr-other"><h3>Other reading essays</h3><div class="chapter-list">'+future+'</div></section>'
   else:
-   arr=essays if cat=='essays' else readings
+   arr=essays
    body='<div class="chapter-list">'+''.join(f'<a class="chapter-row" href="{a["url"]}"><span class="chapter-title">{esc(a["title"])}</span><span class="chapter-arrow">↗</span></a>' for a in arr)+'</div>' if arr else '<p class="empty-note">New writing will appear here as the archive grows.</p>'
-  page=f'<section class="shell detail-view" style="display:block"><div class="detail-breadcrumb"><a href="{base}writing/">Writing</a><span>/</span>{cat.title()}</div><div class="detail-top"><div><span class="eyebrow">The writing archive</span><h2>{cat.title()}</h2><p>{"Travel essay collections and ongoing series" if cat=="collections" else "A growing archive"}</p></div></div>{body}</section>'
-  (p/'index.html').write_text(make_page(cat.title(),page,base,''),encoding='utf8')
+  page=f'<section class="shell detail-view" style="display:block"><div class="detail-breadcrumb"><a href="{base}writing/">Writing</a><span>/</span>{cat.title()}</div><div class="detail-top"><div><span class="eyebrow">The writing archive</span><h2>{cat.title()}</h2><p>{"Travel essay collections and ongoing series" if cat=="collections" else "Book reflections and selected passages" if cat=="readings" else "A growing archive"}</p></div></div>{body}</section>'
+  final=make_page(cat.title(),page,base,'')
+  if cat=='readings':
+   final=final.replace('</head>',f'<link rel="stylesheet" href="{base}writing/assets/reading-notes.css"></head>')
+   final=final.replace('</body>',f'<script src="{base}writing/assets/reading-notes.js" defer></script></body>')
+  (p/'index.html').write_text(final,encoding='utf8')
  return index
 
 if __name__=='__main__':
