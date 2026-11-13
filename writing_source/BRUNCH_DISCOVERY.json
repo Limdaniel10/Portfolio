@@ -527,6 +527,52 @@
       "opening": "돌고 돌아 남항이었다. 영도 돌아가는 남항대교. 올려다본 하늘이 마지막으로 흐렸던 건 언제였던가. 마지막으로 차창 열어 바다내음을 맡았던 건 또 언제였던가. 기억이 뒤섞여 흐렸다. 헬싱키의 하늘처럼 희끄무래고 돌아 남항이었다. 영도 돌아가는 남항대교. 올려다본 하늘이 마지막으로 흐렸던 건 언제였던가. 마지막으로 차창 열어 바다내음을 맡았던 건 또 언제였던가. 기억이 뒤섞여 흐렸다. 헬싱키의 하늘처럼 희끄무레해졌다.\n\n고등학교 시절, 나는 기숙사에 살아 고향 부산에 내려가는 일이 드물었다. 분기에 한 번도 감지덕지였다. 아들이 내려오는 날이면, 아버지는 해운대로 차를 모셨다. 부산의 끝 강서구 명지에서 경부고속도로의 끝 ",
       "backslashes": 0,
       "date_lines": []
+    },
+    {
+      "url": "https://brunch.co.kr/@lim-eat-less/259",
+      "title": "54, 아직 젊습니다",
+      "published_date": "2025-02-01",
+      "og_title": "09화 54, 아직 젊습니다",
+      "author": "https://brunch.co.kr/@@eQZr",
+      "brunchbooks": [
+        {
+          "title": "연재 탈린엔 북풍이 분다",
+          "href": "https://brunch.co.kr/brunchbook/windblowsnorth"
+        },
+        {
+          "title": "전체 목차 보기",
+          "href": "https://brunch.co.kr/brunchbook/windblowsnorth"
+        }
+      ],
+      "headings": [
+        "54, 아직 젊습니다"
+      ],
+      "same_author_article_links": [
+        [
+          "https://brunch.co.kr/@@eQZr/244",
+          "06 바람 불면 쓰러질 폰"
+        ],
+        [
+          "https://brunch.co.kr/@@eQZr/255",
+          "07 태양은 떠오른다"
+        ],
+        [
+          "https://brunch.co.kr/@@eQZr/258",
+          "08 돌고 돌아 남항"
+        ],
+        [
+          "https://brunch.co.kr/@@eQZr/259",
+          "최신글 09 54, 아직 젊습니다"
+        ],
+        [
+          "https://brunch.co.kr/@lim-eat-less/258",
+          "이전 08화 돌고 돌아 남항"
+        ]
+      ],
+      "body_chars": 4373,
+      "opening": "바싹 마른 여자였다. 울긋불긋 선명한 피의 통로가 투명한 살결 위로 얽혀 있었고, 피부는 건식 사우나의 열기에 잠식당한 듯 탄력을 잃고 갈라져 있었다. 이렇듯 노화의 흔적이 뚜렷한 그녀의 몸은 기껏해야 30줄 초반으로 보이는 얼굴과 불가해한 대비를 이뤘다.\n\n묘하게 눈길을 잡아끄는 여자였다. 자세를 바꿀 때마다 근육이 자잘하게 움직였다. 근섬유 하나하나에 각기 다른 명령을 하달하듯. 그녀는 발레리나처럼, 호수에 살포시 안기는 백조처럼 문을 열고 들어왔다. 튤 자락이 바닥에 내려앉듯 요가 매트를 나무 의자 위에 펼쳐 놓았다.\n\n남들과는 다른 시간을 살아가는 여자였다. 매트 위에 앉아 고양이 자세를 취했다. 느리게, 그러나",
+      "backslashes": 0,
+      "date_lines": []
     }
   ],
   "results": [
@@ -545,7 +591,7 @@
     "SKIP_EXISTING tallinn/006",
     "SKIP_EXISTING tallinn/007",
     "SKIP_EXISTING tallinn/008",
-    "NO_SOURCE tallinn/009",
+    "IMPORTED tallinn/009 4373 chars",
     "SKIP_EXISTING venezuela/001",
     "SKIP_EXISTING short-disappearance/001"
   ]
