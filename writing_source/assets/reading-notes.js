@@ -55,6 +55,7 @@
        content.append(make("p","wr-source-label",n.verification==="Notion exact match"?"NOTION HIGHLIGHT · MATCHED":"SELECTED PASSAGE"));
      }
      if(n.reflection)content.append(make("p","wr-reflection",n.reflection));
+     else if(n.content_status==="intentionally_no_reflection")content.append(make("p","wr-pending","No standalone reflection was written for this entry."));
      else if(!n.quote)content.append(make("p","wr-pending","Original content not yet transcribed. Read the Brunch post."));
      if(n.brunch_url.startsWith("https://brunch.co.kr/")){
        const link=make("a","wr-link","Read original on Brunch ↗");
