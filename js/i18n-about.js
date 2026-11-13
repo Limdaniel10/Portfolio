@@ -94,7 +94,7 @@
         "正在完成航空航天工程硕士学位，预计于 2027 年 5 月毕业。",
         "Estoy terminando una maestría en Ingeniería Aeroespacial, con graduación prevista para mayo de 2027.",
         "正在完成航太工程碩士學位，預計於 2027 年 5 月畢業。",
-        "Je termine un master en ingénierie aérospatiale, avec une remise de diplôme prévue en mai 2027.",
+        "Je termine un master en ingénierie aérospatiale, avec une obtention du diplôme prévue en mai 2027.",
         "Ich schließe meinen Master in Luft- und Raumfahrttechnik voraussichtlich im Mai 2027 ab."
       ),
       "#present .now-grid article:nth-child(2) p": tr(
@@ -125,7 +125,7 @@
       "#path .accordion-stack details:nth-child(1) .time-row:nth-child(1) p": tr(
         "대한민국 부산에서 태어나 자랐습니다.", "出生并成长于韩国釜山。",
         "Nací y crecí en Busan, Corea del Sur.", "在韓國釜山出生、長大。",
-        "Je suis né et j’ai grandi à Busan, en Corée du Sud.",
+        "Je suis originaire de Busan, en Corée du Sud, où j’ai grandi.",
         "Geboren und aufgewachsen in Busan, Südkorea."
       ),
       "#path .accordion-stack details:nth-child(1) .time-row:nth-child(2) p": tr(
@@ -137,7 +137,7 @@
         "An der Hankuk Academy of Foreign Studies (HAFS) beschäftigte ich mich mit Chinesisch und internationalen Studien."
       ),
       "#path .accordion-stack details:nth-child(1) .time-row:nth-child(3) p": tr(
-        "대한민국 국군 방첩·정보 분야에서 군 복무를 했습니다.",
+        "대한민국 국군정보사령부에서 군 복무를 했습니다.",
         "在韩国国防情报司令部服兵役。",
         "Presté servicio militar en el Mando de Inteligencia de Defensa de Corea del Sur.",
         "於韓國國防情報司令部服兵役。",
