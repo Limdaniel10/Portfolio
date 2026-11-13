@@ -24,6 +24,7 @@ def run():
     assert not (len(stripped)>=3 and len(set(stripped))==1 and stripped[0] in '-_*'), f'{source}:{n} has unwanted horizontal rule'
    checked+=1
   assert checked>=110, f'Expected all archived manuscripts; found {checked}'
+  print(f'PASS: {checked} Writing manuscripts contain no isolated backslashes or horizontal rules')
   mountain=(copy/'content/collections/ometepe/014.md').read_text(encoding='utf8')
   assert '2023. 03. 25 · Day 8' in mountain
   initial=build(root=copy,base='/Portfolio/')
