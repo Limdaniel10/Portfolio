@@ -188,10 +188,10 @@ initialize();
 /* Reading Highlights: all passages and classifications are managed in Google Sheets. */
 async function initializeHighlights(){
  const root=document.getElementById("highlightArchive"), search=document.getElementById("highlightSearch");
- const filter=document.getElementById("highlightSource"), count=document.getElementById("highlightCount");
+ const count=document.getElementById("highlightCount");
  const total=document.getElementById("highlightTotal"), linked=document.getElementById("highlightLinked");
  const empty=document.getElementById("highlightEmpty");
- if(!root||!search||!filter||!count||!total||!linked||!empty)return;
+ if(!root||!search||!count||!total||!linked||!empty)return;
  const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;};
  const norm=s=>String(s||"").normalize("NFKC").toLocaleLowerCase().replace(/[\s\p{P}\p{S}]/gu,"");
  try{
@@ -205,12 +205,6 @@ async function initializeHighlights(){
    const key=norm(b.title);
    if(!byTitle.has(key))byTitle.set(key,[]);
    byTitle.get(key).push(b);
-  }
-  for(const col of new Set(data.entries.map(n=>n.source).filter(Boolean))){
-    if(![...filter.options].some(o=>o.value===col)){
-      const opt=el("option","",col==="New"?"New highlights":"Highlight "+col);
-      opt.value=col;filter.append(opt);
-    }
   }
   const notes=data.entries.map(n=>{
    // An explicitly selected BookID from HighlightCandidates is authoritative,
@@ -247,7 +241,7 @@ async function initializeHighlights(){
       left.append(el("span","highlight-books-discrepancy",
           "Books match: "+note.book.author+" · Original highlight attribution: "+note.author));
    }
-   title.append(left,el("span","highlight-book-source","HIGHLIGHT "+note.source+" · "+String(note.ordinal).padStart(2,"0")));
+   title.append(left);
    card.append(title);
    const body=el("div","highlight-book-content");
    const paragraphs=String(note.text||"").split(/\n{2,}/).map(s=>s.trim()).filter(Boolean);
@@ -279,9 +273,9 @@ async function initializeHighlights(){
    d.append(header);return d;
   }
   function render(){
-   const q=search.value.trim().toLocaleLowerCase(),src=filter.value;
-   const selection=notes.filter(n=>(src==="all"||n.source===src)&&(!q||[n.title,n.author,n.preview,n.text].join(" ").toLocaleLowerCase().includes(q)));
-   const byYear=new Map(),orphan=new Map(),unfinished=new Map();
+   const q=search.value.trim().toLocaleLowerCase();
+   const selection=notes.filter(n=>!q||[n.title,n.author,n.preview,n.text].join(" ").toLocaleLowerCase().includes(q));
+   const byYear=new Map(),undated=[];
    for(const n of selection){
     if(n.book){
      if(!byYear.has(n.year))byYear.set(n.year,new Map());
@@ -289,9 +283,7 @@ async function initializeHighlights(){
      if(!months.has(n.month))months.set(n.month,[]);
      months.get(n.month).push(n);
     }else{
-     const destination=["Unfinished","Excerpt only"].includes(n.review_status)?unfinished:orphan;
-     if(!destination.has(n.source))destination.set(n.source,[]);
-     destination.get(n.source).push(n);
+     undated.push(n);
     }
    }
    const frag=document.createDocumentFragment();
@@ -309,37 +301,25 @@ async function initializeHighlights(){
     });
     year.append(content);frag.append(year);
    });
-   function appendUngrouped(grouped,title,description,open){
-    if(!grouped.size)return;
-    const all=[...grouped.values()].flat();
-    const other=group("highlight-year",title,all,open);
-    const content=el("div","highlight-year-body");
-    content.append(el("p","highlight-unlinked-caption",description));
-    [...grouped.keys()].sort((a,b)=>a.localeCompare(b)).forEach(s=>{
-      const arr=grouped.get(s).slice().sort((a,b)=>a.ordinal-b.ordinal);
-      const sub=group("highlight-month",s==="New"?"New highlights":"Highlight "+s,arr,Boolean(q)||!yKeys.length);
-      const list=el("div","highlight-book-list");
-      arr.forEach(n=>list.append(noteCard(n,Boolean(q))));
-      sub.append(list);content.append(sub);
-    });
-    other.append(content);frag.append(other);
+   if(undated.length){
+    // Keep unfinished, excerpt-only and unlinked passages in one neutral group.
+    // Book dates are never invented, and these do not enter the completed-book count.
+    const other=group("highlight-year","ETC",undated,Boolean(q)||!yKeys.length);
+    const body=el("div","highlight-year-body");
+    const list=el("div","highlight-book-list");
+    undated.slice().sort((a,b)=>String(a.source||"").localeCompare(String(b.source||""))||a.ordinal-b.ordinal)
+       .forEach(n=>list.append(noteCard(n,Boolean(q))));
+    body.append(list);other.append(body);frag.append(other);
    }
-   appendUngrouped(unfinished,"Unfinished books & excerpts",
-       "These passages were marked Unfinished or Excerpt only in Google Sheets. They are not counted as completed books.",
-       Boolean(q)||!yKeys.length);
-   appendUngrouped(orphan,"Completion not yet verified",
-       "The matching completed book has not been confirmed in Books. Suggested matches do not assign dates until approved.",
-       Boolean(q)||!yKeys.length&&!unfinished.size);
    root.replaceChildren(frag);
    count.textContent=fmt(selection.length)+" of "+fmt(notes.length)+" collected highlights";
    empty.hidden=selection.length!==0;
   }
   search.addEventListener("input",render);
-  filter.addEventListener("change",render);
   render();
  }catch(e){
-  console.error("Reading Notion Highlights unavailable",e);
-  root.replaceChildren(el("p","highlight-error","Notion highlights are temporarily unavailable."));
+  console.error("Reading Highlights unavailable",e);
+  root.replaceChildren(el("p","highlight-error","Highlights are temporarily unavailable."));
   count.textContent="Archive unavailable";
  }
 }

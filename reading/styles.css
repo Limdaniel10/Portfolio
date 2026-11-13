@@ -14,14 +14,13 @@
 .highlight-intro{display:grid;grid-template-columns:minmax(0,1fr) 225px;gap:32px;border-bottom:1px solid var(--line);padding-bottom:29px}
 .highlight-eyebrow{font-size:10px;letter-spacing:.14em;font-weight:600;color:var(--accent)}
 .highlight-intro p{font-size:13px;line-height:1.85;max-width:610px;margin:13px 0 0}
-.highlight-intro .highlight-explainer{font-size:11px;color:var(--muted);line-height:1.8;margin-top:12px}
 .highlight-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:right}
 .highlight-stats strong{display:block;font:400 43px/1 var(--serif);letter-spacing:-.05em}
 .highlight-stats span{font-size:9px;letter-spacing:.08em;color:var(--muted);display:block;margin-top:10px;line-height:1.7}
-.highlight-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 205px;gap:9px 18px;margin:26px 0 16px}
+.highlight-toolbar{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;margin:26px 0 16px}
 .highlight-toolbar label{font-size:10px;color:var(--muted);letter-spacing:.06em}
-.highlight-toolbar input,.highlight-toolbar select{box-sizing:border-box;width:100%;min-width:0;padding:13px 14px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:0;font-size:13px}
-.highlight-toolbar :is(input,select):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.highlight-toolbar input{box-sizing:border-box;width:100%;min-width:0;padding:13px 14px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:0;font-size:13px}
+.highlight-toolbar input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .highlight-status-row{display:flex;justify-content:space-between;gap:15px;font-size:10px;color:var(--muted);padding:12px 5px 21px}
 .highlight-status-row span:last-child{font-size:9px;letter-spacing:.1em}
 .highlight-archive{border-bottom:1px solid var(--line)}
@@ -45,22 +44,18 @@
 .highlight-book-title{font:400 19px/1.32 var(--serif);letter-spacing:-.02em;overflow-wrap:anywhere;word-break:keep-all}
 .highlight-book-author{font-size:10px;color:var(--muted)}
 .highlight-book-preview{font-size:11px;line-height:1.6;color:var(--muted);max-width:700px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-.highlight-book-source{font-size:9px;letter-spacing:.05em;color:var(--accent);white-space:nowrap;flex-shrink:0}
 .highlight-book[open] .highlight-book-title{color:var(--accent)}
 .highlight-book-content{max-width:790px;padding:4px 3px 26px}
 .highlight-first-passage{font:italic 19px/1.78 var(--serif);border-left:2px solid var(--accent);padding:2px 0 2px 17px;color:var(--ink);white-space:pre-wrap;word-break:keep-all;margin:4px 0 19px}
 .highlight-passage{font:400 15px/1.95 var(--serif);color:var(--ink);white-space:pre-wrap;word-break:keep-all;margin:0 0 16px}
 .highlight-book-actions{display:flex;flex-wrap:wrap;gap:15px;align-items:center;border-top:1px solid var(--line);margin-top:21px;padding-top:18px}
-.highlight-original-link,.highlight-find-book{background:transparent;border:0;border-bottom:1px solid var(--edge);padding:0 0 5px;color:var(--accent);font-size:11px;cursor:pointer}
+.highlight-find-book{background:transparent;border:0;border-bottom:1px solid var(--edge);padding:0 0 5px;color:var(--accent);font-size:11px;cursor:pointer}
 .highlight-unlinked-caption,.highlight-missing-passage{font-size:11px;line-height:1.85;color:var(--muted);margin:13px 8px}
-.highlight-source-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px 21px;border-top:1px solid var(--line);margin-top:28px;padding-top:24px}
-.highlight-source-links span{width:100%;font-size:9px;letter-spacing:.12em;color:var(--muted)}
-.highlight-source-links a{font-size:11px;color:var(--accent);border-bottom:1px solid var(--edge);padding-bottom:5px}
 .highlight-error,.highlight-empty{font-size:12px;color:var(--muted);padding:24px 4px}
 @media(max-width:680px){
 .highlight-section{padding-top:57px}.highlight-panel{padding:22px 16px 26px}
 .highlight-intro{grid-template-columns:1fr;gap:19px}.highlight-stats{text-align:left;max-width:300px}.highlight-stats strong{font-size:35px}
-.highlight-toolbar{grid-template-columns:1fr;gap:8px}.highlight-toolbar label:nth-of-type(2){margin-top:10px}
+.highlight-toolbar{grid-template-columns:1fr;gap:8px}
 .highlight-status-row{flex-direction:column;gap:5px}
 .highlight-group-heading{padding:17px 4px;gap:8px}
 .highlight-group-name{font-size:23px}.highlight-group-count{font-size:10px}
@@ -68,7 +63,6 @@
 .highlight-month .highlight-group-name{font-size:19px}
 .highlight-book-list{padding:0 4px 13px}
 .highlight-book-heading{gap:8px;flex-direction:column}
-.highlight-book-source{white-space:normal}
 .highlight-book-title{font-size:18px}.highlight-first-passage{font-size:17px}.highlight-passage{font-size:14px}
 }
 

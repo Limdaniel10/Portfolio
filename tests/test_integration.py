@@ -47,7 +47,18 @@ assert not by_highlight['HII-025']['book_id']
 assert by_highlight['HII-025']['review_status']=='Unfinished'
 
 assert 'ORIGINAL NOTEBOOKS' not in (SITE/'reading/index.html').read_text(encoding='utf8')
-assert 'Manage highlights in Google Sheets' in (SITE/'reading/index.html').read_text(encoding='utf8')
+reading_page=(SITE/'reading/index.html').read_text(encoding='utf8')
+reading_js=(SITE/'reading/app.js').read_text(encoding='utf8')
+assert 'Some books, lines that stayed with me.' in reading_page
+assert 'id="highlightSearch"' in reading_page
+assert 'id="highlightSource"' not in reading_page
+assert 'highlight-source-links' not in reading_page
+assert 'Open a year, then a month' not in reading_page
+assert 'highlight-explainer' not in reading_page
+assert 'Notion Highlight I' not in reading_page
+assert 'Sorted by book completion' not in reading_page
+assert 'group("highlight-year","ETC"' in reading_js
+assert 'filter.addEventListener' not in reading_js
 
 assert 'id="wr-archive"' in (SITE/'writing/readings/index.html').read_text(encoding='utf8')
 assert len(json.loads((SITE/'writing/assets/reading-notes.json').read_text(encoding='utf8'))['notes'])==182
