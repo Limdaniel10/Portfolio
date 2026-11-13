@@ -102,12 +102,12 @@ def build(root=ROOT,base='/Portfolio/',out=None):
   p=site/cat;p.mkdir(exist_ok=True)
   if cat in ['collections','fiction']:
    arr=[b for b in books.values() if b['category']==cat];arr.sort(key=lambda x:x['order'])
-   groups=[('Completed manuscripts',[b for b in arr if b['status']=='completed']),('Works in progress',[b for b in arr if b['status']=='in-progress']),('Planned fiction',[b for b in arr if b['status']=='planned'])]
+   groups=[('Completed Works',[b for b in arr if b['status']=='completed']),('Works in progress',[b for b in arr if b['status']=='in-progress']),('Planned fiction',[b for b in arr if b['status']=='planned'])]
    body=''.join(f'<section class="content-section"><div class="section-header"><h3>{label}</h3></div><div class="book-grid">'+''.join(f'<a class="book-entry" href="{base}writing/book/{b["id"]}/"><div class="book-cover book-{b["order"]}"><span class="book-kicker">{esc(b["status"])}</span><strong class="book-name">{esc(b["title"])}</strong></div><div class="book-caption"><strong>{esc(b["title"])}</strong><span>{len(b["chapters"])} chapters ↗</span></div></a>' for b in group)+'</div></section>' for label,group in groups if group)
   else:
    arr=essays if cat=='essays' else readings
    body='<div class="chapter-list">'+''.join(f'<a class="chapter-row" href="{a["url"]}"><span class="chapter-title">{esc(a["title"])}</span><span class="chapter-arrow">↗</span></a>' for a in arr)+'</div>' if arr else '<p class="empty-note">New writing will appear here as the archive grows.</p>'
-  page=f'<section class="shell detail-view" style="display:block"><div class="detail-breadcrumb"><a href="{base}writing/">Writing</a><span>/</span>{cat.title()}</div><div class="detail-top"><div><span class="eyebrow">The writing archive</span><h2>{cat.title()}</h2><p>{"Manuscripts, chapters and ongoing work" if cat=="collections" else "A growing archive"}</p></div></div>{body}</section>'
+  page=f'<section class="shell detail-view" style="display:block"><div class="detail-breadcrumb"><a href="{base}writing/">Writing</a><span>/</span>{cat.title()}</div><div class="detail-top"><div><span class="eyebrow">The writing archive</span><h2>{cat.title()}</h2><p>{"Travel essay collections and ongoing series" if cat=="collections" else "A growing archive"}</p></div></div>{body}</section>'
   (p/'index.html').write_text(make_page(cat.title(),page,base,''),encoding='utf8')
  return index
 
