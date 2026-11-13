@@ -85,7 +85,11 @@ def make_social_card(output):
   try: return ImageFont.truetype(f,sz)
   except OSError:return ImageFont.load_default()
  dr.text((70,116),'CHAEHYUN LIM',font=font(85,True),fill='#30251f')
- dr.text((73,251),'From nano to the unknown.',font=font(38,True),fill='#624735')
+ # Keep the share preview in sync with the public homepage tagline.
+ homepage=(ROOT/'index.html').read_text(encoding='utf8')
+ tagline_match=re.search(r'<p class="tagline">([^<]+)</p>',homepage)
+ tagline=tagline_match.group(1) if tagline_match else 'Curiosity at every scale.'
+ dr.text((73,251),tagline,font=font(38,True),fill='#624735')
  dr.line((70,376,1130,376),fill='#d9cec1',width=2)
  for i,(n,c) in enumerate([('ABOUT','#b77a51'),('CAREER','#5b9072'),('TRAVEL','#6290b2'),('WRITING','#a4896c'),('READING','#967fa8')]):
   x=75+218*i;dr.rectangle((x,416,x+188,514),fill=c)

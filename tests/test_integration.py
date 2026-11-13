@@ -21,8 +21,15 @@ books=json.loads((SITE/'reading/data/books.json').read_text())['books']
 months=json.loads((SITE/'reading/data/monthly-pages.json').read_text())['months']
 assert len(books)>=1400 and len(months)>=84
 writing=json.loads((SITE/'writing/writing-index.json').read_text())
-assert sum(len(c['chapters']) for c in writing['collections'])==107
-assert len(writing['essays'])==3
+# Compare against the live Markdown source, not hardcoded chapter/essay totals.
+# New chapters, essays, readings and fiction must deploy without editing tests.
+content=ROOT/'writing_source/content'
+source_chapters=list((content/'collections').rglob('*.md'))+list((content/'fiction').rglob('*.md'))
+source_essays=list((content/'essays').rglob('*.md'))
+source_readings=list((content/'readings').rglob('*.md'))
+assert sum(len(c['chapters']) for c in writing['collections'])==len(source_chapters),'Writing: indexed chapter count does not match Markdown files'
+assert len(writing['essays'])==len(source_essays),'Writing: indexed essays do not match Markdown files'
+assert len(writing['readings'])==len(source_readings),'Writing: indexed readings do not match Markdown files'
 failures=[];checked=0
 for html in SITE.rglob('index.html'):
  soup=BeautifulSoup(html.read_text(encoding='utf8'),'html.parser')
@@ -45,4 +52,4 @@ for html in SITE.rglob('index.html'):
 if failures:
  print('BROKEN LINKS (first 100):',*failures[:100],sep='\n  ')
  sys.exit(1)
-print(f'PASS: home + five sections, {len(list(SITE.rglob("index.html")))} HTML pages, {checked} checked local links, {len(books)} books, 107 Writing chapters, {len(travel["places"])} abroad places')
+print(f'PASS: home + five sections, {len(list(SITE.rglob("index.html")))} HTML pages, {checked} checked local links, {len(books)} books, {len(source_chapters)} Writing chapters, {len(travel["places"])} abroad places')
