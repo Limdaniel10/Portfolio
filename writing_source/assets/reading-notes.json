@@ -2217,10 +2217,10 @@
       "author": "로베르토 발저",
       "date": "2025-04-29",
       "reflection": "먹이를 찾아 산기슭을 어슬렁거리는\n\n하이에나를 본 일이 있는가\n\n짐승의 썩은 고기만을 찾아다니는\n\n산기슭의 하이에나\n\n나는 하이에나가 아니라 표범이고 싶다\n\n산정 높이 올라가 굶어서 얼어죽는\n\n눈 덮인 킬리만자로의\n\n그 표범이고 싶다\n\n조용필 < 킬리만자로의 표범 > 작사 양인자 발췌",
-      "quote": "원래 나는 이 세상에\n\n오직 홀로 존재해야만 한다.\n\n오직 나, 헬블링만 있고\n\n다른 생명은 단 하나도 없이…\n\n그러면 나는 아무것도\n\n두려워하지 않으리라…",
+      "quote": "원래 나는 이 세상에\n오직 홀로 존재해야만 한다.\n오직 나, 헬블링만 있고\n다른 생명은 단 하나도 없이…\n그러면 나는 아무것도\n두려워하지 않으리라…",
       "brunch_url": "https://brunch.co.kr/@lim-eat-less/391",
       "quote_source": "https://brunch.co.kr/@lim-eat-less/391",
-      "verification": "Brunch photos fully transcribed but quote translations conflict",
+      "verification": "Korean and English image text fully transcribed; translation/source mismatch",
       "published_date": "2025-04-30",
       "date_source": "Brunch image: dated record slide",
       "previous_quote": "아이들은 천상의 존재이다. 아이들은 어떤 식으로든 일종의 하늘이기 때문이다. 아이들이 자라서 어른이 되면 그들에게 깃든 하늘은 사라져버린다. 그들은 어린아이의 천진한 세계에서 떨어져 나와 건조하고 계산적인 존재로 변하고 지루한 어른의 시각을 가지게 된다.",
@@ -2229,14 +2229,15 @@
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
       "previous_audit_excerpt": "원래 나는 이 세상에 오직 홀로 존재해야만 한다.",
-      "quote_en": "First sentences\n\nhave what I call\n\n“an anle of lean”;\n\nthey lean forward.",
+      "quote_en": "First sentences\nhave what I call\n“an anle of lean”;\nthey lean forward.",
       "photo_full_transcription_verified": false,
       "photo_korean_full_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
       "photo_quote_excerpt": false,
-      "photo_transcription_issue": "Korean passage concerns solitude in Walser's The Walk; English image instead presents a quote about first sentences and is not a translation. Footer 'Roberto Walser, The Walk' conflicts with text.",
-      "photo_translation_mismatch": true
+      "photo_transcription_issue": "Korean photo is Roberto Walser's solitude passage, English photo is an unrelated quotation about first sentences; footer also attributes English quote to The Walk.",
+      "photo_translation_mismatch": true,
+      "photo_english_full_transcribed": true
     },
     {
       "id": "BR-000390",
@@ -3752,7 +3753,8 @@
       "quote_en": "As the wind blows,\nthe leaves fall and scatter\n\nupon the ground,\n\nand so are the generations of men.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "RN-0002",
@@ -3775,7 +3777,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000306",
@@ -3800,7 +3803,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000305",
@@ -3825,7 +3829,8 @@
       "quote_en": "When young,\nmany people dream of success.\n\nHowever, at some point,\nthey realize that achieving the success\nthey once envisioned is difficult.\n\nAt this moment,\nthe way to happiness is simple:\ndo not make success as the goal of your life.\n\nTo succeed, one must accomplish something,\nbut happiness is already enough as it is.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000304",
@@ -3850,7 +3855,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000303",
@@ -3875,7 +3881,8 @@
       "quote_en": "Dictatorial states, where only the\n\nrules of violence and abuse are effective,\n\nhave no need to persuade anyone.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000302",
@@ -3900,7 +3907,8 @@
       "quote_en": "We live worrying about\nwhat we ought to worry about\nat the moment.\n\nWorrying about the future: an illusion",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000301",
@@ -3925,7 +3933,8 @@
       "quote_en": "I consider\nthe acknowledgement of\none’s own ignorance\n\nas the most\nbeautiful and certain\nproof of sanity.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000300",
@@ -3948,7 +3957,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 4,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000299",
@@ -3973,7 +3983,8 @@
       "quote_en": "If not, you’re merely living\n\nas part of a herd - wandering in a crowd.\n\nHow can that be truly human?",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000298",
@@ -3998,7 +4009,8 @@
       "quote_en": "If money is truly everything,\n\npeople would cling to it tightly.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000297",
@@ -4021,7 +4033,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000296",
@@ -4044,7 +4057,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000293",
@@ -4069,7 +4083,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000289",
@@ -4094,7 +4109,8 @@
       "quote_en": "A person called a “nice guy” is, in fact,\nsomeone without their own distinct color.\n\nSuch a person is unlikely to\nbecome a hero or a great figure.\n\nTechnically, they are someone\nwhose presence nor absence makes any\ndifference.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000287",
@@ -4119,7 +4135,8 @@
       "quote_en": "They are Senegalese,\nthe darkest-skinned\nBlack people in Africa,\n\nSo dark that it is\nsometimes difficult to distinguish\nwhere their neck ends and\ntheir hair begins.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000286",
@@ -4144,7 +4161,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000285",
@@ -4168,7 +4186,8 @@
       "quote_en": "Sometimes, I think this way.\n\nThat humans should never be\nallowed to leave Earth.\n\nWe are the only cruel beings\nliving on this planet.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000283",
@@ -4193,7 +4212,8 @@
       "quote_en": "He fell in October 1918,\non a day that was so quiet and still\non the whole front,\n\nthat the army report\nconfined itself to single sentence:\nAll quiet on the Western Front.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000282",
@@ -4218,7 +4238,8 @@
       "quote_en": "Afraid of being\nunable to be loved\nfor who she is,\n\nShe hope to be loved\nfor what she could offer.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000281",
@@ -4243,7 +4264,8 @@
       "quote_en": "In 50 years,\n\nwhen you’re about my age, that\nONE DOLLAR will have become\n1024 DOLLARS.\n\nAre you hungry enough to\nget a $1000 hotdog?",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000279",
@@ -4268,7 +4290,8 @@
       "quote_en": "The real reason for publishing\n\nThe Complee Works of Borges\n\nwas to completely exclude two books:\n\nOther Inquisition and\nanother book\n\n‘whose name I do not care to remember.*’\n\n*First line of Don Quixote",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000278",
@@ -4292,7 +4315,8 @@
       "quote_en": "Does any sort of creativity\nexist inside this bald head?\n\nOr did all of my hair\nrunaway due to my negativity?",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000277",
@@ -4316,7 +4340,8 @@
       "quote_en": "Some tourists\nfeel uncomfortable\n\nwhen they realize that\nmost of what\nthey’ve witnessed\n\nis merely a\nsetup for strangers",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000269",
@@ -4341,7 +4366,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000268",
@@ -4364,7 +4390,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000267",
@@ -4389,7 +4416,8 @@
       "quote_en": "Marie Yonehara, a Japanese writer,\nwho had worked as an interpreter for many years,\n\nOnce recalled that she had never heard\nof the term “inferiority complex” until she\nreturned to Japan at the age of fourteen.\n\nShe didn’t even know what that feeling was.\n\nPointing out that there’s\nno word for “shoulder stiffness” in Czech,\n\nShe remarked that without words,\nphysical sensations cannot exist.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000265",
@@ -4413,7 +4441,8 @@
       "quote_en": "No matter how\nbrilliant one’s mindset is,\n\nYou can’t see it.\n\nNor can you prove it.\n\nPeople aren’t fools.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000264",
@@ -4437,7 +4466,8 @@
       "quote_en": "While here, they would\nwonder what was there.\n\nWhile there, they would\nwonder what was yonder.\n\nBoth children and dogs\nwere alike in this.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000263",
@@ -4462,7 +4492,8 @@
       "quote_en": "F. Scott Fitzgerald once\nsaid to Ernest Hemingway:\n\n“The rich are different from you and me.”\n\nand Hemingway retorted,\n\n“Yes, they have more money.”",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000262",
@@ -4487,7 +4518,8 @@
       "quote_en": "So the only solution is to\nteach children to hide in lockers\nor carry bulletproof backpacks.\n\nSince people must have the\nfreedom to write and say whatever\nthey want on the internet,\n\nthe only solution is to\ntell the targeted individuals to\narm themselves.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     },
     {
       "id": "BR-000261",
@@ -4512,7 +4544,8 @@
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
       "photo_image_count": 3,
-      "photo_quote_excerpt": false
+      "photo_quote_excerpt": false,
+      "photo_korean_full_verified": true
     },
     {
       "id": "RN-0001",
@@ -4537,7 +4570,8 @@
       "quote_en": "If we know that even a glimpse of memory\ndisappears after a short time, why do we bother\nreading at all?\n\nAfter grappling with this question repeatedly,\nSuskind offered an answer:\n\nReading is not about “memory”\nbut about “transformation”\n\nReaders who suffer from the amnesia of literature are\nconstantly changing through reading, yet they cannot\nrealize this transformation since the critical core of\nthe brain, which could point out that change, are also\ntransforming at the the same time.",
       "photo_full_transcription_verified": true,
       "photo_full_transcription_date": "2026-11-13",
-      "photo_image_count": 3
+      "photo_image_count": 3,
+      "photo_korean_full_verified": true
     }
   ]
 }
