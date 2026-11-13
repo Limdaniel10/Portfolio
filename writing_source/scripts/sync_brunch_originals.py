@@ -230,12 +230,24 @@ def main() -> int:
         book_url = data.get("book_url") or discovered.get(book_id)
         known = data.get("chapters") or []
         published = []
+        source_debug = None
         if book_url:
             try:
-                published = book_links(fetch(session, book_url), data["count"])
+                book_page = fetch(session, book_url)
+                published = book_links(book_page, data["count"])
+                if book_id == "arctic":
+                    source = str(book_page)
+                    marker = "북극으로 가는 길"
+                    position = source.find(marker)
+                    source_debug = {
+                        "marker_position": position,
+                        "page_length": len(source),
+                        "excerpt": source[max(0, position - 900):position + 1200] if position >= 0 else source[:1800],
+                        "known_ids_in_html": {str(n): [m.start() for m in list(re.finditer(str(n), source))[:5]] for n in [502,503,505,506,511,513]},
+                    }
             except (requests.RequestException, ValueError) as exc:
                 print(f"BOOK_UNAVAILABLE {book_id}: {exc}")
-        discovery_report[book_id] = {"book_url": book_url, "published_links": [{"url": u, "label": label} for u, label in published]}
+        discovery_report[book_id] = {"book_url": book_url, "published_links": [{"url": u, "label": label} for u, label in published], "debug": source_debug}
         for no in range(1, data["count"] + 1):
             entry = next((c for c in known if c["chapter"] == no), {})
             title = entry.get("title", "")
