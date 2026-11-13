@@ -11,7 +11,7 @@ assert (SITE/'index.html').exists(),'Missing homepage'
 expected=('about','career','traveling','writing','reading')
 for section in expected:assert (SITE/section/'index.html').exists(),f'Missing /{section}/ index'
 assert (SITE/'assets/resume.pdf').stat().st_size>10000,'Missing resume'
-# Four-language selector should be available on the home and all five sections.
+# Seven-language selector should be available on the home and all five sections.
 assert (SITE/'js/i18n.js').exists() and (SITE/'css/i18n.css').exists(), 'Missing localization files'
 for section in ('', *expected):
     page = SITE / section / 'index.html' if section else SITE / 'index.html'
