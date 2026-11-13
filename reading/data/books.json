@@ -14120,6 +14120,16 @@
       "month": 11,
       "month_order": 3,
       "status": "Completed"
+    },
+    {
+      "id": "BK-001413",
+      "title": "후회 없는 삶을 위한 아주 오래된 가르침",
+      "author": "기타가와 야스시",
+      "completed_date": "2026-11",
+      "year": 2026,
+      "month": 11,
+      "month_order": 4,
+      "status": "Completed"
     }
   ]
 }

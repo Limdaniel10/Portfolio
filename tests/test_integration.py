@@ -23,9 +23,12 @@ assert len(books)>=1400 and len(months)>=84
 assert 'reading-notes-section' not in (SITE/'reading/index.html').read_text(encoding='utf8')
 assert 'id="reading-highlights"' in (SITE/'reading/index.html').read_text(encoding='utf8')
 highlight_data=json.loads((SITE/'reading/data/highlights.json').read_text(encoding='utf8'))['entries']
-assert len(highlight_data)>=337 and len({e['id'] for e in highlight_data})==len(highlight_data)
-assert all(sum(e['source']==s for e in highlight_data)>=expected for s,expected in (('I',100),('II',100),('III',100),('IV',37)))
-assert sum(bool(e['book_id']) for e in highlight_data)>=292
+assert len(highlight_data)>=405 and len({e['id'] for e in highlight_data})==len(highlight_data)
+assert all(sum(e['source']==s for e in highlight_data)>=expected for s,expected in (('I',100),('II',100),('III',100),('IV',100),('V',5)))
+assert all(sum(e['source']==s for e in highlight_data)<=100 for s in ('I','II','III','IV','V'))
+assert sum(bool(e['book_id']) for e in highlight_data)>=355
+assert next(e for e in highlight_data if e['id']=='HI-065')['text'].count('“나는 단수가 아니다.”')==1
+assert any(e['id']=='HV-005' and e['book_id']=='BK-001413' for e in highlight_data)
 # Multiple-read works must map to the earliest matching completed book.
 known={'HII-034':'BK-000098','HI-067':'BK-000488','HIII-085':'BK-000301','HIII-089':'BK-000609'}
 assert {e['id']:e['book_id'] for e in highlight_data if e['id'] in known}==known

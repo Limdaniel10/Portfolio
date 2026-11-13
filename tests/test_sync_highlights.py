@@ -19,7 +19,7 @@ class HighlightSyncTests(unittest.TestCase):
         rows[1][11]="Newly corrected passage from Google Sheets"
         updated=merge_highlights(rows,self.snapshot,self.ids)
         self.assertEqual(updated["entries"][0]["text"],rows[1][11])
-        self.assertEqual(len(updated["entries"]),337)
+        self.assertEqual(len(updated["entries"]),len(self.snapshot["entries"]))
     def test_linking_is_explicit_not_proposed(self):
         # Simulate a new candidate without requiring live pending matches.
         rows=copy.deepcopy(self.rows)
@@ -49,7 +49,7 @@ class HighlightSyncTests(unittest.TestCase):
         rows.append(["NEW-001","New book","Example writer","First passage","","",
                      "","","Needs review","New","1","First passage","",""])
         result=merge_highlights(rows,self.snapshot,self.ids)
-        self.assertEqual(len(result["entries"]),338)
+        self.assertEqual(len(result["entries"]),len(self.snapshot["entries"])+1)
     def test_missing_bookids_and_deleted_records_rejected(self):
         rows=copy.deepcopy(self.rows)
         rows[1][6]="BK-no-such-book"
