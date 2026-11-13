@@ -50,7 +50,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/486",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-31",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "그때는 몰랐다. 한창 예민한 시기에 환영받지 못하는 존재라는 상처를 입게 됐다는 것을. 훗날 그 결락을 채우기 위해 값비싼 대가를 치러야 한다는 것도.",
       "previous_quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "photo_quote_verified": true,
@@ -69,7 +69,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/485",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-27",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "예술가는 고독 속에서도 자신의 내면을 그를 둘러싼 세계와 그 세계 속의 자신을 차갑게 관조할 수 있는 태도를 지녀야 한다.",
       "previous_quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "photo_quote_verified": true,
@@ -88,7 +88,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/484",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-27",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13"
@@ -105,7 +105,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/483",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-27",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "Literature is fundamentally about trying to ascertain one’s own value.",
       "previous_quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "photo_quote_verified": true,
@@ -125,7 +125,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/482",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-25",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "내면은 적당히 살피자.",
       "previous_quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "photo_quote_verified": true,
@@ -144,7 +144,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/481",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-24",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "가장 달콤하게 우울한 얼굴",
       "previous_quote_source": "https://app.notion.com/p/186f8fb4581b8035b4a6e43eabae4a09",
       "photo_quote_verified": true,
@@ -339,7 +339,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/470",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-07-14",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "Vibrant green of the trees changed to a blackish green and the cicadas’ cries became desperately shrill. It was the heart of summer.",
       "photo_quote_verified": true,
       "photo_date_verified": true,
@@ -1808,7 +1808,7 @@
       "quote_source": "https://brunch.co.kr/@lim-eat-less/384",
       "verification": "Brunch photo quote verified",
       "published_date": "2025-04-24",
-      "date_source": "Brunch original image (third slide)",
+      "date_source": "Brunch image: dated record slide",
       "previous_quote": "천장 가까운 암흑 속에서 뜨거운 열이 날고 있었다. 주먹 만한 크기의 열은 마치 그들을 선도하듯 날아가고 있었다.",
       "previous_quote_source": "https://app.notion.com/p/185f8fb4581b800ab924c9a33cb6fd31",
       "photo_quote_verified": true,
@@ -3135,7 +3135,8 @@
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
-      "photo_quote_excerpt": true
+      "photo_quote_excerpt": true,
+      "date_source": "Brunch image: dated record slide"
     },
     {
       "id": "BR-000283",
@@ -3233,7 +3234,8 @@
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
-      "photo_quote_excerpt": true
+      "photo_quote_excerpt": true,
+      "date_source": "Brunch image: dated record slide"
     },
     {
       "id": "BR-000277",
@@ -3251,7 +3253,8 @@
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
-      "photo_quote_excerpt": true
+      "photo_quote_excerpt": true,
+      "date_source": "Brunch image: dated record slide"
     },
     {
       "id": "BR-000269",
@@ -3325,7 +3328,8 @@
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
-      "photo_quote_excerpt": true
+      "photo_quote_excerpt": true,
+      "date_source": "Brunch image: dated record slide"
     },
     {
       "id": "BR-000264",
@@ -3343,7 +3347,8 @@
       "photo_quote_verified": true,
       "photo_date_verified": true,
       "photo_audit_date": "2026-11-13",
-      "photo_quote_excerpt": true
+      "photo_quote_excerpt": true,
+      "date_source": "Brunch image: dated record slide"
     },
     {
       "id": "BR-000263",
