@@ -21,16 +21,22 @@ class HighlightSyncTests(unittest.TestCase):
         self.assertEqual(updated["entries"][0]["text"],rows[1][11])
         self.assertEqual(len(updated["entries"]),337)
     def test_linking_is_explicit_not_proposed(self):
-        result=merge_highlights(self.rows,self.snapshot,self.ids)
-        suggested=next(e for e in result["entries"] if e.get("suggested_book_id"))
-        self.assertFalse(suggested["book_id"])
-        self.assertEqual(suggested["review_status"],"Suggested match")
+        # Simulate a new candidate without requiring live pending matches.
         rows=copy.deepcopy(self.rows)
-        target=next(r for r in rows if r[0]==suggested["id"])
-        target[6]=target[12]
+        target=next(r for r in rows[1:] if r[6])
+        accepted_id=target[6]
+        target[6]=""
+        target[12]=accepted_id
+        target[8]="Suggested match"
+        proposed=merge_highlights(rows,self.snapshot,self.ids)
+        entry=next(e for e in proposed["entries"] if e["id"]==target[0])
+        self.assertFalse(entry["book_id"])
+        self.assertEqual(entry["suggested_book_id"],accepted_id)
+        target[6]=accepted_id
+        target[12]=""
         target[8]="Approved"
         updated=merge_highlights(rows,self.snapshot,self.ids)
-        self.assertEqual(next(e for e in updated["entries"] if e["id"]==suggested["id"])["book_id"],target[6])
+        self.assertEqual(next(e for e in updated["entries"] if e["id"]==target[0])["book_id"],accepted_id)
     def test_unfinished_separated(self):
         rows=copy.deepcopy(self.rows)
         missing=next(r for r in rows[1:] if not r[6])
