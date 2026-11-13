@@ -229,6 +229,11 @@ def inspect_supplied_links(session: requests.Session, urls: list[str]) -> list[d
                 for a in soup.select('a[href*="/brunchbook/"]')[:12]
             ]
             row["headings"] = [a.get_text(" ", strip=True) for a in soup.select("h1,h2,h3")[:12]]
+            row["same_author_article_links"] = list({
+                urljoin("https://brunch.co.kr", a.get("href", "")): a.get_text(" ", strip=True)[:100]
+                for a in soup.select("a[href]")
+                if ARTICLE_URL.search(urlparse(urljoin("https://brunch.co.kr", a.get("href", ""))).path)
+            }.items())[:80]
             try:
                 body = extract_article(soup, url)
                 row["body_chars"] = len(body)
