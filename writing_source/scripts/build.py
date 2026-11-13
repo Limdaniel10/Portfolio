@@ -16,10 +16,10 @@ def chapter_href(c): return c['url'] if c.get('has_body') or not c.get('brunch_u
 def chapter_attrs(c): return '' if c.get('has_body') or not c.get('brunch_url') else ' target="_blank" rel="noopener noreferrer"'
 BOOK_DESCRIPTIONS={'solo-abroad':'A solo journey across the Americas, written in Korean.','milan-night':'A night in Milan and the long journey it set in motion.','ometepe':'A spring-break journey through the Caribbean and Nicaragua.','caribbean':'Island-hopping stories from the southern Caribbean.','el-salvador':'A student escapes class for a journey to El Salvador.'}
 def escape_date_list_markers(body):
- # Markdown treats "2023. 03. 24" as nested numbered lists (2023. / 03.).
- # Escape a leading year dot so dates display as normal prose, even in future MD.
+ # Markdown treats "2023. 03. 24" as nested numbered lists.
+ # Escape the leading year dot so the entire date renders as prose.
  return re.sub(
-  r'(?m)^([ \\t]*)(20\\d{2}|\\d{2})\\.(?=[ \\t]+\\d{1,2}\\.[ \\t]*\\d{1,2}(?:\\D|$))',
+  r'(?m)^([ \t]*)(20\d{2}|\d{2})\.(?=[ \t]+\d{1,2}\.[ \t]*\d{1,2}(?:\D|$))',
   lambda m: m.group(1)+m.group(2)+chr(92)+'.',
   body,
  )
