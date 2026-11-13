@@ -45,10 +45,10 @@
       ".career-art > p": tr(
         "항공우주에서 반도체까지.<br><em>호기심을 엔지니어링하다.</em>",
         "从航空航天到半导体。<br><em>以工程实现好奇心。</em>",
-        "De la aeronáutica a los semiconductores.<br><em>La curiosidad hecha ingeniería.</em>",
+        "De la ingeniería aeroespacial a los semiconductores.<br><em>La curiosidad hecha ingeniería.</em>",
         "從航太到半導體。<br><em>用工程實現好奇心。</em>",
         "De l’aérospatial aux semi-conducteurs.<br><em>La curiosité au service de l’ingénierie.</em>",
-        "Von der Luft- und Raumfahrt zur Halbleitertechnik.<br><em>Neugier wird Technik.</em>"
+        "Von der Luft- und Raumfahrt zur Halbleitertechnik.<br><em>Aus Neugier wird Technik.</em>"
       ),
       ".career-art .art-index": tr(
         "엔지니어링의 기록 &nbsp; / &nbsp; 2027",
@@ -327,7 +327,7 @@
         "航空航天工程学士 · GPA 3.65 / 4.00 · 最高荣誉毕业",
         "Grado en Ingeniería Aeroespacial · GPA 3,65 / 4,00 · Máximos honores",
         "航太工程學士 · GPA 3.65 / 4.00 · 最高榮譽畢業",
-        "Licence en ingénierie aérospatiale · GPA 3,65 / 4,00 · Plus haute distinction",
+        "Bachelor of Science en ingénierie aérospatiale · GPA 3,65 / 4,00 · Plus haute distinction",
         "Bachelor Luft- und Raumfahrttechnik · GPA 3,65 / 4,00 · Mit höchster Auszeichnung"
       ),
       "#education .timeline-item:nth-of-type(4) p": tr(
