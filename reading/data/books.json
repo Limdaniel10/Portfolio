@@ -14062,26 +14062,6 @@
       "status": "Completed"
     },
     {
-      "id": "BK-001407",
-      "title": "TSMC 반도체 제국",
-      "author": "상업주간",
-      "completed_date": "2026-09",
-      "year": 2026,
-      "month": 9,
-      "month_order": 2,
-      "status": "Completed"
-    },
-    {
-      "id": "BK-001408",
-      "title": "TSMC와 트럼프 이펙트",
-      "author": "콜리 황",
-      "completed_date": "2026-09",
-      "year": 2026,
-      "month": 9,
-      "month_order": 3,
-      "status": "Completed"
-    },
-    {
       "id": "BK-001409",
       "title": "완벽한 날들",
       "author": "메리 올리버",
@@ -14129,6 +14109,26 @@
       "year": 2026,
       "month": 11,
       "month_order": 4,
+      "status": "Completed"
+    },
+    {
+      "id": "BK-001407",
+      "title": "TSMC 반도체 제국",
+      "author": "상업주간",
+      "completed_date": "2026-11",
+      "year": 2026,
+      "month": 11,
+      "month_order": 6,
+      "status": "Completed"
+    },
+    {
+      "id": "BK-001408",
+      "title": "TSMC와 트럼프 이펙트",
+      "author": "콜리 황",
+      "completed_date": "2026-11",
+      "year": 2026,
+      "month": 11,
+      "month_order": 7,
       "status": "Completed"
     }
   ]
