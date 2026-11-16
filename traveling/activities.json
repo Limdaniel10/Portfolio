@@ -7,8 +7,9 @@
       "country": "Ecuador",
       "date": "2022-12-28",
       "reached": "Crater rim",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 1124,
+      "elevationBasis": "summit",
+      "elevationSource": "https://volcano.si.edu/volcano.cfm?vn=353050"
     },
     {
       "id": "tr-002",
@@ -16,8 +17,9 @@
       "country": "Costa Rica",
       "date": "2023-01-03",
       "reached": "Crater area",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 3436,
+      "elevationBasis": "summit",
+      "elevationSource": "https://volcano.si.edu/volcano.cfm?vn=345060"
     },
     {
       "id": "tr-003",
@@ -25,8 +27,9 @@
       "country": "Nicaragua",
       "date": "2023-03-25",
       "reached": "Crater rim",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 1610,
+      "elevationBasis": "summit",
+      "elevationSource": "https://webserver2.ineter.gob.ni/geofisica/boletin/2020/Anual_2020/Boletin%20Anual%20Vulcanologia%202020.pdf"
     },
     {
       "id": "tr-004",
@@ -34,8 +37,9 @@
       "country": "Guatemala",
       "date": "2023-05-06",
       "reached": "Base camp / Fuego viewpoint",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 3976,
+      "elevationBasis": "summit",
+      "elevationSource": "https://volcano.si.edu/volcano.cfm?vn=342080"
     },
     {
       "id": "tr-005",
@@ -43,8 +47,9 @@
       "country": "Bulgaria",
       "date": "2023-07-12",
       "reached": "Standard lake circuit",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 2535,
+      "elevationBasis": "highest lake",
+      "elevationSource": "https://rilskiezera.bg/en/about/"
     },
     {
       "id": "tr-006",
@@ -52,8 +57,9 @@
       "country": "Portugal",
       "date": "2023-08-08",
       "reached": "Caldera / crater rim",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 842,
+      "elevationBasis": "volcanic summit",
+      "elevationSource": "https://volcano.si.edu/volcano.cfm?vn=382080"
     },
     {
       "id": "tr-007",
@@ -61,8 +67,9 @@
       "country": "Georgia",
       "date": "2023-10-31",
       "reached": "Mountain hut",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 5054,
+      "elevationBasis": "summit",
+      "elevationSource": "https://en.wikipedia.org/wiki/Mount_Kazbek"
     },
     {
       "id": "tr-008",
@@ -70,8 +77,9 @@
       "country": "Mongolia",
       "date": "2024-05-27",
       "reached": "Route not recorded",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 2268,
+      "elevationBasis": "highest massif peak (Tsetsee Gun)",
+      "elevationSource": "https://www.touristinfocenter.mn/TourRoute_more.aspx?ItemID=8"
     },
     {
       "id": "tr-009",
@@ -79,8 +87,10 @@
       "country": "Peru",
       "date": "2024-12-19",
       "reached": "Viewpoint",
-      "elevationM": 5032,
-      "elevationBasis": "personal record"
+      "elevationM": 5036,
+      "elevationBasis": "viewpoint",
+      "personalRecordedElevationM": 5032,
+      "elevationSource": "https://mountainfieldguide.com/vinicunca/"
     },
     {
       "id": "tr-010",
@@ -88,8 +98,9 @@
       "country": "Norway (Svalbard)",
       "date": "2025-10-05",
       "reached": "Approximately one-hour ascent",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 500,
+      "elevationBasis": "approximate summit",
+      "elevationSource": "https://discoversvalbard.no/activities/hike-winter/hike-sarkofagen-winter/?lang=en"
     },
     {
       "id": "tr-011",
@@ -97,8 +108,9 @@
       "country": "Argentina",
       "date": "2025-12-24",
       "reached": "Laguna de los Tres",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 3405,
+      "elevationBasis": "summit",
+      "elevationSource": "https://www.argentina.gob.ar/sites/default/files/2019/06/folleto_informacion_gral_pnlg_espanol_2024.pdf"
     },
     {
       "id": "tr-012",
@@ -106,8 +118,9 @@
       "country": "Argentina",
       "date": "2025-12-26",
       "reached": "Tumbado trail / endpoint unconfirmed",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 1510,
+      "elevationBasis": "summit",
+      "elevationSource": "https://www.peakbagger.com/peak.aspx?pid=37624"
     },
     {
       "id": "tr-013",
@@ -116,7 +129,8 @@
       "date": "2025-12-31",
       "reached": "Summit",
       "elevationM": 2552,
-      "elevationBasis": "published summit elevation"
+      "elevationBasis": "summit",
+      "elevationSource": "https://ospo.noaa.gov/products/atmosphere/vaac/volcanoes/PACAYA.html"
     },
     {
       "id": "tr-014",
@@ -124,8 +138,9 @@
       "country": "Guatemala",
       "date": "2026-04-26",
       "reached": "Route not recorded",
-      "elevationM": null,
-      "elevationBasis": null
+      "elevationM": 3976,
+      "elevationBasis": "summit",
+      "elevationSource": "https://volcano.si.edu/volcano.cfm?vn=342080"
     },
     {
       "id": "tr-015",
@@ -134,7 +149,8 @@
       "date": "2026-05-18",
       "reached": "Summit",
       "elevationM": 5604,
-      "elevationBasis": "published summit elevation"
+      "elevationBasis": "summit",
+      "elevationSource": "https://boletinmeteo.cl/trekmap-v2.html?lang=en&trail=cerrotoco&unit=C"
     },
     {
       "id": "tr-016",
@@ -143,7 +159,8 @@
       "date": "2026-07-31",
       "reached": "Summit / crater rim",
       "elevationM": 2329,
-      "elevationBasis": "published summit elevation"
+      "elevationBasis": "summit",
+      "elevationSource": "https://migas.esdm.go.id/uploads/perpustakaan/ACUAN-LEBARAN-17-.pdf"
     },
     {
       "id": "tr-017",
@@ -152,7 +169,8 @@
       "date": "2026-08-01",
       "reached": "Summit crater rim",
       "elevationM": 2386,
-      "elevationBasis": "published summit elevation"
+      "elevationBasis": "crater summit",
+      "elevationSource": "https://volcano.si.edu/volcano.cfm?vn=263350"
     }
   ],
   "scuba": [
@@ -303,13 +321,14 @@
       "date": "2026-08"
     }
   ],
-  "elevationPolicy": "Elevation is shown only for a user-recorded altitude or a published summit height when the summit was reported reached. It is not a GPS-measured maximum for the entire route.",
+  "elevationPolicy": "The trekking table lists reference summit elevation of the named mountain/volcano rather than a personally achieved height. Exceptions: Seven Rila Lakes = highest lake (2,535 m); Rainbow Mountain/Vinicunca = recognized viewpoint height (5,036 m, separate from user's logged 5,032 m); Sarkofagen = approximate summit (about 500 m).",
   "sourceNotes": [
     "Dates from uploaded 20s Goal.xlsx, sheet 30, unless explicitly corrected by the traveler.",
     "Fitz Roy and Tumbado are separate hikes on 2025-12-24 and 2025-12-26 as confirmed by the traveler.",
-    "Published summit elevations are reference values, not personal GPS measurements.",
     "Scuba data transcribed from the three supplied dive-log screenshots on 2026-11-16; the 12 visible records may not represent the entire lifetime log.",
-    "Atlantic Princess W… and Sebayur Kecil Komo… are displayed exactly as truncated in the source screenshots; full dive-site names require confirmation."
+    "Atlantic Princess W… and Sebayur Kecil Komo… are displayed exactly as truncated in the source screenshots; full dive-site names require confirmation.",
+    "All 17 trekking elevations checked against mountain/volcano or tourism references in November 2026; the elevationSource field records each reference. Mountain heights are NOT claims of reaching those heights.",
+    "Concepcion summit heights vary by publisher; use Nicaragua INETER 1,610 m. Irazu uses Smithsonian GVP 3,436 m. Cerro Toco 5,604 m is the highest reference elevation of the trekking archive."
   ],
   "sources": [
     {
