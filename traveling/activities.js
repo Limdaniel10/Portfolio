@@ -21,7 +21,7 @@
     const dives=Array.isArray(data.scuba)?data.scuba:[];
     const surfs=Array.isArray(data.surfing)?data.surfing:[];
     document.getElementById("trekCount").textContent=hikes.length+" hikes";
-    document.getElementById("scubaCount").textContent=dives.length?dives.length+" dives":"Dive logs pending";
+    document.getElementById("scubaCount").textContent=dives.length?dives.length+" logged dives":"Dive logs pending";
     document.getElementById("surfCount").textContent=surfs.length+" sessions";
     const sortedHikes=[...hikes].sort((a,b)=>String(a.date).localeCompare(String(b.date)));
     document.getElementById("trekkingRecords").innerHTML=sortedHikes.length?table(
@@ -38,7 +38,7 @@
     document.getElementById("scubaRecords").innerHTML=dives.length?table(
       ["Date","Dive site","Country","Max depth","Duration"],
       [...dives].sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(x=>
-        '<tr><td class="activity-nowrap">'+esc(formatDate(x.date))+'</td><td>'+esc(x.site||"Not recorded")+'</td>'+
+        '<tr><td class="activity-nowrap">'+esc(formatDate(x.date))+'</td><td>'+esc(x.site||"Not recorded")+(x.siteNameTruncated?'<small class="activity-truncated">Name truncated in the original logbook</small>':'')+'</td>'+
         '<td>'+esc(x.country||"—")+'</td><td class="activity-nowrap">'+
         (Number.isFinite(x.depthM)?esc(x.depthM)+" m":"—")+'</td><td class="activity-nowrap">'+
         (Number.isFinite(x.durationMin)?esc(x.durationMin)+" min":"—")+'</td></tr>'
