@@ -489,7 +489,7 @@
     location.pathname.includes("/reading/") ? "reading" :
     location.pathname.includes("/about/") ? "about" :
     location.pathname.includes("/writing/") ? "writing" : "home";
-  // Additional translations are loaded only on About and Career.
+  // Additional translations are loaded on About, Career, and Traveling.
   // The English version always uses the existing, source-authored HTML.
   const detailedTranslations = window.PortfolioDetailedTranslations?.[page];
   if (detailedTranslations) Object.assign(texts[page], detailedTranslations);
@@ -559,6 +559,8 @@
     notice.hidden = i === 0 || page === "about" || page === "career";
     try { localStorage.setItem("portfolio-language", chosen); } catch (_) {}
     refreshCounts();
+    // Notify asynchronously loaded archives (Goals and Activities) of locale changes.
+    document.dispatchEvent(new CustomEvent("portfolio:language", {detail:{language:chosen}}));
   }
   function refreshCounts() {
     const i = codes.indexOf(chosen);
