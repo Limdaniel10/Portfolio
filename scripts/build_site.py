@@ -114,7 +114,7 @@ def build(base,output):
  for folder in ('traveling','reading'):
   dst=output/folder;dst.mkdir()
   src=ROOT/folder
-  include={'traveling':['index.html','style.css','app.js','assets'],
+  include={'traveling':['index.html','style.css','app.js','activities.js','activities.json','assets'],
            'reading':['index.html','styles.css','app.js','data']}[folder]
   for item in include:
    p=src/item;q=dst/item
