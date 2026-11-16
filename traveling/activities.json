@@ -1,0 +1,210 @@
+{
+  "lastUpdated": "2026-11-16",
+  "trekking": [
+    {
+      "id": "tr-001",
+      "name": "Sierra Negra",
+      "country": "Ecuador",
+      "date": "2022-12-28",
+      "reached": "Crater rim",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-002",
+      "name": "Volcán Irazú",
+      "country": "Costa Rica",
+      "date": "2023-01-03",
+      "reached": "Crater area",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-003",
+      "name": "Volcán Concepción",
+      "country": "Nicaragua",
+      "date": "2023-03-25",
+      "reached": "Crater rim",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-004",
+      "name": "Volcán Acatenango",
+      "country": "Guatemala",
+      "date": "2023-05-06",
+      "reached": "Base camp / Fuego viewpoint",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-005",
+      "name": "Seven Rila Lakes",
+      "country": "Bulgaria",
+      "date": "2023-07-12",
+      "reached": "Standard lake circuit",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-006",
+      "name": "Sete Cidades",
+      "country": "Portugal",
+      "date": "2023-08-08",
+      "reached": "Caldera / crater rim",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-007",
+      "name": "Mount Kazbek",
+      "country": "Georgia",
+      "date": "2023-10-31",
+      "reached": "Mountain hut",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-008",
+      "name": "Bogd Khan Uul",
+      "country": "Mongolia",
+      "date": "2024-05-27",
+      "reached": "Route not recorded",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-009",
+      "name": "Rainbow Mountain (Vinicunca)",
+      "country": "Peru",
+      "date": "2024-12-19",
+      "reached": "Viewpoint",
+      "elevationM": 5032,
+      "elevationBasis": "personal record"
+    },
+    {
+      "id": "tr-010",
+      "name": "Sarkofagen",
+      "country": "Norway (Svalbard)",
+      "date": "2025-10-05",
+      "reached": "Approximately one-hour ascent",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-011",
+      "name": "Fitz Roy — Laguna de los Tres",
+      "country": "Argentina",
+      "date": "2025-12-24",
+      "reached": "Laguna de los Tres",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-012",
+      "name": "Loma del Pliegue Tumbado",
+      "country": "Argentina",
+      "date": "2025-12-26",
+      "reached": "Tumbado trail / endpoint unconfirmed",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-013",
+      "name": "Volcán Pacaya",
+      "country": "Guatemala",
+      "date": "2025-12-31",
+      "reached": "Summit",
+      "elevationM": 2552,
+      "elevationBasis": "published summit elevation"
+    },
+    {
+      "id": "tr-014",
+      "name": "Volcán Acatenango",
+      "country": "Guatemala",
+      "date": "2026-04-26",
+      "reached": "Route not recorded",
+      "elevationM": null,
+      "elevationBasis": null
+    },
+    {
+      "id": "tr-015",
+      "name": "Cerro Toco",
+      "country": "Chile",
+      "date": "2026-05-18",
+      "reached": "Summit",
+      "elevationM": 5604,
+      "elevationBasis": "published summit elevation"
+    },
+    {
+      "id": "tr-016",
+      "name": "Mount Bromo",
+      "country": "Indonesia",
+      "date": "2026-07-31",
+      "reached": "Summit / crater rim",
+      "elevationM": 2329,
+      "elevationBasis": "published summit elevation"
+    },
+    {
+      "id": "tr-017",
+      "name": "Kawah Ijen",
+      "country": "Indonesia",
+      "date": "2026-08-01",
+      "reached": "Summit crater rim",
+      "elevationM": 2386,
+      "elevationBasis": "published summit elevation"
+    }
+  ],
+  "scuba": [],
+  "surfing": [
+    {
+      "id": "sf-001",
+      "place": "Gold Coast",
+      "country": "Australia",
+      "date": "2024-05"
+    },
+    {
+      "id": "sf-002",
+      "place": "Jinha Beach, Ulsan",
+      "country": "South Korea",
+      "date": "2024-06"
+    },
+    {
+      "id": "sf-003",
+      "place": "El Palmarcito",
+      "country": "El Salvador",
+      "date": "2024-08"
+    },
+    {
+      "id": "sf-004",
+      "place": "Canggu, Bali",
+      "country": "Indonesia",
+      "date": "2026-08"
+    }
+  ],
+  "elevationPolicy": "Elevation is shown only for a user-recorded altitude or a published summit height when the summit was reported reached. It is not a GPS-measured maximum for the entire route.",
+  "sourceNotes": [
+    "Dates from uploaded 20s Goal.xlsx, sheet 30, unless explicitly corrected by the traveler.",
+    "Fitz Roy and Tumbado are separate hikes on 2025-12-24 and 2025-12-26 as confirmed by the traveler.",
+    "Published summit elevations are reference values, not personal GPS measurements.",
+    "Scuba dive entries will be added after dive logs are provided."
+  ],
+  "sources": [
+    {
+      "item": "Volcán Pacaya",
+      "url": "https://ospo.noaa.gov/products/atmosphere/vaac/volcanoes/PACAYA.html"
+    },
+    {
+      "item": "Cerro Toco",
+      "url": "https://www.acgm.cl/wp-content/uploads/2020/11/GUI%CC%81A-PARA-EXPEDICIONES-DE-ALTA-MONTAN%CC%83A-EN-SECTORES-DE-GRAN-VALOR-ARQUEOLO%CC%81GICO.pdf"
+    },
+    {
+      "item": "Mount Bromo",
+      "url": "https://migas.esdm.go.id/uploads/perpustakaan/ACUAN-LEBARAN-17-.pdf"
+    },
+    {
+      "item": "Kawah Ijen",
+      "url": "https://www.bnpb.go.id/storage/app/media/uploads/24/renkon-ijen-bondowoso.pdf"
+    }
+  ]
+}
