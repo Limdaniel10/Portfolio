@@ -155,7 +155,128 @@
       "elevationBasis": "published summit elevation"
     }
   ],
-  "scuba": [],
+  "scuba": [
+    {
+      "id": "dv-001",
+      "date": "2024-05-02",
+      "site": "Tortuga",
+      "country": "Dominican Republic",
+      "depthM": 10,
+      "durationMin": 30,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1060.png"
+    },
+    {
+      "id": "dv-002",
+      "date": "2024-05-02",
+      "site": "Viva Shallow",
+      "country": "Dominican Republic",
+      "depthM": 10,
+      "durationMin": 30,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1060.png"
+    },
+    {
+      "id": "dv-003",
+      "date": "2024-05-03",
+      "site": "Coco Reef",
+      "country": "Dominican Republic",
+      "depthM": 10,
+      "durationMin": 30,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1060.png"
+    },
+    {
+      "id": "dv-004",
+      "date": "2024-05-03",
+      "site": "Atlantic Princess W…",
+      "country": "Dominican Republic",
+      "depthM": 12,
+      "durationMin": 35,
+      "siteNameTruncated": true,
+      "sourceScreenshot": "IMG_1060.png"
+    },
+    {
+      "id": "dv-005",
+      "date": "2025-08-13",
+      "site": "Pescador North",
+      "country": "Philippines",
+      "depthM": 12,
+      "durationMin": 30,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1059.png"
+    },
+    {
+      "id": "dv-006",
+      "date": "2025-08-13",
+      "site": "Lambug Beach",
+      "country": "Philippines",
+      "depthM": 15,
+      "durationMin": 40,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1059.png"
+    },
+    {
+      "id": "dv-007",
+      "date": "2026-07-17",
+      "site": "Crystal Bay Komodo",
+      "country": "Indonesia",
+      "depthM": 15.1,
+      "durationMin": 42,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1059.png"
+    },
+    {
+      "id": "dv-008",
+      "date": "2026-07-17",
+      "site": "Mauan",
+      "country": "Indonesia",
+      "depthM": 17.8,
+      "durationMin": 45,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1059.png"
+    },
+    {
+      "id": "dv-009",
+      "date": "2026-07-17",
+      "site": "Crystal Rock Komodo",
+      "country": "Indonesia",
+      "depthM": 28.7,
+      "durationMin": 31,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1058.png"
+    },
+    {
+      "id": "dv-010",
+      "date": "2026-07-18",
+      "site": "Sebayur Kecil Komo…",
+      "country": "Indonesia",
+      "depthM": 18.6,
+      "durationMin": 41,
+      "siteNameTruncated": true,
+      "sourceScreenshot": "IMG_1058.png"
+    },
+    {
+      "id": "dv-011",
+      "date": "2026-07-18",
+      "site": "Tatawa Kecil",
+      "country": "Indonesia",
+      "depthM": 18,
+      "durationMin": 41,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1058.png"
+    },
+    {
+      "id": "dv-012",
+      "date": "2026-07-18",
+      "site": "Mauan",
+      "country": "Indonesia",
+      "depthM": 17,
+      "durationMin": 49,
+      "siteNameTruncated": false,
+      "sourceScreenshot": "IMG_1058.png"
+    }
+  ],
   "surfing": [
     {
       "id": "sf-001",
@@ -187,7 +308,8 @@
     "Dates from uploaded 20s Goal.xlsx, sheet 30, unless explicitly corrected by the traveler.",
     "Fitz Roy and Tumbado are separate hikes on 2025-12-24 and 2025-12-26 as confirmed by the traveler.",
     "Published summit elevations are reference values, not personal GPS measurements.",
-    "Scuba dive entries will be added after dive logs are provided."
+    "Scuba data transcribed from the three supplied dive-log screenshots on 2026-11-16; the 12 visible records may not represent the entire lifetime log.",
+    "Atlantic Princess W… and Sebayur Kecil Komo… are displayed exactly as truncated in the source screenshots; full dive-site names require confirmation."
   ],
   "sources": [
     {
