@@ -105,9 +105,29 @@
         "Je rejoindrai TSMC Arizona en juin 2027 comme ingénieur procédés au sein du module de photolithographie.",
         "Ab Juni 2027 werde ich als Prozessingenieur im Lithografie-Modul arbeiten."
       ),
+      "#goals .section-heading .eyebrow": tr(
+        "04 / 목표", "04 / 目标", "04 / OBJETIVOS",
+        "04 / 目標", "04 / OBJECTIFS", "04 / ZIELE"
+      ),
+      "#goals .section-heading h2": tr(
+        "진행 중인 목표들.", "正在实现的目标。", "Metas en marcha.",
+        "持續前進的目標。", "Des objectifs en cours.", "Ziele auf dem Weg."
+      ),
+      "#goals .section-heading .aside-note": tr(
+        "대학 시절과 서른 살 이전.", "大学时光与三十岁之前。", "Universidad y antes de los treinta.",
+        "大學時光與三十歲之前。", "Les études et avant trente ans.", "Studium und vor dem dreißigsten Geburtstag."
+      ),
+      "#goals .goal-intro": tr(
+        "어떤 목표는 이뤘고, 어떤 목표는 진행 중이며, 아직 시작하지 않은 목표도 있습니다. 펼쳐서 살펴보세요.",
+        "有些目标已经完成，有些正在进行，也有一些仍在计划中。展开查看完整清单。",
+        "Algunas metas ya se cumplieron; otras siguen en curso. Abre cada etapa para verlas.",
+        "有些目標已完成，有些正在進行，也有些尚待開始。展開查看完整清單。",
+        "Certains objectifs sont atteints, d'autres sont en cours. Ouvrez chaque période pour les voir.",
+        "Manche Ziele sind erreicht, andere noch in Arbeit. Öffne die Abschnitte, um sie zu sehen."
+      ),
       "#path .section-heading .eyebrow": tr(
-        "04 / 지나온 길", "04 / 走过的路", "04 / MI RECORRIDO",
-        "04 / 走過的路", "04 / MON PARCOURS", "04 / MEIN WEG"
+        "05 / 지나온 길", "05 / 走过的路", "05 / MI RECORRIDO",
+        "05 / 走過的路", "05 / MON PARCOURS", "05 / MEIN WEG"
       ),
       "#path .section-heading .aside-note": tr(
         "간단히 돌아본 나의 발자취.", "一段简短的个人经历。",
