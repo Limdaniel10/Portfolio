@@ -45,7 +45,14 @@ assert len({x['id'] for x in activities['trekking']})==17
 assert sum(x['name'].startswith('Volcán Acatenango') for x in activities['trekking'])==2
 assert next(x for x in activities['trekking'] if x['name'].startswith('Fitz Roy'))['date']=='2025-12-24'
 assert next(x for x in activities['trekking'] if 'Tumbado' in x['name'])['date']=='2025-12-26'
-assert next(x for x in activities['trekking'] if x['name'].startswith('Rainbow'))['elevationM']==5032
+assert next(x for x in activities['trekking'] if x['name'].startswith('Rainbow'))['elevationM']==5036
+assert next(x for x in activities['trekking'] if x['name'].startswith('Rainbow'))['personalRecordedElevationM']==5032
+assert next(x for x in activities['trekking'] if x['name']=='Cerro Toco')['elevationM']==5604
+assert max(x['elevationM'] for x in activities['trekking'])==5604
+assert all(x['elevationM']>0 and x['elevationBasis'] and x['elevationSource'] for x in activities['trekking'])
+assert 'Reached' not in (SITE/'traveling/activities.js').read_text(encoding='utf8')
+assert 'Dive site / country' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
+assert 'Open a chapter to see the full picture.' not in (SITE/'about/index.html').read_text(encoding='utf8')
 assert 'id="activities"' in (SITE/'traveling/index.html').read_text(encoding='utf8')
 assert (SITE/'traveling/activities.js').stat().st_size>500
 
