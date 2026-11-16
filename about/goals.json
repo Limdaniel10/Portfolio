@@ -155,7 +155,7 @@
           "date": null
         },
         {
-          "title": "Read 2000 Books",
+          "title": "Read 2,000 Books",
           "status": "in_progress",
           "date": "2024-03-24"
         },
@@ -165,27 +165,27 @@
           "date": "2023-05-03"
         },
         {
-          "title": "Family Trip 🇺🇳",
+          "title": "Family Trip",
           "status": "completed",
           "date": "2023-07-04"
         },
         {
-          "title": "Trip with Mom 🇺🇳",
+          "title": "Trip with Mom",
           "status": "completed",
           "date": "2023-11-17"
         },
         {
-          "title": "🇧🇴 Uyuni & 🇵🇪 Rainbow Mt",
+          "title": "Uyuni & Rainbow Mountain",
           "status": "completed",
           "date": "2020-01-06"
         },
         {
-          "title": "🇷🇺 Siberia Railway",
+          "title": "Trans-Siberian Railway",
           "status": "completed",
           "date": null
         },
         {
-          "title": "🇦🇷 Patagonia",
+          "title": "Patagonia Trek",
           "status": "completed",
           "date": "2023-12-16"
         },
@@ -215,12 +215,12 @@
           "date": null
         },
         {
-          "title": "Spanish A2 🇪🇸",
+          "title": "Spanish A2",
           "status": "todo",
           "date": "2024-11-05"
         },
         {
-          "title": "Chinese HSK 6 🇨🇳",
+          "title": "Chinese HSK 6",
           "status": "todo",
           "date": null
         },
@@ -235,17 +235,17 @@
           "date": null
         },
         {
-          "title": "Trip with Dad 🇺🇳",
+          "title": "Trip with Dad",
           "status": "todo",
           "date": "2024-06-26"
         },
         {
-          "title": "🇺🇸 Half Dome",
+          "title": "Half Dome",
           "status": "todo",
           "date": null
         },
         {
-          "title": "🇺🇸 Mt. Whitney",
+          "title": "Mt. Whitney",
           "status": "todo",
           "date": null
         },
@@ -260,12 +260,12 @@
           "date": "2022-06-03"
         },
         {
-          "title": "Triathlon (Sprint)",
+          "title": "Sprint Triathlon",
           "status": "todo",
           "date": null
         },
         {
-          "title": "Triathlon (Olympic)",
+          "title": "Olympic Triathlon",
           "status": "todo",
           "date": null
         }
