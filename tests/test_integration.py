@@ -24,6 +24,24 @@ travel=json.loads((SITE/'traveling/assets/data.js').read_text(encoding='utf8').s
 assert sum(bool(c['count_in_195']) for c in travel['countries'])==json.loads((SITE/'data/countries.json').read_text())['totalCountries']
 assert len(travel['places'])>=282 and len(travel['domestic_places'])>=69
 assert len(travel['airport_overnights'])>=45
+# New About and Travel archives must be included by the Pages build.
+goal_data=json.loads((SITE/'about/goals.json').read_text(encoding='utf8'))
+assert len(goal_data['sets'])==2
+assert [(len(s['items']),sum(i['status']=='completed' for i in s['items'])) for s in goal_data['sets']]==[(25,22),(25,6)]
+assert all(i['status'] in ('todo','in_progress','completed') for s in goal_data['sets'] for i in s['items'])
+assert 'id="goals"' in (SITE/'about/index.html').read_text(encoding='utf8')
+assert 'fetch("./goals.json"' in (SITE/'js/about.js').read_text(encoding='utf8')
+activities=json.loads((SITE/'traveling/activities.json').read_text(encoding='utf8'))
+assert len(activities['trekking'])==17 and len(activities['surfing'])==4
+assert isinstance(activities['scuba'],list)
+assert len({x['id'] for x in activities['trekking']})==17
+assert sum(x['name'].startswith('Volcán Acatenango') for x in activities['trekking'])==2
+assert next(x for x in activities['trekking'] if x['name'].startswith('Fitz Roy'))['date']=='2025-12-24'
+assert next(x for x in activities['trekking'] if 'Tumbado' in x['name'])['date']=='2025-12-26'
+assert next(x for x in activities['trekking'] if x['name'].startswith('Rainbow'))['elevationM']==5032
+assert 'id="activities"' in (SITE/'traveling/index.html').read_text(encoding='utf8')
+assert (SITE/'traveling/activities.js').stat().st_size>500
+
 books=json.loads((SITE/'reading/data/books.json').read_text())['books']
 months=json.loads((SITE/'reading/data/monthly-pages.json').read_text())['months']
 assert len(books)>=1400 and len(months)>=84
