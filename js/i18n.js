@@ -48,6 +48,7 @@
       "#atlas .sectionhead h2": ["An atlas in motion.", "이어지는 여정의 지도.", "不断延伸的旅途地图。", "Un atlas en movimiento."],
       "#atlas .sectionhead p": ["Unfold a year. Follow a month.", "연도를 펼치고 월별 여정을 살펴보세요.", "展开年份，探索每个月的旅程。", "Abre un año y explora cada mes."],
       "#places .sectionhead h2": ["Somewhere along the way.", "여행길 위의 장소들.", "旅途中的地方。", "Lugares del camino."],
+      "#activities .sectionhead h2": ["Trails, depths &amp; waves.", "산과 바다, 그리고 파도.", "山径、深海与海浪。", "Senderos, profundidades y olas."],
       "#highlights .sectionhead h2": ["What stays with me.", "여행이 남긴 것.", "旅途留下的记忆。", "Lo que permanece."],
       "#allYears": ["All years ↗", "전체 연도 ↗", "所有年份 ↗", "Todos los años ↗"],
       "#cumulative": ["Cumulative", "누적", "累计", "Acumulado"],
