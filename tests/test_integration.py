@@ -33,7 +33,14 @@ assert 'id="goals"' in (SITE/'about/index.html').read_text(encoding='utf8')
 assert 'fetch("./goals.json"' in (SITE/'js/about.js').read_text(encoding='utf8')
 activities=json.loads((SITE/'traveling/activities.json').read_text(encoding='utf8'))
 assert len(activities['trekking'])==17 and len(activities['surfing'])==4
-assert isinstance(activities['scuba'],list)
+assert len(activities['scuba'])==12, 'The twelve screenshot-visible scuba dives must be preserved'
+assert len({x['id'] for x in activities['scuba']})==12, 'All scuba dives need distinct stable IDs'
+assert all(x['date'] and x['site'] and x['country'] and x['depthM']>0 and x['durationMin']>0 for x in activities['scuba'])
+assert sum(x['site']=='Mauan' for x in activities['scuba'])==2, 'Distinct Mauan dives must not be merged'
+assert max(x['depthM'] for x in activities['scuba'])==28.7
+assert max(x['durationMin'] for x in activities['scuba'])==49
+assert sum(bool(x.get('siteNameTruncated')) for x in activities['scuba'])==2
+
 assert len({x['id'] for x in activities['trekking']})==17
 assert sum(x['name'].startswith('Volcán Acatenango') for x in activities['trekking'])==2
 assert next(x for x in activities['trekking'] if x['name'].startswith('Fitz Roy'))['date']=='2025-12-24'
