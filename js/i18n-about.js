@@ -118,12 +118,12 @@
         "大學時光與三十歲之前。", "Les études et avant trente ans.", "Studium und vor dem dreißigsten Geburtstag."
       ),
       "#goals .goal-intro": tr(
-        "어떤 목표는 이뤘고, 어떤 목표는 진행 중이며, 아직 시작하지 않은 목표도 있습니다. 펼쳐서 살펴보세요.",
-        "有些目标已经完成，有些正在进行，也有一些仍在计划中。展开查看完整清单。",
-        "Algunas metas ya se cumplieron; otras siguen en curso. Abre cada etapa para verlas.",
-        "有些目標已完成，有些正在進行，也有些尚待開始。展開查看完整清單。",
-        "Certains objectifs sont atteints, d'autres sont en cours. Ouvrez chaque période pour les voir.",
-        "Manche Ziele sind erreicht, andere noch in Arbeit. Öffne die Abschnitte, um sie zu sehen."
+        "어떤 목표는 이뤘고, 어떤 목표는 진행 중이며, 아직 시작하지 않은 목표도 있습니다.",
+        "有些目标已经完成，有些正在进行，也有一些仍在计划中。",
+        "Algunas metas ya se cumplieron; otras siguen en curso.",
+        "有些目標已完成，有些正在進行，也有些尚待開始。",
+        "Certains objectifs sont atteints, d'autres sont en cours.",
+        "Manche Ziele sind erreicht, andere noch in Arbeit."
       ),
       "#path .section-heading .eyebrow": tr(
         "05 / 지나온 길", "05 / 走过的路", "05 / MI RECORRIDO",
