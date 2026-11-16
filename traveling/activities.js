@@ -25,21 +25,21 @@
     document.getElementById("surfCount").textContent=surfs.length+" sessions";
     const sortedHikes=[...hikes].sort((a,b)=>String(a.date).localeCompare(String(b.date)));
     document.getElementById("trekkingRecords").innerHTML=sortedHikes.length?table(
-      ["Mountain / trail","Country","Date","Reached","Elevation"],
+      ["Mountain / trail","Country","Date","Summit / landmark elevation"],
       sortedHikes.map(x=>{
         const recorded=Number.isFinite(x.elevationM);
         const elev=recorded ? Number(x.elevationM).toLocaleString("en-US")+" m" : "—";
-        const basis=recorded ? (x.elevationBasis==="personal record"?"Personal record":"Summit reference") : "";
+        const basis=recorded && !["summit","crater summit","volcanic summit"].includes(x.elevationBasis) ? (x.elevationBasis==="viewpoint"?"Viewpoint":x.elevationBasis==="highest lake"?"Highest lake":x.elevationBasis==="approximate summit"?"Approx. summit":x.elevationBasis==="highest massif peak (Tsetsee Gun)"?"Tsetsee Gun summit":"") : "";
         return '<tr><td>'+esc(x.name)+'</td><td class="activity-nowrap">'+esc(x.country)+'</td>'+
-          '<td class="activity-nowrap">'+esc(formatDate(x.date))+'</td><td>'+esc(x.reached||"Not recorded")+'</td>'+
+          '<td class="activity-nowrap">'+esc(formatDate(x.date))+'</td>'+
           '<td class="activity-elev">'+esc(elev)+(basis?'<small>'+esc(basis)+'</small>':'')+'</td></tr>';
       }).join(""))
       :desc("No trekking records have been added.");
     document.getElementById("scubaRecords").innerHTML=dives.length?table(
-      ["Date","Dive site","Country","Max depth","Duration"],
+      ["Date","Dive site / country","Max depth","Duration"],
       [...dives].sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(x=>
-        '<tr><td class="activity-nowrap">'+esc(formatDate(x.date))+'</td><td>'+esc(x.site||"Not recorded")+(x.siteNameTruncated?'<small class="activity-truncated">Name truncated in the original logbook</small>':'')+'</td>'+
-        '<td>'+esc(x.country||"—")+'</td><td class="activity-nowrap">'+
+        '<tr><td class="activity-nowrap">'+esc(formatDate(x.date))+'</td><td>'+esc(x.site||"Not recorded")+' <span class="activity-muted">· '+esc(x.country||"—")+'</span>'+(x.siteNameTruncated?'<small class="activity-truncated">Name truncated in the original logbook</small>':'')+'</td>'+
+        '<td class="activity-nowrap">'+
         (Number.isFinite(x.depthM)?esc(x.depthM)+" m":"—")+'</td><td class="activity-nowrap">'+
         (Number.isFinite(x.durationMin)?esc(x.durationMin)+" min":"—")+'</td></tr>'
       ).join(""))
