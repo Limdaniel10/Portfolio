@@ -1,0 +1,276 @@
+{
+  "updated": "2026-11-16",
+  "statusOrder": [
+    "todo",
+    "in_progress",
+    "completed"
+  ],
+  "sets": [
+    {
+      "id": "university",
+      "name": "University Years",
+      "description": "Goals set during my university years",
+      "items": [
+        {
+          "title": "365 Days, 365 Books",
+          "status": "completed",
+          "date": "2022-12-07"
+        },
+        {
+          "title": "Become a Brunch Author",
+          "status": "completed",
+          "date": "2023-01-29"
+        },
+        {
+          "title": "Write a Book",
+          "status": "completed",
+          "date": "2023-10-11"
+        },
+        {
+          "title": "Read 1,000 Books",
+          "status": "completed",
+          "date": "2024-03-24"
+        },
+        {
+          "title": "Surf",
+          "status": "completed",
+          "date": "2024-05-20"
+        },
+        {
+          "title": "PADI Scuba Diving",
+          "status": "completed",
+          "date": "2023-05-03"
+        },
+        {
+          "title": "Complete 10 Scuba Dives (12 logged)",
+          "status": "completed",
+          "date": null
+        },
+        {
+          "title": "Solo Travel in Korea",
+          "status": "completed",
+          "date": "2022-04-01"
+        },
+        {
+          "title": "Travel with Friends Abroad",
+          "status": "completed",
+          "date": "2020-01-06"
+        },
+        {
+          "title": "Travel with Friends in Korea",
+          "status": "completed",
+          "date": "2020-08-20"
+        },
+        {
+          "title": "Solo Travel Abroad",
+          "status": "completed",
+          "date": "2023-12-16"
+        },
+        {
+          "title": "Oktoberfest",
+          "status": "completed",
+          "date": "2023-09-26"
+        },
+        {
+          "title": "Northern Lights",
+          "status": "completed",
+          "date": null
+        },
+        {
+          "title": "Tomorrowland Festival",
+          "status": "completed",
+          "date": "2024-07-24"
+        },
+        {
+          "title": "Visit All 9 KBO Stadiums",
+          "status": "completed",
+          "date": "2022-06-03"
+        },
+        {
+          "title": "Visit 30 Countries",
+          "status": "completed",
+          "date": "2023-07-04"
+        },
+        {
+          "title": "Visit 40 Countries",
+          "status": "completed",
+          "date": "2023-11-17"
+        },
+        {
+          "title": "Visit 50 Countries",
+          "status": "completed",
+          "date": "2024-06-26"
+        },
+        {
+          "title": "Earn Money by Traveling",
+          "status": "completed",
+          "date": null
+        },
+        {
+          "title": "Personal Website",
+          "status": "completed",
+          "date": "2024-11-05"
+        },
+        {
+          "title": "Driver’s License",
+          "status": "completed",
+          "date": "2024-06-10"
+        },
+        {
+          "title": "Get a Job",
+          "status": "completed",
+          "date": null
+        },
+        {
+          "title": "Write 500 Journal Entries (377 recorded)",
+          "status": "in_progress",
+          "date": null
+        },
+        {
+          "title": "Skydive",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Camino de Santiago",
+          "status": "todo",
+          "date": null
+        }
+      ],
+      "notionSource": "https://app.notion.com/p/ddec47f74fe048b197ce02fa8606b63f"
+    },
+    {
+      "id": "before-30",
+      "name": "Before 30",
+      "description": "Milestones I want to reach before thirty",
+      "items": [
+        {
+          "title": "Publish a Book Series",
+          "status": "todo",
+          "date": "2023-10-11"
+        },
+        {
+          "title": "Write 1,000 Journal Entries (385 recorded)",
+          "status": "in_progress",
+          "date": null
+        },
+        {
+          "title": "Read 2000 Books",
+          "status": "in_progress",
+          "date": "2024-03-24"
+        },
+        {
+          "title": "Advanced Open Water",
+          "status": "completed",
+          "date": "2023-05-03"
+        },
+        {
+          "title": "Family Trip 🇺🇳",
+          "status": "completed",
+          "date": "2023-07-04"
+        },
+        {
+          "title": "Trip with Mom 🇺🇳",
+          "status": "completed",
+          "date": "2023-11-17"
+        },
+        {
+          "title": "🇧🇴 Uyuni & 🇵🇪 Rainbow Mt",
+          "status": "completed",
+          "date": "2020-01-06"
+        },
+        {
+          "title": "🇷🇺 Siberia Railway",
+          "status": "completed",
+          "date": null
+        },
+        {
+          "title": "🇦🇷 Patagonia",
+          "status": "completed",
+          "date": "2023-12-16"
+        },
+        {
+          "title": "Visit 30 MLB Stadiums (12 visited)",
+          "status": "in_progress",
+          "date": "2022-06-03"
+        },
+        {
+          "title": "Skydive",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Save 30K",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Save 50K",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Save 100K",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Spanish A2 🇪🇸",
+          "status": "todo",
+          "date": "2024-11-05"
+        },
+        {
+          "title": "Chinese HSK 6 🇨🇳",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "JMP STIPS",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Promotion",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Trip with Dad 🇺🇳",
+          "status": "todo",
+          "date": "2024-06-26"
+        },
+        {
+          "title": "🇺🇸 Half Dome",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "🇺🇸 Mt. Whitney",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "U.S. Road Trip",
+          "status": "todo",
+          "date": "2024-06-10"
+        },
+        {
+          "title": "Play on a Baseball / Softball Team",
+          "status": "todo",
+          "date": "2022-06-03"
+        },
+        {
+          "title": "Triathlon (Sprint)",
+          "status": "todo",
+          "date": null
+        },
+        {
+          "title": "Triathlon (Olympic)",
+          "status": "todo",
+          "date": null
+        }
+      ],
+      "notionSource": "https://app.notion.com/p/41af8fb4581b808d8561eb1987147ec4"
+    }
+  ]
+}
