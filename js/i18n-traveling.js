@@ -35,12 +35,12 @@
         "서핑","冲浪","Surf","衝浪","Surf","Surfen"
       ),
       "#activities .activity-footnote":tr(
-        "고도는 직접 도달한 최고점이 아닌 산 정상 또는 명소의 기준 고도입니다. 릴라 일곱 호수는 가장 높은 호수, 레인보우 마운틴은 전망대 기준입니다. 세로토코는 개인 최고 기록으로 강조했습니다(실제 도달 약 5,600m, 산 정상 5,604m).",
-        "海拔为山峰或景点的参考高度，不代表本人一定抵达该高度。七座里拉湖取最高湖泊，彩虹山取观景台高度。Cerro Toco 标为个人纪录（实际到达约 5,600 米，山顶 5,604 米）。",
-        "Las altitudes indican la cima o la altura de referencia del lugar, no necesariamente el punto alcanzado. Los Siete Lagos de Rila usan el lago más alto y la Montaña Arcoíris, el mirador. Cerro Toco se destaca como récord personal (unos 5.600 m alcanzados; cima de 5.604 m).",
-        "海拔為山峰或景點的參考高度，不表示本人一定抵達該高度。七座里拉湖採最高湖泊，彩虹山採觀景臺高度。Cerro Toco 標示為個人紀錄（實際抵達約 5,600 公尺，山頂 5,604 公尺）。",
-        "Les altitudes sont celles des sommets ou sites de référence, et non forcément celles atteintes. Les sept lacs de Rila utilisent le lac le plus haut ; la montagne Arc-en-ciel, son belvédère. Cerro Toco est mon record personnel (environ 5 600 m atteints ; sommet à 5 604 m).",
-        "Die Höhenangaben beziehen sich auf Gipfel oder Orte, nicht unbedingt auf die tatsächlich erreichte Höhe. Bei den Sieben Rila-Seen gilt der höchste See, beim Rainbow Mountain der Aussichtspunkt. Cerro Toco ist mein persönlicher Rekord (etwa 5.600 m erreicht; Gipfel 5.604 m)."
+        "고도는 직접 도달한 최고점이 아닌 산 정상 또는 명소의 기준 고도입니다. 릴라 일곱 호수는 가장 높은 호수, 레인보우 마운틴은 전망대 기준입니다. 세로토코는 개인 최고 기록으로 강조했습니다(실제 도달 5,604m, 산 정상 5,604m).",
+        "海拔为山峰或景点的参考高度，不代表本人一定抵达该高度。七座里拉湖取最高湖泊，彩虹山取观景台高度。Cerro Toco 标为个人纪录（实际到达 5,604 米，山顶 5,604 米）。",
+        "Las altitudes indican la cima o la altura de referencia del lugar, no necesariamente el punto alcanzado. Los Siete Lagos de Rila usan el lago más alto y la Montaña Arcoíris, el mirador. Cerro Toco se destaca como récord personal (5.604 m alcanzados; cima de 5.604 m).",
+        "海拔為山峰或景點的參考高度，不表示本人一定抵達該高度。七座里拉湖採最高湖泊，彩虹山採觀景臺高度。Cerro Toco 標示為個人紀錄（實際抵達 5,604 公尺，山頂 5,604 公尺）。",
+        "Les altitudes sont celles des sommets ou sites de référence, et non forcément celles atteintes. Les sept lacs de Rila utilisent le lac le plus haut ; la montagne Arc-en-ciel, son belvédère. Cerro Toco est mon record personnel (5 604 m atteints ; sommet à 5 604 m).",
+        "Die Höhenangaben beziehen sich auf Gipfel oder Orte, nicht unbedingt auf die tatsächlich erreichte Höhe. Bei den Sieben Rila-Seen gilt der höchste See, beim Rainbow Mountain der Aussichtspunkt. Cerro Toco ist mein persönlicher Rekord (5.604 m erreicht; Gipfel 5.604 m)."
       ),
       "#highlights .sectionhead .eyebrow":tr(
         "04 / 여정 너머의 기록","04 / 行程之外","04 / MÁS ALLÁ DEL ITINERARIO",
