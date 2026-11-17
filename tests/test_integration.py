@@ -49,9 +49,13 @@ assert next(x for x in activities['trekking'] if x['name'].startswith('Rainbow')
 assert next(x for x in activities['trekking'] if x['name'].startswith('Rainbow'))['personalRecordedElevationM']==5032
 assert next(x for x in activities['trekking'] if x['name']=='Cerro Toco')['elevationM']==5604
 cerro=next(x for x in activities['trekking'] if x['name']=='Cerro Toco')
-assert cerro['personalRecord'] is True and cerro['personalReachedElevationM']==5600
+assert cerro['personalRecord'] is True and cerro['personalReachedElevationM']==5604
 assert 'Personal Record' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
 assert 'activity-record' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
+assert 'id="trekRecordHint"' in (SITE/'traveling/index.html').read_text(encoding='utf8')
+assert 'Cerro Toco · 5,604 m · Personal Record' in (SITE/'traveling/index.html').read_text(encoding='utf8')
+assert 'location.hash === "#trekkingFold"' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
+assert '5,600 m reached' not in (SITE/'traveling/index.html').read_text(encoding='utf8')
 assert '../js/i18n-traveling.js' in (SITE/'traveling/index.html').read_text(encoding='utf8')
 assert (SITE/'js/i18n-traveling.js').stat().st_size>1000
 assert 'portfolio:language' in (SITE/'js/i18n.js').read_text(encoding='utf8')
