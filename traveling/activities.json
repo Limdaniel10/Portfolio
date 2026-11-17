@@ -152,7 +152,7 @@
       "elevationBasis": "summit",
       "elevationSource": "https://boletinmeteo.cl/trekmap-v2.html?lang=en&trail=cerrotoco&unit=C",
       "personalRecord": true,
-      "personalReachedElevationM": 5600
+      "personalReachedElevationM": 5604
     },
     {
       "id": "tr-016",
@@ -331,7 +331,7 @@
     "Atlantic Princess W… and Sebayur Kecil Komo… are displayed exactly as truncated in the source screenshots; full dive-site names require confirmation.",
     "All 17 trekking elevations checked against mountain/volcano or tourism references in November 2026; the elevationSource field records each reference. Mountain heights are NOT claims of reaching those heights.",
     "Concepcion summit heights vary by publisher; use Nicaragua INETER 1,610 m. Irazu uses Smithsonian GVP 3,436 m. Cerro Toco 5,604 m is the highest reference elevation of the trekking archive.",
-    "Cerro Toco is highlighted as the personal trekking altitude record: approximately 5,600 m reached (traveler-reported), versus the mountain summit reference height of 5,604 m."
+    "Cerro Toco is highlighted as the personal trekking altitude record: 5,604 m reached (traveler-confirmed), equal to the mountain summit reference height of 5,604 m."
   ],
   "sources": [
     {
