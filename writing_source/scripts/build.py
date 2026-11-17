@@ -31,16 +31,16 @@ def frontmatter(path):
 def make_page(title,body,base,style,nav='Writing'):
  header=(ROOT/'assets/header-fragment.html').read_text()
  footer=(ROOT/'assets/footer-fragment.html').read_text()
- # links are relative to /Portfolio/, not the current chapter directory
+ # links are relative to the configured site root, not the current chapter directory
  h=BeautifulSoup(header,'html.parser');f=BeautifulSoup(footer,'html.parser')
  for a in list(h.select('a[href]'))+list(f.select('a[href]')):
   href=a.get('href','')
   if href=='#top':a['href']='#top'
   elif href.startswith('#'):a['href']=base+'writing/'+('' if href=='#writing' else href[1:]+'/')
   elif href.startswith('../'):a['href']=base+href[3:]
- return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f5ef"><title>{esc(title)} — Chaehyun Lim</title><link rel="stylesheet" href="{base}writing/assets/style.css"><link rel="icon" type="image/svg+xml" href="{base}assets/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="Korean original essays and travel narratives by Chaehyun Lim."><meta property="og:image" content="https://limdaniel10.github.io/Portfolio/assets/social-card.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="{base}css/i18n.css"></head><body id="top">{h}<main>{body}</main>{f}<script src="{base}js/i18n.js" defer></script></body></html>'''
+ return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f5ef"><title>{esc(title)} — Chaehyun Lim</title><link rel="stylesheet" href="{base}writing/assets/style.css"><link rel="icon" type="image/svg+xml" href="{base}assets/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="Korean original essays and travel narratives by Chaehyun Lim."><meta property="og:image" content="https://limeatless.github.io/assets/social-card.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="{base}css/i18n.css"></head><body id="top">{h}<main>{body}</main>{f}<script src="{base}js/i18n.js" defer></script></body></html>'''
 
-def build(root=ROOT,base='/Portfolio/',out=None):
+def build(root=ROOT,base='/',out=None):
  global ROOT;ROOT=Path(root).resolve()
  if not base.startswith('/') or not base.endswith('/'):raise ValueError('base must start/end with /')
  out=Path(out).resolve() if out else ROOT/'_site'
@@ -128,4 +128,4 @@ def build(root=ROOT,base='/Portfolio/',out=None):
  return index
 
 if __name__=='__main__':
- ap=argparse.ArgumentParser();ap.add_argument('--base',default='/Portfolio/');ap.add_argument('--out',default=None);a=ap.parse_args();idx=build(base=a.base,out=a.out);print('Built',sum(len(b['chapters']) for b in idx['collections']),'chapters,',len(idx['essays']),'essays')
+ ap=argparse.ArgumentParser();ap.add_argument('--base',default='/');ap.add_argument('--out',default=None);a=ap.parse_args();idx=build(base=a.base,out=a.out);print('Built',sum(len(b['chapters']) for b in idx['collections']),'chapters,',len(idx['essays']),'essays')

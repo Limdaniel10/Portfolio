@@ -10,6 +10,13 @@ SITE=ROOT/'_site'
 assert (SITE/'index.html').exists(),'Missing homepage'
 expected=('about','career','traveling','writing','reading')
 for section in expected:assert (SITE/section/'index.html').exists(),f'Missing /{section}/ index'
+for section in ('', *expected):
+ page = SITE / section / 'index.html' if section else SITE / 'index.html'
+ markup = page.read_text(encoding='utf8')
+ expected_url = 'https://limeatless.github.io/' + (f'{section}/' if section else '')
+ if section != 'writing':
+  assert f'<meta property="og:url" content="{expected_url}">' in markup, f'Incorrect share URL: {section or "home"}'
+ assert 'limdaniel10.github.io' not in markup and '/Portfolio/' not in markup, f'Old URL remains: {section or "home"}'
 assert (SITE/'assets/resume.pdf').stat().st_size>10000,'Missing resume'
 # Seven-language selector should be available on the home and all five sections.
 assert (SITE/'js/i18n.js').exists() and (SITE/'css/i18n.css').exists(), 'Missing localization files'
@@ -136,17 +143,16 @@ assert len(writing['essays'])==len(source_essays),'Writing: indexed essays do no
 assert len(writing['readings'])==len(source_readings),'Writing: indexed readings do not match Markdown files'
 failures=[];checked=0
 for html in SITE.rglob('index.html'):
+ assert 'limdaniel10.github.io' not in html.read_text(encoding='utf8'), f'Old URL in {html.relative_to(SITE)}'
+ assert '/Portfolio/' not in html.read_text(encoding='utf8'), f'Old base path in {html.relative_to(SITE)}'
  soup=BeautifulSoup(html.read_text(encoding='utf8'),'html.parser')
  for tag in soup.select('a[href],link[href],script[src],img[src]'):
   raw=tag.get('href') or tag.get('src') or ''
   if not raw or raw.startswith(('#','mailto:','tel:','data:','https://','http://')):continue
   path=urlsplit(raw).path
   if not path:continue
-  if path.startswith('/Portfolio/'):
-   target=SITE/unquote(path[len('/Portfolio/'):])
-  elif path.startswith('/'):
-   failures.append(f'{html.relative_to(SITE)} : absolute non-Portfolio link {path}')
-   continue
+  if path.startswith('/'):
+   target=SITE/unquote(path.lstrip('/'))
   else:target=html.parent/unquote(path)
   if target.is_dir():target/='index.html'
   checked+=1

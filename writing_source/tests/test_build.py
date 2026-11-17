@@ -28,7 +28,7 @@ def run():
   print(f'PASS: {checked} Writing manuscripts contain no isolated backslashes or horizontal rules')
   mountain=(copy/'content/collections/ometepe/014.md').read_text(encoding='utf8')
   assert '2023. 03. 25 · Day 8' in mountain or '2023\. 03. 25 · Day 8' in mountain
-  initial=build(root=copy,base='/Portfolio/')
+  initial=build(root=copy,base='/')
   # 182 book reflections are indexed under Writing / Readings.
   html=(copy/'_site/writing/readings/index.html').read_text(encoding='utf8')
   assert 'id="wr-archive"' in html and 'reading-notes.js' in html
@@ -118,7 +118,7 @@ brunch_url: https://brunch.co.kr/@lim-eat-less/999
 
 GitHub Markdown에서 자동으로 생성된 본문입니다.
 ''',encoding='utf8')
-  new=build(root=copy,base='/Portfolio/')
+  new=build(root=copy,base='/')
   b=next(x for x in new['collections'] if x['id']=='solo-abroad')
   assert len(b['chapters'])==len(book_before['chapters'])+1
   page=copy/f'_site/writing/articles/solo-abroad/{chapter_slug}/index.html'
@@ -126,12 +126,12 @@ GitHub Markdown에서 자동으로 생성된 본문입니다.
   html=page.read_text(encoding='utf8')
   assert 'GitHub Markdown에서 자동으로 생성된 본문입니다.' in html
   assert '<h2>새 글</h2>' in html
-  assert '/Portfolio/writing/' in html
+  assert '/writing/' in html
   assert 'brunch.co.kr/@lim-eat-less/999' in html
   idx=json.loads((copy/'_site/writing/writing-index.json').read_text(encoding='utf8'))
   assert any(c['chapter']==next_chapter for c in next(b for b in idx['collections'] if b['id']=='solo-abroad')['chapters'])
   test.unlink()
-  deleted=build(root=copy,base='/Portfolio/')
+  deleted=build(root=copy,base='/')
   assert len(next(b for b in deleted['collections'] if b['id']=='solo-abroad')['chapters'])==len(book_before['chapters'])
   assert not page.exists()
   print(f'PASS: {initial_chapters} baseline chapters; add chapter {next_chapter} -> regenerated index, HTML, navigation, Brunch link; remove -> restored')

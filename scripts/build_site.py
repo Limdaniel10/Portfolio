@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Assemble the entire GitHub Pages site, including Writing Markdown and real travel-map SVG.
 
-For the Portfolio repository: python scripts/build_site.py --base /Portfolio/
-For local test: python scripts/build_site.py --base /
+For the limeatless.github.io repository: python scripts/build_site.py --base /
 """
 from __future__ import annotations
 import argparse,json,re,shutil,subprocess,sys
@@ -94,12 +93,12 @@ def make_social_card(output):
  for i,(n,c) in enumerate([('ABOUT','#b77a51'),('CAREER','#5b9072'),('TRAVEL','#6290b2'),('WRITING','#a4896c'),('READING','#967fa8')]):
   x=75+218*i;dr.rectangle((x,416,x+188,514),fill=c)
   dr.text((x+13,452),n,font=font(18),fill='#ffffff')
- dr.text((75,562),'limdaniel10.github.io/Portfolio/',font=font(20),fill='#877b6f')
+ dr.text((75,562),'limeatless.github.io',font=font(20),fill='#877b6f')
  im.save(output/'assets/social-card.png',format='PNG',optimize=True)
 
 def build(base,output):
  if not base.startswith('/') or not base.endswith('/'):
-  raise ValueError('base should look like /Portfolio/ or /')
+  raise ValueError('base should look like / or /repository-name/')
  if output.resolve() in (ROOT.resolve(),Path('/').resolve()):
   raise ValueError('Refusing unsafe output directory')
  output=output.resolve(); temp=(ROOT/'.build_writing').resolve()
@@ -133,7 +132,7 @@ def build(base,output):
 
 def main(argv=None):
  p=argparse.ArgumentParser(description=__doc__)
- p.add_argument('--base',default='/Portfolio/')
+ p.add_argument('--base',default='/')
  p.add_argument('--out',type=Path,default=ROOT/'_site')
  a=p.parse_args(argv)
  build(a.base,a.out)

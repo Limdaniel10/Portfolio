@@ -4,8 +4,8 @@
 
 이 ZIP은 GitHub에 올리는 **전체 소스 저장소**입니다. ZIP 파일 자체를 GitHub에 업로드하는 것이 아니라, **압축을 푼 뒤 안에 있는 파일과 폴더 전부**를 저장소 최상위에 넣어야 합니다. `.github` 폴더도 반드시 포함하세요.
 
-- 권장 저장소 이름: `Portfolio` (대소문자 일치)
-- 권장 공개 주소: `https://limdaniel10.github.io/Portfolio/`
+- 저장소 이름: `limeatless.github.io` (GitHub 사용자 이름과 일치)
+- 공개 주소: `https://limeatless.github.io/`
 - 배포 방식: **GitHub Actions** (구식 `Deploy from a branch`가 아님)
 - 최상위 `index.html` = Home, `about/`, `career/`, `traveling/`, `writing/`, `reading/` = 각각의 주소
 - 배포 워크플로는 **`.github/workflows/deploy.yml` 하나만 사용**. 원래 여섯 ZIP에 있던 독립 배포 워크플로는 중복 실행되지 않도록 병합했습니다.
@@ -13,7 +13,7 @@
 ## 1. 폴더 구조
 
 ```text
-Portfolio/
+limeatless.github.io/
 ├── index.html                        # Home
 ├── about/index.html                 # About Me
 ├── career/index.html                # Career
@@ -51,20 +51,20 @@ Portfolio/
 
 ## 2. GitHub에 올리기 — 가장 안전한 순서
 
-**기존 사이트 백업:** 현재 GitHub `Portfolio` 저장소로 이동 → **Code → Download ZIP**으로 먼저 백업합니다. 기존 Git 저장소의 변경 이력은 그대로 유지하는 편이 좋습니다.
+**기존 사이트 백업:** GitHub `limeatless.github.io` 저장소 → **Code → Download ZIP**으로 백업할 수 있습니다. 기존 Git 저장소 변경 이력은 그대로 유지합니다.
 
 ### GitHub Desktop 이용 (권장, Windows)
 
-1. GitHub Desktop 설치 및 로그인 → **File → Clone repository** → `limdaniel10/Portfolio` 선택.
+1. GitHub Desktop 설치 및 로그인 → **File → Clone repository** → `limeatless/limeatless.github.io` 선택.
 2. 받은 통합 ZIP을 **압축 해제**합니다. 압축을 푼 곳에서 `index.html`, `.github`, `about`, `career` 등이 보이면 올바른 루트입니다.
-3. 압축을 푼 파일·폴더를 복제한 `Portfolio` 로컬 폴더의 **최상위에 그대로 복사**합니다. 덮어쓰기 허용. 오래된 독립 Pages 워크플로가 있다면 지우고 이 ZIP의 `.github/workflows/deploy.yml` 하나만 남깁니다.
+3. 압축을 푼 파일·폴더를 복제한 `limeatless.github.io` 로컬 폴더의 **최상위에 그대로 복사**합니다. 덮어쓰기 허용. 오래된 독립 Pages 워크플로가 있다면 지우고 이 ZIP의 `.github/workflows/deploy.yml` 하나만 남깁니다.
 4. GitHub Desktop의 **Changes**에서 변경 내용 확인 → Summary에 `Integrate portfolio` → **Commit to main** → **Push origin**.
-5. GitHub 웹사이트 → `Portfolio` → **Settings → Pages → Build and deployment → Source: GitHub Actions**. 기존에 `Deploy from a branch`였다면 꼭 변경합니다.
+5. GitHub 웹사이트 → `limeatless.github.io` → **Settings → Pages → Build and deployment → Source: GitHub Actions**. 기존에 `Deploy from a branch`였다면 꼭 변경합니다.
 6. **Actions** 탭에서 `Build and deploy full Portfolio` 워크플로가 성공인지 확인한 뒤 위 주소를 방문합니다.
 
 **중요:** ZIP 파일 1개를 `Add file → Upload files`로 업로드해도 GitHub가 압축을 자동으로 풀어주지 않습니다. 반드시 내부 파일들을 올리세요. 기존 저장소에 이미 `gh-pages` 방식 또는 다른 배포 워크플로가 있다면 충돌 가능성을 제거해야 합니다.
 
-**CLI 이용시**: `git clone https://github.com/limdaniel10/Portfolio.git` 후 압축을 푼 파일을 클론 폴더에 복사하고, `git add -A && git commit -m "Integrate portfolio" && git push origin main` 실행. 강제 push(`--force`)는 사용하지 마세요.
+**CLI 이용시**: `git clone https://github.com/limeatless/limeatless.github.io.git` 후 압축을 푼 파일을 클론 폴더에 복사하고, `git add -A && git commit -m "Integrate portfolio" && git push origin main` 실행. 강제 push(`--force`)는 사용하지 마세요.
 
 ## 3. Writing — 새로운 글 하나 추가하기
 
@@ -102,7 +102,7 @@ Markdown 내용은 배포 시 HTML 페이지로 자동 변환됩니다.
 1. Google Sheets 파일 하나 생성. 탭을 **정확히** `Books`, `MonthlyPages`로 만듭니다.
 2. 제공된 `reading/sheets/Books.csv`의 **전체 행을 `Books` 탭**에, `reading/sheets/MonthlyPages.csv` 전체 행을 **`MonthlyPages` 탭**에 CSV 가져오기로 입력합니다. `CompletedDate` 열은 **Plain text(일반 텍스트)** 형식으로 설정하여 `YYYY-MM` 형식을 유지하세요. 머리글은 변경하지 마세요. 부분 데이터만 가져오면 데이터 보호 검사 때문에 동기화 실패합니다.
 3. Google Cloud에서 **Google Sheets API**를 활성화하고 **서비스 계정**을 만든 뒤 JSON 키를 생성합니다. 서비스 계정 이메일(`client_email`)에 Google Sheet **Viewer** 권한을 공유합니다.
-4. GitHub `Portfolio` → **Settings → Secrets and variables → Actions**에서
+4. GitHub `limeatless.github.io` → **Settings → Secrets and variables → Actions**에서
    - **Repository secret**: `GOOGLE_SERVICE_ACCOUNT_JSON` = 서비스 계정 JSON 키 **전체 내용** (파일은 Git에 절대로 올리지 말 것)
    - **Repository variable**: `GOOGLE_SHEETS_ID` = Sheet URL의 `/d/`와 `/edit` 사이 ID
 5. **Actions → Build and deploy full Portfolio → Run workflow**로 시험합니다. 설정이 정상이면 매일 12:17 UTC에 변경 여부를 다시 확인하고 자동 배포합니다. 수동 Git commit 없이 Google Sheet 행을 추가해도 공개 사이트가 갱신됩니다.
@@ -157,7 +157,7 @@ python -m http.server 8000 --directory _site
 
 브라우저 주소: `http://localhost:8000/`. **`index.html`을 더블클릭하여 `file://`로 열면 JSON fetch가 실패할 수 있으므로 HTTP 서버로 확인하세요.**
 
-**배포 URL을 바꾸는 경우:** 워크플로의 `python scripts/build_site.py --base /Portfolio/`에서 `/Portfolio/`를 실제 저장소 이름에 맞게 바꿔야 합니다. 루트에 배포되는 `username.github.io` 특별 저장소라면 `--base /`로 변경하세요.
+**배포 URL 설정:** 이 저장소는 사용자 사이트 `limeatless.github.io`이므로 워크플로에서 `python scripts/build_site.py --base /`를 사용합니다. `/Portfolio/` 경로는 더 이상 사용하지 않습니다.
 
 ## 8. 장애 확인
 
