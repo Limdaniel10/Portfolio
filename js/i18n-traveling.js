@@ -18,18 +18,18 @@
         "旅程之外的紀錄","Au-delà de l'itinéraire","Abseits der Reiseroute"
       ),
       "#activities .activity-intro":tr(
-        "트레킹, 수중 탐험, 서핑의 기록입니다. 날짜는 개인 여행 기록을 따르며, 표시된 고도는 실제 도달 고도가 아닌 산이나 명소의 기준 고도일 수 있습니다.",
-        "记录徒步、潜水与冲浪经历。日期来自个人记录；所示海拔为山峰或景点的参考高度，不一定是本人实际到达的高度。",
-        "Un registro de senderismo, buceo y surf. Las fechas provienen de mis notas; la altitud indicada corresponde a la montaña o al lugar, no necesariamente a la altura alcanzada.",
-        "這裡記錄健行、潛水與衝浪。日期來自個人紀錄；標示的海拔為山峰或景點的參考高度，不一定是本人實際抵達的高度。",
-        "Une archive de randonnées, de plongées et de surf. Les dates proviennent de mes notes ; les altitudes sont celles des montagnes ou des sites, pas nécessairement celles atteintes.",
-        "Ein Archiv für Wanderungen, Tauchgänge und Surfen. Die Daten stammen aus meinen Aufzeichnungen; Höhenangaben beziehen sich auf Berge oder Orte, nicht unbedingt auf die erreichte Höhe."
+        "트레킹, 수중 탐험, 서핑의 기록입니다. 날짜는 개인 여행 기록을 따릅니다.",
+        "记录徒步、潜水与冲浪经历。日期来自个人记录。",
+        "Un registro de senderismo, buceo y surf. Las fechas provienen de mis notas.",
+        "這裡記錄健行、潛水與衝浪。日期來自個人紀錄。",
+        "Une archive de randonnées, de plongées et de surf. Les dates proviennent de mes notes.",
+        "Ein Archiv für Wanderungen, Tauchgänge und Surfen. Die Daten stammen aus meinen Aufzeichnungen."
       ),
       "#trekkingFold > summary > strong":tr(
         "트레킹","徒步","Senderismo","健行","Randonnée","Wandern"
       ),
       "#scubaFold > summary > strong":tr(
-        "스쿠버 다이빙","水肺潜水","Buceo","水肺潛水","Plongée sous-marine","Gerätetauchen"
+        "스쿠버 다이빙 · AOW","水肺潜水 · AOW","Buceo · AOW","水肺潛水 · AOW","Plongée sous-marine · AOW","Gerätetauchen · AOW"
       ),
       "#surfFold > summary > strong":tr(
         "서핑","冲浪","Surf","衝浪","Surf","Surfen"
