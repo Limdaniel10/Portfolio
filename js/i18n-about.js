@@ -125,6 +125,14 @@
         "Certains objectifs sont atteints, d'autres sont en cours.",
         "Manche Ziele sind erreicht, andere noch in Arbeit."
       ),
+      "#goals .goal-source-note": tr(
+        "목표 목록을 바탕으로 2026년 11월에 확인한 기록입니다. 진행률은 세 가지 상태를 기준으로 계산합니다.",
+        "本页面基于目标清单，最后核对于 2026 年 11 月。进度根据三种状态计算。",
+        "Una instantánea de mis metas, revisada en noviembre de 2026. El progreso se calcula a partir de los tres estados.",
+        "根據目標清單於 2026 年 11 月核對的紀錄。進度依三種狀態計算。",
+        "Une vue des objectifs vérifiée en novembre 2026. La progression est calculée à partir des trois statuts.",
+        "Ein Stand meiner Ziele vom November 2026. Der Fortschritt wird aus den drei Statusgruppen berechnet."
+      ),
       "#path .section-heading .eyebrow": tr(
         "05 / 지나온 길", "05 / 走过的路", "05 / MI RECORRIDO",
         "05 / 走過的路", "05 / MON PARCOURS", "05 / MEIN WEG"
