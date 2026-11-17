@@ -62,7 +62,7 @@ assert 'portfolio:language' in (SITE/'js/i18n.js').read_text(encoding='utf8')
 
 assert max(x['elevationM'] for x in activities['trekking'])==5604
 assert all(x['elevationM']>0 and x['elevationBasis'] and x['elevationSource'] for x in activities['trekking'])
-assert 'Reached' not in (SITE/'traveling/activities.js').read_text(encoding='utf8')
+assert '["Mountain / trail","Country","Date","Summit / landmark elevation"]' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
 assert 'Dive site / country' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
 assert 'Open a chapter to see the full picture.' not in (SITE/'about/index.html').read_text(encoding='utf8')
 assert 'id="activities"' in (SITE/'traveling/index.html').read_text(encoding='utf8')
