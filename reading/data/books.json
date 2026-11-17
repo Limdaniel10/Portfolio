@@ -14062,16 +14062,6 @@
       "status": "Completed"
     },
     {
-      "id": "BK-001409",
-      "title": "완벽한 날들",
-      "author": "메리 올리버",
-      "completed_date": "2026-10",
-      "year": 2026,
-      "month": 10,
-      "month_order": 1,
-      "status": "Completed"
-    },
-    {
       "id": "BK-001410",
       "title": "여름",
       "author": "알베르 카뮈",
@@ -14189,6 +14179,16 @@
       "year": 2026,
       "month": 11,
       "month_order": 12,
+      "status": "Completed"
+    },
+    {
+      "id": "BK-001409",
+      "title": "완벽한 날들",
+      "author": "메리 올리버",
+      "completed_date": "2026-11",
+      "year": 2026,
+      "month": 11,
+      "month_order": 13,
       "status": "Completed"
     }
   ]
