@@ -59,3 +59,10 @@ header nav a[aria-current="page"]{color:var(--ink);font-weight:700;border-bottom
 /* The highest personally reported trek altitude is singled out in the archive. */
 .activity-table tr.activity-record td{font-weight:750}
 .activity-table tr.activity-record .activity-elev small{color:var(--blue);font-weight:750;letter-spacing:.02em}
+
+/* Make the altitude milestone visible even before opening the trekking list. */
+.activity-fold#trekkingFold>summary{grid-template-columns:58px minmax(0,1fr) minmax(175px,245px) 24px}
+.activity-summary-meta{display:flex;flex-direction:column;align-items:flex-end;gap:5px;min-width:0;text-align:right}
+.activity-summary-meta #trekCount{text-align:right}
+.activity-record-hint{color:var(--blue)!important;font-size:10px!important;font-weight:750;line-height:1.35}
+@media(max-width:650px){.activity-fold#trekkingFold>summary{grid-template-columns:36px minmax(0,1fr) minmax(100px,145px) 14px}.activity-record-hint{font-size:9px!important}}
