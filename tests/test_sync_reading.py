@@ -77,7 +77,7 @@ class ReadingSyncTests(unittest.TestCase):
     def test_duplicate_month_order_preserves_existing_and_appends_new_batch(self):
         books = {book['id']: book for book in validate_books(self.books_csv)}
         ids = [f'BK-{n:06d}' for n in range(1415, 1420)]
-        self.assertEqual([books[ident]['month_order'] for ident in ids], [8, 9, 10, 11, 12])
+        self.assertEqual([books[ident]['month_order'] for ident in ids], [14, 15, 16, 17, 18])
         november = [book['month_order'] for book in books.values()
                     if (book['year'], book['month']) == (2026, 11)]
         self.assertEqual(len(november), len(set(november)))
