@@ -102,6 +102,11 @@
     const dives=Array.isArray(archive.scuba)?archive.scuba:[];
     const surfs=Array.isArray(archive.surfing)?archive.surfing:[];
     document.getElementById("trekCount").textContent=currentLang==="ko"?hikes.length+t.counts[0]:hikes.length+" "+t.counts[0];
+    const record=hikes.find(x=>x.personalRecord);
+    const hint=document.getElementById("trekRecordHint");
+    if(hint){
+      hint.textContent=record?"Cerro Toco · "+Number(record.personalReachedElevationM).toLocaleString(currentLang)+" m · "+t.record:"";
+    }
     document.getElementById("scubaCount").textContent=dives.length?(currentLang==="ko"?dives.length+t.counts[1]:dives.length+" "+t.counts[1]):t.pending;
     document.getElementById("surfCount").textContent=currentLang==="ko"?surfs.length+t.counts[2]:surfs.length+" "+t.counts[2];
     document.getElementById("trekkingRecords").innerHTML=hikes.length?table(t.trek,
@@ -127,6 +132,8 @@
         '<td class="activity-nowrap">'+esc(fmtDate(x.date,currentLang))+'</td></tr>'
       ).join("")):pending(t.empty[2]);
   }
+  // A link ending in #trekkingFold opens the hidden archive automatically.
+  if (window.location.hash === "#trekkingFold") document.getElementById("trekkingFold").open=true;
   document.addEventListener("portfolio:language",render);
   fetch("./activities.json",{cache:"no-cache"}).then(r=>{
     if(!r.ok)throw Error("Activity archive unavailable");
