@@ -20,7 +20,7 @@ class ReadingSyncTests(unittest.TestCase):
     def test_complete_archive_retained(self):
         books = validate_books(self.books_csv)
         pages = validate_months(self.pages_csv)
-        self.assertGreaterEqual(len(books), 1413)
+        self.assertGreaterEqual(len(books), 1419)
         self.assertGreaterEqual(len(pages), 84)
         self.assertGreaterEqual(sum(m['pages_read'] for m in pages), 471691)
         y2026 = [b for b in books if b['year'] == 2026]
@@ -74,11 +74,19 @@ class ReadingSyncTests(unittest.TestCase):
             self.assertEqual((d/'books.json').read_bytes(), before)
             self.assertEqual(len(json.loads(before)['books']), len(books))
 
+    def test_duplicate_month_order_preserves_existing_and_appends_new_batch(self):
+        books = {book['id']: book for book in validate_books(self.books_csv)}
+        ids = [f'BK-{n:06d}' for n in range(1415, 1420)]
+        self.assertEqual([books[ident]['month_order'] for ident in ids], [8, 9, 10, 11, 12])
+        november = [book['month_order'] for book in books.values()
+                    if (book['year'], book['month']) == (2026, 11)]
+        self.assertEqual(len(november), len(set(november)))
+
     def test_unnumbered_new_book_appends_to_month(self):
         rows = [list(r) for r in self.books_csv]
         last_id=max(int(r[0].split('-')[-1]) for r in rows[1:])
         new_id=f'BK-{last_id+1:06d}'
-        existing_order=max(int(r[4]) for r in rows[1:] if r[3]=='2026-11')
+        existing_order=max(b['month_order'] for b in validate_books(self.books_csv) if (b['year'], b['month']) == (2026, 11))
         rows.append([new_id, 'A Newly Completed Book', 'One Author', '2026-11', '', 'Completed'])
         out = validate_books(rows)
         sample = next(b for b in out if b['id'] == new_id)

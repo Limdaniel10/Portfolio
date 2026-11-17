@@ -78,7 +78,7 @@ def positive_int(raw, description, allow_zero=False):
 
 
 def validate_books(lines):
-    items, ids, slots, blank_order = [], set(), defaultdict(set), defaultdict(list)
+    items, ids, slots, blank_order, collision_start = [], set(), defaultdict(set), defaultdict(list), {}
     for rownum, r in parse_rows(lines, "Books"):
         ident, title, author, completed, order, status = (r[x] for x in HEADERS_BOOKS)
         if not ID_PATTERN.fullmatch(ident):
@@ -95,20 +95,37 @@ def validate_books(lines):
         key = year, month
         if index is not None:
             if index in slots[key]:
-                raise DataError(f"Books row {rownum}: duplicate MonthOrder={index} in {year}-{month:02d}")
-            slots[key].add(index)
+                # A newly appended batch may restart the current month's numbering.
+                # Keep the earlier records stable and append the later block below.
+                collision_start.setdefault(key, rownum)
+            else:
+                slots[key].add(index)
         item = {"id": ident, "title": title, "author": author,
                 "completed_date": completed, "year": year, "month": month,
-                "month_order": index, "status": "Completed"}
+                "month_order": index, "status": "Completed", "_source_row": rownum}
         items.append(item)
         if index is None:
             blank_order[key].append(item)
-    # For newly added books, MonthOrder can remain blank. They are appended to that month.
-    for key, entries in blank_order.items():
-        next_order = max(slots[key], default=0) + 1
-        for entry in entries:
+    # When an appended batch restarts at an occupied MonthOrder, append that
+    # entire later block in sheet-row order; do not silently drop any books.
+    # This only normalizes the published archive, never edits the source Sheet.
+    for key, first_row in collision_start.items():
+        older = [b for b in items if (b["year"], b["month"]) == key and b["_source_row"] < first_row]
+        newer = [b for b in items if (b["year"], b["month"]) == key and b["_source_row"] >= first_row]
+        next_order = max((b["month_order"] or 0 for b in older), default=0) + 1
+        for entry in newer:
             entry["month_order"] = next_order
             next_order += 1
+        print(f"WARNING: repeated MonthOrder in {key[0]}-{key[1]:02d}; appended {len(newer)} later books in sheet order", file=sys.stderr)
+    # For newly added books, MonthOrder can remain blank. They are appended.
+    for key, entries in blank_order.items():
+        next_order = max((b["month_order"] or 0 for b in items if (b["year"], b["month"]) == key), default=0) + 1
+        for entry in entries:
+            if entry["month_order"] is None:
+                entry["month_order"] = next_order
+                next_order += 1
+    for entry in items:
+        entry.pop("_source_row")
     items.sort(key=lambda b: (b["year"], b["month"], b["month_order"], b["id"]))
     return items
 
