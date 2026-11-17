@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
 """Run after build_site.py to catch broken Pages paths and data regression."""
 from __future__ import annotations
-import csv,json,re,sys
+import csv,json,os,re,sys
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'_site'
+BASE=os.environ.get('SITE_BASE','/')
+assert BASE in ('/','/Portfolio/'), 'Unexpected GitHub Pages base'
 assert (SITE/'index.html').exists(),'Missing homepage'
 expected=('about','career','traveling','writing','reading')
 for section in expected:assert (SITE/section/'index.html').exists(),f'Missing /{section}/ index'
 for section in ('', *expected):
  page = SITE / section / 'index.html' if section else SITE / 'index.html'
  markup = page.read_text(encoding='utf8')
- expected_url = 'https://limeatless.github.io/' + (f'{section}/' if section else '')
+ expected_url = 'https://limeatless.github.io' + BASE + (f'{section}/' if section else '')
  if section != 'writing':
   assert f'<meta property="og:url" content="{expected_url}">' in markup, f'Incorrect share URL: {section or "home"}'
- assert 'limdaniel10.github.io' not in markup and '/Portfolio/' not in markup, f'Old URL remains: {section or "home"}'
+ assert 'limdaniel10.github.io' not in markup, f'Old account URL remains: {section or "home"}'
+ if BASE=='/': assert '/Portfolio/' not in markup, f'Old base URL remains: {section or "home"}'
 assert (SITE/'assets/resume.pdf').stat().st_size>10000,'Missing resume'
 # Seven-language selector should be available on the home and all five sections.
 assert (SITE/'js/i18n.js').exists() and (SITE/'css/i18n.css').exists(), 'Missing localization files'
@@ -144,15 +147,18 @@ assert len(writing['readings'])==len(source_readings),'Writing: indexed readings
 failures=[];checked=0
 for html in SITE.rglob('index.html'):
  assert 'limdaniel10.github.io' not in html.read_text(encoding='utf8'), f'Old URL in {html.relative_to(SITE)}'
- assert '/Portfolio/' not in html.read_text(encoding='utf8'), f'Old base path in {html.relative_to(SITE)}'
+ if BASE=='/':assert '/Portfolio/' not in html.read_text(encoding='utf8'), f'Old base path in {html.relative_to(SITE)}'
  soup=BeautifulSoup(html.read_text(encoding='utf8'),'html.parser')
  for tag in soup.select('a[href],link[href],script[src],img[src]'):
   raw=tag.get('href') or tag.get('src') or ''
   if not raw or raw.startswith(('#','mailto:','tel:','data:','https://','http://')):continue
   path=urlsplit(raw).path
   if not path:continue
-  if path.startswith('/'):
-   target=SITE/unquote(path.lstrip('/'))
+  if path.startswith(BASE):
+   target=SITE/unquote(path[len(BASE):])
+  elif path.startswith('/'):
+   failures.append(f'{html.relative_to(SITE)} : absolute link outside site base {path}')
+   continue
   else:target=html.parent/unquote(path)
   if target.is_dir():target/='index.html'
   checked+=1

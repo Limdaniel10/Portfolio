@@ -79,7 +79,17 @@ jobs:
             python scripts/sync_travel.py --from-csv
           fi
       - name: Build all pages and live visited-country homepage map
-        run: python scripts/build_site.py --base /
+        shell: bash
+        run: |
+          # Keep the project URL working until the repository is renamed.
+          # After rename, the special user-site repository automatically uses /.
+          if [[ "${{ github.event.repository.name }}" == "limeatless.github.io" ]]; then
+            echo 'SITE_BASE=/' >> "$GITHUB_ENV"
+            python scripts/build_site.py --base /
+          else
+            echo 'SITE_BASE=/Portfolio/' >> "$GITHUB_ENV"
+            python scripts/build_site.py --base /Portfolio/
+          fi
       - name: Render monochrome one-page resume PDF
         run: python scripts/build_resume.py --out _site/assets/resume.pdf
       - name: Test Markdown auto-generation and source data checks

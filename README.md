@@ -157,7 +157,7 @@ python -m http.server 8000 --directory _site
 
 브라우저 주소: `http://localhost:8000/`. **`index.html`을 더블클릭하여 `file://`로 열면 JSON fetch가 실패할 수 있으므로 HTTP 서버로 확인하세요.**
 
-**배포 URL 설정:** 이 저장소는 사용자 사이트 `limeatless.github.io`이므로 워크플로에서 `python scripts/build_site.py --base /`를 사용합니다. `/Portfolio/` 경로는 더 이상 사용하지 않습니다.
+**배포 URL 설정:** 워크플로는 저장소가 `Portfolio`인 동안 `--base /Portfolio/`로 기존 주소를 유지합니다. 저장소를 `limeatless.github.io`로 변경하면 다음 배포부터 자동으로 `--base /`를 사용합니다. 이에 따라 최종 공개 주소는 `https://limeatless.github.io/`가 됩니다.
 
 ## 8. 장애 확인
 

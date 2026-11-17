@@ -74,7 +74,7 @@ def make_map(data,world):
  svg.append('</svg>')
  return '\n'.join(svg)+'\n' 
 
-def make_social_card(output):
+def make_social_card(output,base):
  from PIL import Image,ImageDraw,ImageFont
  im=Image.new('RGB',(1200,630),'#f8f5ef'); dr=ImageDraw.Draw(im)
  dr.rectangle((0,0,1200,12),fill='#8c715d')
@@ -93,7 +93,7 @@ def make_social_card(output):
  for i,(n,c) in enumerate([('ABOUT','#b77a51'),('CAREER','#5b9072'),('TRAVEL','#6290b2'),('WRITING','#a4896c'),('READING','#967fa8')]):
   x=75+218*i;dr.rectangle((x,416,x+188,514),fill=c)
   dr.text((x+13,452),n,font=font(18),fill='#ffffff')
- dr.text((75,562),'limeatless.github.io',font=font(20),fill='#877b6f')
+ dr.text((75,562),'limeatless.github.io'+(base if base!='/' else ''),font=font(20),fill='#877b6f')
  im.save(output/'assets/social-card.png',format='PNG',optimize=True)
 
 def build(base,output):
@@ -120,7 +120,15 @@ def build(base,output):
    if p.is_dir():shutil.copytree(p,q)
    else:shutil.copy2(p,q)
  shutil.copytree(temp/'writing',output/'writing')
- make_social_card(output)
+ # Source metadata uses the final root URL. While the repository still has
+ # the old name, publish accurate temporary URLs under /Portfolio/.
+ if base!='/':
+  final_url='https://limeatless.github.io/'
+  temporary_url='https://limeatless.github.io'+base
+  for html in output.rglob('index.html'):
+   content=html.read_text(encoding='utf8')
+   html.write_text(content.replace(final_url,temporary_url),encoding='utf8')
+ make_social_card(output,base)
  shutil.rmtree(temp)
  travel=parse_js_object(ROOT/'traveling/assets/data.js','TRAVEL')
  world=parse_js_object(ROOT/'traveling/assets/world.js','WORLD')
