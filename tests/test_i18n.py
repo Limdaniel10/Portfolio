@@ -27,7 +27,7 @@ process.stdout.write(JSON.stringify(window.PortfolioDetailedTranslations));
     assert page in data, f"{filename}: no catalog for {page}"
     return data[page]
 
-for page in ("about", "career"):
+for page in ("about", "career", "traveling"):
     html_path = ROOT / page / "index.html"
     soup = BeautifulSoup(html_path.read_text(encoding="utf8"), "html.parser")
     html_scripts = [x.get("src", "") for x in soup.find_all("script") if x.get("src")]
@@ -38,7 +38,7 @@ for page in ("about", "career"):
         f"{page}: detail bundle must precede shared switcher"
     )
     catalog_data = catalog(f"i18n-{page}.js", page)
-    assert len(catalog_data) >= (35 if page == "about" else 60)
+    assert len(catalog_data) >= {"about":35, "career":60, "traveling":9}[page]
     for selector, translations in catalog_data.items():
         targets = soup.select(selector)
         assert len(targets) == 1, (
@@ -73,3 +73,21 @@ for code in LANGS:
     assert f'"{code}"' in shared, f"Missing language {code}"
 assert "window.PortfolioDetailedTranslations" in shared, "No detailed locale integration"
 print(f"PASS: all {len(LANGS)} language codes in shared switcher")
+# Dynamic sections are rendered after the general language switcher's initial pass,
+# so a shared event and per-section dictionaries are needed when switching languages.
+assert 'new CustomEvent("portfolio:language"' in shared
+about_js=(ROOT/"js"/"about.js").read_text(encoding="utf8")
+activity_js=(ROOT/"traveling"/"activities.js").read_text(encoding="utf8")
+for section,code in (("about",about_js),("traveling",activity_js)):
+    assert 'document.addEventListener("portfolio:language"' in code, f"{section}: dynamic locale change subscription missing"
+    assert 'window.PortfolioI18n?.getLanguage?.()' in code, f"{section}: locale detection missing"
+    for lang in LANGS:
+        assert f'"{lang}"' in code, f"{section}: missing dynamic locale {lang}"
+assert 'Personal Record' in activity_js
+assert 'activity-record' in activity_js
+assert 'siteNameTruncated' in activity_js
+assert 'siteNameTruncated' in (ROOT/"traveling"/"activities.json").read_text(encoding="utf8")
+assert 'Open a chapter to see the full picture.' not in (ROOT/"about"/"index.html").read_text(encoding="utf8")
+assert 'Open a chapter to see the full picture.' not in (ROOT/"js"/"i18n-about.js").read_text(encoding="utf8")
+print("PASS: dynamic About goals + Traveling activities respond to all seven interface locales")
+
