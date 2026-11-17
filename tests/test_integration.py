@@ -66,6 +66,13 @@ assert '["Mountain / trail","Country","Date","Summit / landmark elevation"]' in 
 assert 'Dive site / country' in (SITE/'traveling/activities.js').read_text(encoding='utf8')
 assert 'Open a chapter to see the full picture.' not in (SITE/'about/index.html').read_text(encoding='utf8')
 assert 'id="activities"' in (SITE/'traveling/index.html').read_text(encoding='utf8')
+travel_activities_html=(SITE/'traveling/index.html').read_text(encoding='utf8')
+assert 'Dates are personal records.' in travel_activities_html
+assert 'not necessarily the altitude I reached' not in travel_activities_html.split('class="activity-intro"',1)[1].split('</p>',1)[0]
+assert '<strong>Scuba Diving · AOW</strong>' in travel_activities_html
+travel_locale=(SITE/'js/i18n-traveling.js').read_text(encoding='utf8')
+assert travel_locale.count(' · AOW')>=6
+
 assert (SITE/'traveling/activities.js').stat().st_size>500
 
 books=json.loads((SITE/'reading/data/books.json').read_text())['books']
