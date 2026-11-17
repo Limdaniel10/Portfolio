@@ -56,3 +56,6 @@ header nav a[aria-current="page"]{color:var(--ink);font-weight:700;border-bottom
 .activity-footnote{font-size:10px;color:var(--muted);line-height:1.8;max-width:850px;margin:14px 0 0}
 @media(max-width:650px){#activities{padding-top:62px}.activity-fold>summary{grid-template-columns:36px minmax(0,1fr) 78px 14px;gap:7px;padding:20px 2px}.activity-fold>summary strong{font-size:27px}.activity-fold>summary small{font-size:9px}.activity-table{min-width:660px}.activity-table th,.activity-table td{padding:11px 12px}.activity-body{padding-left:0;padding-right:0}}
 \n.activity-truncated{display:block;margin-top:5px;color:var(--muted);font-size:9px;line-height:1.5;font-weight:400}\n
+/* The highest personally reported trek altitude is singled out in the archive. */
+.activity-table tr.activity-record td{font-weight:750}
+.activity-table tr.activity-record .activity-elev small{color:var(--blue);font-weight:750;letter-spacing:.02em}
